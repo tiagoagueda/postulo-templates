@@ -1,0 +1,12 @@
+postulo-templates
+Copyright (C) 2026 Tiago Agueda
+Licensed under the GNU Affero General Public License, version 3 or later (see LICENSE).
+
+The europass theme reproduces the layout of the Europass CV template (Word, 2013-2019),
+© European Union, 2002-2015, published by Cedefop at https://europass.cedefop.europa.eu and
+reused under the European Commission's reuse policy (Decision 2011/833/EU). The layout is
+redrawn in HTML and CSS; no file, text or image of the template is included.
+
+This plugin is not affiliated with, endorsed by or sponsored by Europass, Cedefop or the
+European Commission. "Europass" names the format the theme follows, and nothing more. The
+plugin ships no Europass logo.

@@ -1,0 +1,72 @@
+[project]
+name = "postulo-templates"
+version = "0.3.0"
+description = "The official document templates for Postulo: CV themes that sit beside Postulo's own, installed as a plugin. The first is a CV laid out as the Europass CV is."
+readme = "README.md"
+requires-python = ">=3.12.4"
+license = "AGPL-3.0-or-later"
+authors = [{ name = "Tiago Agueda" }]
+keywords = ["postulo", "plugin", "cv", "europass", "templates"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: Django",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business",
+]
+# Nothing to depend on: a plugin runs inside Postulo's own environment, which already
+# carries Django and both PDF renderers. Postulo itself is not declared: it is not on PyPI.
+dependencies = []
+
+[project.urls]
+Homepage = "https://source.tiagoagueda.com/postulo/postulo-templates"
+Issues = "https://source.tiagoagueda.com/postulo/postulo-templates/issues"
+"Postulo" = "https://source.tiagoagueda.com/postulo/postulo"
+"Writing a plugin" = "https://source.tiagoagueda.com/postulo/postulo/wiki/Writing-a-plugin"
+
+# A feature plugin whose `themes` Postulo registers when it loads the plugin, together with
+# the `templates/` directory inside the package (postulo/postulo#132).
+[project.entry-points."postulo.features"]
+templates = "postulo_templates.plugin:Templates"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/postulo_templates"]
+# The compiled catalogues: never committed (a translation arriving from Weblate would leave
+# a stale one behind), so `postulo-messages compile` writes them before the build and this
+# puts them in the wheel, which leaves out what .gitignore names.
+artifacts = ["src/postulo_templates/locale/*/LC_MESSAGES/django.mo"]
+
+[dependency-groups]
+dev = [
+    # The Postulo these templates are proved against, named by commit rather than whatever
+    # `main` holds the morning CI runs: a template proved against tomorrow's core goes green
+    # here and breaks on the instance it ships to.
+    "postulo @ git+https://source.tiagoagueda.com/postulo/postulo.git@d28ef8384a8f752b1a3aa124a97fa74ff3647a5d",
+    "pytest>=8.3",
+    "pytest-django>=4.14",
+    "ruff>=0.16",
+]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "tests.settings"
+pythonpath = ["."]
+testpaths = ["tests"]
+filterwarnings = ["error"]
+# The release gate: the European Union catalogues complete, run before a tag with
+# `uv run pytest -m release`. Postulo's own gate cannot see a plugin's catalogues.
+addopts = "--strict-markers -m 'not release'"
+markers = [
+    "release: a promise that must hold in a published version, not in every commit",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S"]
+ignore = ["S101"]

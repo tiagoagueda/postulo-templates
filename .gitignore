@@ -1,1 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
+
+# Compiled by `postulo-messages compile` before a build, never committed: translations
+# arrive from Weblate as .po changes.
+*.mo
+
+# The Word templates the themes are drawn from: reference material, kept out of the
+# repository (the Europass CV template is the European Union's).
 *.docx

@@ -1,0 +1,84 @@
+# Runs the plugin's tests inside a real Postulo, fetched from its repository by uv.
+#
+# The job image is Node rather than Python, which looks backwards and is not: Forgejo runs
+# `actions/checkout` as JavaScript *inside the job container*, so a container without
+# `node` fails the checkout before a single step of this file runs — which is what every
+# run here did, on `python:3.14-slim-bookworm` (postulo/postulo-dav#3). uv brings its own Python, so the image
+# only has to carry Node, git and curl. Postulo's own CI is Node for the same reason and
+# says so.
+#
+# `runs-on` must name a label the runner actually advertises. A label no runner has does
+# not fail the job: it queues for ever, which looks exactly like CI passing.
+name: CI
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+
+# Every job here only reads the repository.
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      # Debian with Node, git and curl already present.
+      image: node:22-bookworm
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # The token is not needed after the checkout; leaving it in .git/config would
+          # hand it to every later step.
+          persist-credentials: false
+          # The whole history: the translation guard reads every commit it is given.
+          fetch-depth: 0
+
+      - name: Install WeasyPrint's libraries
+        # Postulo's settings import its PDF backend, which loads Pango.
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz0b libfontconfig1
+          rm -rf /var/lib/apt/lists/*
+
+      - name: Install uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Install the plugin, Postulo and the test tools
+        # --locked: the lock names the Postulo this plugin is released beside, and a lock
+        # that no longer matches pyproject.toml is a resolution nobody reviewed.
+        run: uv sync --locked --python 3.14
+
+      - name: Lint
+        run: |
+          uv run ruff check --output-format=full .
+          uv run ruff format --check .
+
+      - name: Check the catalogues and refuse translations written outside Weblate
+        # Postulo's own catalogue tool, installed with Postulo as a dev dependency; no GNU
+        # gettext in the image. The catalogues are in Weblate's layout, so its pull requests
+        # pass `extract --check` unchanged; `guard` refuses a commit that writes, changes or
+        # reviews a translation unless Weblate made it (postulo/postulo#706). The .mo files
+        # are not committed: `compile` writes them for the tests and for the wheel.
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          uv run postulo-messages extract --check
+          uv run postulo-messages check
+          uv run postulo-messages guard --base "$BASE"
+          uv run postulo-messages compile
+
+      - name: Weblate's pull request leaves French and Portuguese complete
+        # A commit adds a string with an empty slot; Weblate drafts it by machine, and its
+        # pull request brings the drafts in. A draft counts (postulo/postulo#347).
+        if: github.head_ref == 'weblate'
+        run: uv run postulo-messages gate fr-FR pt-PT
+
+      - name: Test
+        run: uv run pytest

@@ -1,0 +1,46 @@
+# The gate a tag has to pass and a commit does not: the twenty-four European Union
+# catalogues complete. `pytest -m release` is what asks for them — `-m 'not release'` hides
+# them from every other run — and a tag is the only thing that asks for it.
+#
+# Its own workflow rather than a second job in `ci.yml`, because a job carrying `needs:`
+# ends the whole run here with "'runs-on' key not defined in CI/test" — the release job
+# reported failure on every ordinary push, which is the same red as a real failure. A
+# workflow that a branch push does not trigger cannot be red on one (postulo/postulo-dav#3).
+name: Release gate
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    container:
+      # Node, because Forgejo runs `actions/checkout` as JavaScript inside this container;
+      # uv brings its own Python. `ci.yml` says more about why.
+      image: node:22-bookworm
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Install WeasyPrint's libraries
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz0b libfontconfig1
+          rm -rf /var/lib/apt/lists/*
+
+      - name: Install uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Install the plugin, Postulo and the test tools
+        run: uv sync --locked --python 3.14
+
+      - name: Every European Union catalogue is complete
+        run: uv run pytest -m release
