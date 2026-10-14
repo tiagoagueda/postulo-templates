@@ -5,65 +5,77 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-11 17:59+0000\n"
-"Last-Translator: Postulo contributors\n"
-"Language-Team: اردو\n"
+"PO-Revision-Date: 2026-10-11 20:04+0000\n"
+"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"Language-Team: Urdu <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/ur/>\n"
 "Language: ur\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "Curriculum Vitae"
-msgstr ""
+msgstr "کری‌اول وائرس"
 
 #: src/postulo_templates/plugin.py
+#, fuzzy
 msgid "Document templates"
-msgstr ""
+msgstr "دستاویزات کی نمائش"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, python-format
+#, fuzzy, python-format
 msgid "EQF level %(level)s"
-msgstr ""
+msgstr "EQF سطح %(level)s"
 
 #: src/postulo_templates/plugin.py
+#, fuzzy
 msgid "Europass"
-msgstr ""
+msgstr "یوروپا"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "Levels: Common European Framework of Reference for Languages"
-msgstr ""
+msgstr "سطح : عام یورپی فرم کام برائے زبانوں کے لیے"
 
 #: src/postulo_templates/plugin.py
+#, fuzzy
 msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr ""
+msgstr "ایک سی وی سیٹ کرنے کے لئے زیادہ سے زیادہ تھی. سونیا کے لوگ اب اس موضوع کو پیش نہیں کرتے ۔."
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "Mother tongue(s)"
-msgstr ""
+msgstr "مادری زبان"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "Other language(s)"
-msgstr ""
+msgstr "دوسری زبان (s)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "Personal information"
-msgstr ""
+msgstr "ذاتی معلومات"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "Personal statement"
-msgstr ""
+msgstr "ذاتی بیان"
 
 #: src/postulo_templates/plugin.py
+#, fuzzy
 msgid "Postulo Templates"
-msgstr ""
+msgstr "پوسٹو ٹیمپل"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "present"
-msgstr ""
+msgstr "موجود"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "References are available on request."
-msgstr ""
+msgstr "درخواست پر حوالہ جات دستیاب ہیں۔."

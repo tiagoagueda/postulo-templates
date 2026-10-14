@@ -5,65 +5,77 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-11 17:59+0000\n"
-"Last-Translator: Postulo contributors\n"
-"Language-Team: slovenščina\n"
+"PO-Revision-Date: 2026-10-11 20:04+0000\n"
+"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"Language-Team: Slovenian <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/sl/>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3;\n"
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "Curriculum Vitae"
-msgstr ""
+msgstr "Biografija"
 
 #: src/postulo_templates/plugin.py
+#, fuzzy
 msgid "Document templates"
-msgstr ""
+msgstr "Predloge dokumenta"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, python-format
+#, fuzzy, python-format
 msgid "EQF level %(level)s"
-msgstr ""
+msgstr "Raven EOK %(level)s"
 
 #: src/postulo_templates/plugin.py
+#, fuzzy
 msgid "Europass"
-msgstr ""
+msgstr "Europass"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "Levels: Common European Framework of Reference for Languages"
-msgstr ""
+msgstr "Ravni: skupni evropski referenčni okvir za jezike"
 
 #: src/postulo_templates/plugin.py
+#, fuzzy
 msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr ""
+msgstr "Več tem za nastavljanje življenjepisa poleg življenjepisa družbe Postulo: življenjepis, kot je življenjepis Europass. Izklopljene teme niso več ponujene in dokument, nastavljen v eni od njih, je narisan v navadni temi, dokler ni ponovno vklopljen."
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "Mother tongue(s)"
-msgstr ""
+msgstr "Materni jezik(-i)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "Other language(s)"
-msgstr ""
+msgstr "Drugi jeziki"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "Personal information"
-msgstr ""
+msgstr "Osebni podatki"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "Personal statement"
-msgstr ""
+msgstr "Osebna izjava"
 
 #: src/postulo_templates/plugin.py
+#, fuzzy
 msgid "Postulo Templates"
-msgstr ""
+msgstr "Predloge za postulo"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "present"
-msgstr ""
+msgstr "prisoten"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "References are available on request."
-msgstr ""
+msgstr "Reference so na voljo na zahtevo."

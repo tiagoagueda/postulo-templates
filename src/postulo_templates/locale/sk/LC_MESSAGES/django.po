@@ -5,9 +5,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-11 17:59+0000\n"
-"Last-Translator: Postulo contributors\n"
-"Language-Team: slovenčina\n"
+"PO-Revision-Date: 2026-10-11 20:04+0000\n"
+"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"Language-Team: Slovak <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,54 +16,66 @@ msgstr ""
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "Curriculum Vitae"
-msgstr ""
+msgstr "Životopis"
 
 #: src/postulo_templates/plugin.py
+#, fuzzy
 msgid "Document templates"
-msgstr ""
+msgstr "Vzory dokumentov"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, python-format
+#, fuzzy, python-format
 msgid "EQF level %(level)s"
-msgstr ""
+msgstr "Úroveň EQF %(level)s"
 
 #: src/postulo_templates/plugin.py
+#, fuzzy
 msgid "Europass"
-msgstr ""
+msgstr "Europass"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "Levels: Common European Framework of Reference for Languages"
-msgstr ""
+msgstr "Úrovne: Spoločný európsky referenčný rámec pre jazyky"
 
 #: src/postulo_templates/plugin.py
+#, fuzzy
 msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr ""
+msgstr "Ďalšie témy, do ktorých sa má vložiť životopis, okrem vlastného Postulo: životopis stanovený ako Europass životopis. Vypnúť, témy už nie sú ponúkané a dokument v jednom z nich je nakreslený v jednoduchej téme, kým sa znovu nezapne."
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "Mother tongue(s)"
-msgstr ""
+msgstr "Materinský jazyk (s)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "Other language(s)"
-msgstr ""
+msgstr "Iné jazyky"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "Personal information"
-msgstr ""
+msgstr "Osobné údaje"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "Personal statement"
-msgstr ""
+msgstr "Osobné vyhlásenie"
 
 #: src/postulo_templates/plugin.py
+#, fuzzy
 msgid "Postulo Templates"
-msgstr ""
+msgstr "Posunúť šablóny"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "present"
-msgstr ""
+msgstr "súčasnej"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "References are available on request."
-msgstr ""
+msgstr "Referencie sú k dispozícii na požiadanie."

@@ -5,65 +5,65 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-11 17:59+0000\n"
-"Last-Translator: Postulo contributors\n"
-"Language-Team: English (Canada)\n"
+"PO-Revision-Date: 2026-10-13 18:56+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
+"Language-Team: English (Canada) <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/en_CA/>\n"
 "Language: en_CA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Curriculum Vitae"
-msgstr ""
+msgstr "Curriculum Vitae"
 
 #: src/postulo_templates/plugin.py
 msgid "Document templates"
-msgstr ""
+msgstr "Document templates"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 #, python-format
 msgid "EQF level %(level)s"
-msgstr ""
+msgstr "EQF level %(level)s"
 
 #: src/postulo_templates/plugin.py
 msgid "Europass"
-msgstr ""
+msgstr "Europass"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Levels: Common European Framework of Reference for Languages"
-msgstr ""
+msgstr "Levels: Common European Framework of Reference for Languages"
 
 #: src/postulo_templates/plugin.py
 msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr ""
+msgstr "More themes to set a résumé in, beside Postulo's own: a résumé laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Mother tongue(s)"
-msgstr ""
+msgstr "Mother tongue(s)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Other language(s)"
-msgstr ""
+msgstr "Other language(s)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Personal information"
-msgstr ""
+msgstr "Personal information"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Personal statement"
-msgstr ""
+msgstr "Personal statement"
 
 #: src/postulo_templates/plugin.py
 msgid "Postulo Templates"
-msgstr ""
+msgstr "Postulo Templates"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "present"
-msgstr ""
+msgstr "present"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "References are available on request."
-msgstr ""
+msgstr "References are available on request."
