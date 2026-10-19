@@ -45,7 +45,7 @@ dev = [
     # The Postulo these templates are proved against, named by commit rather than whatever
     # `main` holds the morning CI runs: a template proved against tomorrow's core goes green
     # here and breaks on the instance it ships to.
-    "postulo @ git+https://source.tiagoagueda.com/postulo/postulo.git@d28ef8384a8f752b1a3aa124a97fa74ff3647a5d",
+    "postulo @ git+https://source.tiagoagueda.com/postulo/postulo.git@42be52048214fd98ed96d881fdf9fbadc10c4b73",
     "pytest>=8.3",
     "pytest-django>=4.14",
     "ruff>=0.16",

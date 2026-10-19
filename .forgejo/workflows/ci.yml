@@ -16,10 +16,22 @@ on:
     branches: [main]
     tags: ["v*"]
   pull_request:
+  schedule:
+    # The dependency audit also runs weekly, so a vulnerability disclosed in a library is
+    # noticed even in a week when nothing was pushed.
+    - cron: "17 6 * * 1"
 
 # Every job here only reads the repository.
 permissions:
   contents: read
+
+env:
+  # The one version of uv every job installs, and the sha256 of that version's install.sh,
+  # checked before it is run: the script is the trust root for the uv binary it then fetches,
+  # and `curl | sh` ran whatever the address answered (postulo/postulo#790). Same values as
+  # Postulo's own `.forgejo/workflows/ci.yml`; bump the two together when it does.
+  UV_VERSION: "0.12.17"
+  UV_INSTALLER_SHA256: "37b82230b28617c6c24fa52364fa28aa37f2aa40c114809a623f6b064a9730e5"
 
 jobs:
   test:
@@ -46,7 +58,9 @@ jobs:
 
       - name: Install uv
         run: |
-          curl -LsSf https://astral.sh/uv/install.sh | sh
+          curl -LsSf "https://astral.sh/uv/${UV_VERSION}/install.sh" -o /tmp/uv-install.sh
+          echo "${UV_INSTALLER_SHA256}  /tmp/uv-install.sh" | sha256sum -c -
+          sh /tmp/uv-install.sh
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
       - name: Install the plugin, Postulo and the test tools
@@ -82,3 +96,34 @@ jobs:
 
       - name: Test
         run: uv run pytest
+
+  audit:
+    name: Audit the locked dependencies
+    # The dev lock is what CI and a developer's machine install; an instance installs the plugin
+    # as a wheel under the core's own lock. The lock can fall behind the core with published
+    # advisories in it before anybody looks (#15), so this looks on every push and every week.
+    runs-on: ubuntu-latest
+    container:
+      image: node:22-bookworm
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Install uv
+        run: |
+          curl -LsSf "https://astral.sh/uv/${UV_VERSION}/install.sh" -o /tmp/uv-install.sh
+          echo "${UV_INSTALLER_SHA256}  /tmp/uv-install.sh" | sha256sum -c -
+          sh /tmp/uv-install.sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Audit the Python dependencies
+        # The lock rather than the installed environment, without the project and without
+        # Postulo (a git dependency, not on PyPI, so `--strict` could not look it up; the
+        # core audits its own lock). Anything else that cannot be looked up still fails.
+        run: |
+          uv export --no-emit-project --no-emit-package postulo --all-groups \
+            --format requirements-txt --no-hashes > /tmp/locked-requirements.txt
+          uv run --with pip-audit==2.10.1 pip-audit --strict --progress-spinner off \
+            -r /tmp/locked-requirements.txt
