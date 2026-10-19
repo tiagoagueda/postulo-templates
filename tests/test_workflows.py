@@ -1,5 +1,6 @@
 """The workflows install uv from a pinned, checksummed installer and audit the lock (#15)."""
 
+import re
 from pathlib import Path
 
 import pytest
@@ -14,7 +15,7 @@ def test_uv_is_installed_from_a_versioned_installer_whose_checksum_is_checked(wo
     if "astral.sh/uv/" in text:
         assert "https://astral.sh/uv/${UV_VERSION}/install.sh" in text
         assert 'echo "${UV_INSTALLER_SHA256}  /tmp/uv-install.sh" | sha256sum -c -' in text
-        assert "| sh" not in text, "the installer is checked, then run; never piped"
+        assert not re.search(r"\|\s*sh", text), "the installer is checked, then run; never piped"
 
 
 def test_the_lock_is_audited_on_a_schedule():
