@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-22 22:07+0000\n"
-"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"PO-Revision-Date: 2026-10-24 03:42+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Greek <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/el/>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
@@ -16,66 +16,54 @@ msgstr ""
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Curriculum Vitae"
-msgstr "Βιογραφία"
+msgstr "Βιογραφικό σημείωμα"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Document templates"
 msgstr "Πρότυπα εγγράφων"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy, python-format
+#, python-format
 msgid "EQF level %(level)s"
 msgstr "Επίπεδο EQF %(level)s"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Europass"
-msgstr "Γιουρόπας"
+msgstr "Europass"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Levels: Common European Framework of Reference for Languages"
 msgstr "Επίπεδα: Κοινό ευρωπαϊκό πλαίσιο αναφοράς για τις γλώσσες"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr "Περισσότερα θέματα για να ορίσετε ένα βιογραφικό σημείωμα στο, εκτός από το δικό του Postulo: ένα βιογραφικό που ορίζεται ως το βιογραφικό Europass είναι. Κλειστά, τα θέματα δεν προσφέρονται πλέον, και ένα έγγραφο που βρίσκεται σε ένα από αυτά σχεδιάζεται στο απλό θέμα μέχρι να ενεργοποιηθεί ξανά."
+msgstr "Περισσότερα θέματα για τη μορφοποίηση ενός βιογραφικού, πέρα από αυτά του Postulo: ένα βιογραφικό με τη διάταξη του βιογραφικού Europass. Όταν είναι απενεργοποιημένο, τα θέματα δεν προσφέρονται πλέον, και ένα έγγραφο μορφοποιημένο με ένα από αυτά εμφανίζεται με το απλό θέμα μέχρι να ενεργοποιηθεί ξανά."
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Mother tongue(s)"
 msgstr "Μητρική(-ές) γλώσσα(-ες)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Other language(s)"
 msgstr "Άλλες γλώσσες"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Personal information"
 msgstr "Προσωπικές πληροφορίες"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Personal statement"
 msgstr "Προσωπική δήλωση"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Postulo Templates"
 msgstr "Πρότυπα Postulo"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "present"
-msgstr "παρόν"
+msgstr "σήμερα"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "References are available on request."
-msgstr "Οι αναφορές είναι διαθέσιμες κατόπιν αιτήσεως."
+msgstr "Συστάσεις διαθέσιμες κατόπιν αιτήματος."

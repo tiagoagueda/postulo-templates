@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-22 22:07+0000\n"
-"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"PO-Revision-Date: 2026-10-24 04:14+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Irish <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/ga/>\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
@@ -16,66 +16,56 @@ msgstr ""
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Curriculum Vitae"
-msgstr "Curaclam Visor"
+msgstr "Curriculum Vitae"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Document templates"
-msgstr "Téacsanna doiciméid"
+msgstr "Teimpléid doiciméad"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 #, fuzzy, python-format
 msgid "EQF level %(level)s"
-msgstr "EQF leibhéal %(level)s"
+msgstr "Leibhéal CEC %(level)s"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Europass"
 msgstr "Europass"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Levels: Common European Framework of Reference for Languages"
 msgstr "Leibhéil: Comhchreat Tagartha Eorpach do Theangacha"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr "Téamaí níos mó chun CV a leagan isteach, in aice le Postulo féin: CV a leagtar amach mar an CV Europass. Athraigh amach, níl na téamaí ar fáil a thuilleadh, agus tarraingíodh doiciméad atá leagtha i gceann acu sa téama plain go dtí go ndéantar é a athrú arís."
+msgstr "Tuilleadh téamaí chun CV a leagan amach iontu, taobh le téamaí Postulo féin: CV leagtha amach mar atá CV Europass. Múchta, ní thairgtear na téamaí a thuilleadh, agus tarraingítear doiciméad atá leagtha amach i gceann acu sa téama simplí go dtí go gcuirtear ar siúl arís é."
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 #, fuzzy
 msgid "Mother tongue(s)"
-msgstr "Máthair teanga (í)"
+msgstr "Máthairtheanga(cha)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 #, fuzzy
 msgid "Other language(s)"
-msgstr "Teangacha nó teangacha eile"
+msgstr "Teanga(cha) eile"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Personal information"
 msgstr "Faisnéis phearsanta"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Personal statement"
 msgstr "Ráiteas pearsanta"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Postulo Templates"
-msgstr "Plean Gníomhaíochta don Oideachas"
+msgstr "Teimpléid Postulo"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "present"
-msgstr "i láthair na huaire"
+msgstr "faoi láthair"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "References are available on request."
-msgstr "Tá tagairtí ar fáil ar iarratas."
+msgstr "Tá teistiméireachtaí ar fáil ach iad a iarraidh."

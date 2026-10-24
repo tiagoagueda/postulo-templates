@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-22 22:07+0000\n"
-"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"PO-Revision-Date: 2026-10-24 03:35+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Bulgarian <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/bg/>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
@@ -16,47 +16,39 @@ msgstr ""
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Curriculum Vitae"
 msgstr "Curriculum Vitae"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Document templates"
-msgstr "Образеци на документи"
+msgstr "Шаблони на документи"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy, python-format
+#, python-format
 msgid "EQF level %(level)s"
-msgstr "Ниво на EQF %(level)s"
+msgstr "Ниво %(level)s по ЕКР"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Europass"
-msgstr "Европас"
+msgstr "Europass"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Levels: Common European Framework of Reference for Languages"
 msgstr "Нива: Обща европейска референтна рамка за езиците"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr "Повече теми за създаване на автобиография, освен собствени Postulo: автобиография, посочена като автобиографията на Europass. Изключени, темите вече не се предлагат и документ, поставен в една от тях, се изготвя в обикновена тема, докато не бъде включен отново."
+msgstr "Още теми за оформяне на автобиография освен собствените на Postulo: автобиография, оформена като автобиографията Europass. Когато е изключено, темите вече не се предлагат, а документ, оформен в някоя от тях, се изобразява в обикновената тема, докато не бъде включено отново."
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Mother tongue(s)"
-msgstr "Майчин език(s)"
+msgstr "Майчин(и) език(ци)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Other language(s)"
-msgstr "Други езици(и)"
+msgstr "Друг(и) език(ци)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Personal information"
 msgstr "Лична информация"
 
@@ -66,16 +58,13 @@ msgid "Personal statement"
 msgstr "Лична декларация"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Postulo Templates"
-msgstr "Шаблони Postulo"
+msgstr "Шаблони на Postulo"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "present"
-msgstr "присъстващ"
+msgstr "до момента"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "References are available on request."
-msgstr "При поискване се предоставят препратки."
+msgstr "Препоръки се предоставят при поискване."
