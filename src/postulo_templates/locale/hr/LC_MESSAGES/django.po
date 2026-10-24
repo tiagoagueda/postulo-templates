@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-22 22:07+0000\n"
+"PO-Revision-Date: 2026-10-24 04:14+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Croatian <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/hr/>\n"
 "Language: hr\n"
@@ -16,66 +16,54 @@ msgstr ""
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Curriculum Vitae"
 msgstr "Curriculum Vitae"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Document templates"
 msgstr "Predlošci dokumenata"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy, python-format
+#, python-format
 msgid "EQF level %(level)s"
 msgstr "Razina EKO-a %(level)s"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Europass"
 msgstr "Europass"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Levels: Common European Framework of Reference for Languages"
 msgstr "Razine: Zajednički europski referentni okvir za jezike"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
 msgstr "Dodatne teme za oblikovanje životopisa, uz Postulove vlastite: životopis složen kao Europass životopis. Kad je isključen, teme se više ne nude, a dokument složen u jednoj od njih crta se u običnoj temi dok se ponovno ne uključi."
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Mother tongue(s)"
 msgstr "Materinski jezik (jezici)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Other language(s)"
 msgstr "Drugi jezik (jezici)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Personal information"
 msgstr "Osobni podaci"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Personal statement"
 msgstr "Osobni sažetak"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Postulo Templates"
 msgstr "Predlošci za Postulo"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "present"
 msgstr "danas"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "References are available on request."
 msgstr "Preporuke su dostupne na zahtjev."

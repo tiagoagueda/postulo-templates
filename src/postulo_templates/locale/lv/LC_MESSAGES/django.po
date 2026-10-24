@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-22 22:07+0000\n"
-"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"PO-Revision-Date: 2026-10-24 04:07+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Latvian <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/lv/>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -16,66 +16,55 @@ msgstr ""
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Curriculum Vitae"
 msgstr "Curriculum Vitae"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Document templates"
 msgstr "Dokumentu sagataves"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy, python-format
+#, python-format
 msgid "EQF level %(level)s"
 msgstr "EQF līmenis %(level)s"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Europass"
 msgstr "Europass"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Levels: Common European Framework of Reference for Languages"
-msgstr "Līmeņi: Eiropas vienotā sistēma valodu apguvei"
+msgstr "Līmeņi: Eiropas kopīgās pamatnostādnes valodu apguvei"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr "Vairāk tēmu, lai izveidotu CV, blakus Postulo: CV, kas izklāstīts kā Europass CV. Izslēdzot, tēmas vairs netiek piedāvātas, un vienā no tām uzstādīts dokuments tiek zīmēts vienkāršā tēmā, līdz tas atkal tiek ieslēgts."
+msgstr "Vēl citas tēmas CV noformēšanai līdzās Postulo pašu tēmām: CV, kas izkārtots tāpat kā Europass CV. Kad izslēgts, tēmas vairs netiek piedāvātas, un dokuments, kas noformēts kādā no tām, tiek attēlots vienkāršajā tēmā, līdz to atkal ieslēdz."
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Mother tongue(s)"
-msgstr "Dzimtā(-ās) valoda(-as)"
+msgstr "Dzimtā(s) valoda(s)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Other language(s)"
-msgstr "Citā(-ās) valodā(-ās)"
+msgstr "Cita(s) valoda(s)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Personal information"
 msgstr "Personas informācija"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 #, fuzzy
 msgid "Personal statement"
-msgstr "Personisks paziņojums"
+msgstr "Personīgais apraksts"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Postulo Templates"
 msgstr "Postulo sagataves"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "present"
-msgstr "nav"
+msgstr "pašlaik"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "References are available on request."
-msgstr "Atsauces ir pieejamas pēc pieprasījuma."
+msgstr "Atsauksmes pieejamas pēc pieprasījuma."

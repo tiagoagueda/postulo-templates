@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-22 22:07+0000\n"
-"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"PO-Revision-Date: 2026-10-24 04:32+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Swedish <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
@@ -16,66 +16,54 @@ msgstr ""
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Curriculum Vitae"
-msgstr "Läroplan Vitae"
+msgstr "Curriculum vitae"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Document templates"
 msgstr "Dokumentmallar"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy, python-format
+#, python-format
 msgid "EQF level %(level)s"
 msgstr "EQF-nivå %(level)s"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Europass"
 msgstr "Europass"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Levels: Common European Framework of Reference for Languages"
 msgstr "Nivåer: Gemensam europeisk referensram för språk"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr "Fler teman för att sätta ett CV i, bredvid Postulos eget: ett CV som anges som Europass CV är. Växlas bort, teman inte längre erbjuds, och ett dokument som anges i en av dem dras i vanligt tema tills det är påslagen igen."
+msgstr "Fler teman att sätta ett CV i, utöver Postulos eget: ett CV med samma layout som Europass-CV:t. Avstängt erbjuds temana inte längre, och ett dokument som är satt i ett av dem visas i det enkla temat tills det slås på igen."
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Mother tongue(s)"
-msgstr "Moder tunga(s)"
+msgstr "Modersmål"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Other language(s)"
-msgstr "Andra språk(er)"
+msgstr "Andra språk"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Personal information"
 msgstr "Personuppgifter"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Personal statement"
-msgstr "Personligt uttalande"
+msgstr "Personlig presentation"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Postulo Templates"
-msgstr "Postulo mallar"
+msgstr "Postulo-mallar"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "present"
-msgstr "närvarande"
+msgstr "nu"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "References are available on request."
 msgstr "Referenser finns tillgängliga på begäran."

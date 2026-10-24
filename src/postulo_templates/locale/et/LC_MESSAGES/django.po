@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-22 22:07+0000\n"
-"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"PO-Revision-Date: 2026-10-24 03:35+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Estonian <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/et/>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
@@ -16,66 +16,55 @@ msgstr ""
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Curriculum Vitae"
 msgstr "Elulookirjeldus"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Document templates"
 msgstr "Dokumendimallid"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy, python-format
+#, python-format
 msgid "EQF level %(level)s"
-msgstr "Euroopa kvalifikatsiooniraamistiku tase %(level)s"
+msgstr "EKR tase %(level)s"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Europass"
 msgstr "Europass"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Levels: Common European Framework of Reference for Languages"
 msgstr "Tasemed: Euroopa keeleõppe raamdokument"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr "Postulo enda kõrval on veel elulookirjelduse koostamise teemasid: Europassi CV on elulookirjeldus. Väljalülitamisel ei pakuta enam teemasid ja ühes neist määratud dokument joonistatakse lihtsas teemas, kuni see uuesti sisse lülitatakse."
+msgstr "Lisaks Postulo enda teemadele veel teemasid CV kujundamiseks: CV, mis on paigutatud nagu Europassi CV. Välja lülitatuna neid teemasid enam ei pakuta ja neist ühega kujundatud dokument kuvatakse lihtsas teemas, kuni see uuesti sisse lülitatakse."
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Mother tongue(s)"
 msgstr "Emakeel(ed)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Other language(s)"
 msgstr "Muu(d) keel(ed)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Personal information"
 msgstr "Isikuandmed"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 #, fuzzy
 msgid "Personal statement"
-msgstr "Isiklik avaldus"
+msgstr "Enesetutvustus"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Postulo Templates"
 msgstr "Postulo mallid"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "present"
-msgstr "kohalolev"
+msgstr "praegu"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "References are available on request."
-msgstr "Viited on saadaval nõudmisel."
+msgstr "Soovitajate andmed esitatakse nõudmisel."

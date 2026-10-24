@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-22 22:07+0000\n"
-"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"PO-Revision-Date: 2026-10-24 02:36+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Polish <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -16,66 +16,55 @@ msgstr ""
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Curriculum Vitae"
-msgstr "Program nauczania Vitae"
+msgstr "Curriculum vitae"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Document templates"
-msgstr "Wzory dokumentów"
+msgstr "Szablony dokumentów"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy, python-format
+#, python-format
 msgid "EQF level %(level)s"
-msgstr "Poziom EQF %(level)s"
+msgstr "Poziom ERK %(level)s"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Europass"
 msgstr "Europass"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Levels: Common European Framework of Reference for Languages"
-msgstr "Poziomy: Wspólne europejskie ramy odniesienia dla języków"
+msgstr "Poziomy: Europejski system opisu kształcenia językowego"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr "Więcej tematów do ustanowienia CV, obok własnego Postulo: CV określone jako Europass CV. Wyłączony, tematy nie są już oferowane, a dokument w jednym z nich jest rysowany w zwykłym temacie, dopóki nie zostanie ponownie włączony."
+msgstr "Więcej motywów do składania CV, oprócz własnych motywów Postulo: CV ułożone tak jak CV Europass. Po wyłączeniu motywy nie są już oferowane, a dokument złożony w jednym z nich jest wyświetlany w prostym motywie do czasu ponownego włączenia."
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Mother tongue(s)"
-msgstr "Język ojczysty"
+msgstr "Język(i) ojczysty(e)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Other language(s)"
-msgstr "Inne języki"
+msgstr "Inny(e) język(i)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Personal information"
 msgstr "Dane osobowe"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 #, fuzzy
 msgid "Personal statement"
-msgstr "Oświadczenie osobiste"
+msgstr "O mnie"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Postulo Templates"
 msgstr "Szablony Postulo"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "present"
-msgstr "obecny"
+msgstr "obecnie"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "References are available on request."
-msgstr "Referencje są dostępne na życzenie."
+msgstr "Referencje dostępne na życzenie."
