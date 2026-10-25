@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-22 22:07+0000\n"
-"Last-Translator: LibreTranslate <noreply-mt-libretranslate@weblate.org>\n"
+"PO-Revision-Date: 2026-10-24 21:54+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Turkish <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -16,66 +16,55 @@ msgstr ""
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Curriculum Vitae"
-msgstr "Özgeçmiş Vitae"
+msgstr "Özgeçmiş"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Document templates"
-msgstr "Doküman şablonları"
+msgstr "Belge şablonları"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy, python-format
+#, python-format
 msgid "EQF level %(level)s"
-msgstr "EQF seviyesi %(level)s"
+msgstr "EQF düzeyi %(level)s"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Europass"
-msgstr "Avrupalılar"
+msgstr "Europass"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Levels: Common European Framework of Reference for Languages"
-msgstr "Seviyeler: Diller için Avrupa Referans Çerçeve"
+msgstr "Düzeyler: Diller için Avrupa Ortak Başvuru Metni"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr "Postulo'nun kendi yanında bir CV ayarlamak için daha fazla tema: Europass CV olarak ortaya çıkan bir CV. Anahtarlandı, temalar artık teklif edilmez ve bunlardan birinde ayarlanmış bir belge tekrar geçişe kadar düz temada çizilir."
+msgstr "Postulo'nun kendi temalarının yanı sıra bir CV'yi dizmek için daha fazla tema: Europass CV'si gibi düzenlenmiş bir CV. Kapatıldığında temalar artık sunulmaz ve bunlardan biriyle dizilmiş bir belge, yeniden açılana kadar sade temayla çizilir."
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Mother tongue(s)"
-msgstr "Anne dili (s)"
+msgstr "Ana dil(ler)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Other language(s)"
-msgstr "Diğer dil(s)"
+msgstr "Diğer dil(ler)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Personal information"
-msgstr "Kişisel bilgi"
+msgstr "Kişisel bilgiler"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 #, fuzzy
 msgid "Personal statement"
-msgstr "Kişisel ifade"
+msgstr "Kişisel beyan"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Postulo Templates"
-msgstr "Postulo Şablonları"
+msgstr "Postulo şablonları"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "present"
-msgstr "şu anki mevcut"
+msgstr "halen"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "References are available on request."
-msgstr "Referanslar talep üzerine mevcuttur."
+msgstr "Referanslar istek üzerine verilir."
