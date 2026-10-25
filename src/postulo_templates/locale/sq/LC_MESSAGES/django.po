@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-23 11:34+0000\n"
+"PO-Revision-Date: 2026-10-24 23:02+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Albanian <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/sq/>\n"
 "Language: sq\n"
@@ -16,66 +16,54 @@ msgstr ""
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Curriculum Vitae"
 msgstr "Curriculum Vitae"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Document templates"
-msgstr "Modeli i dokumentit"
+msgstr "Shabllone dokumentesh"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy, python-format
+#, python-format
 msgid "EQF level %(level)s"
 msgstr "Niveli EQF %(level)s"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Europass"
 msgstr "Europass"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Levels: Common European Framework of Reference for Languages"
-msgstr "Nivelet: Kuadri i përbashkët Europian i Referimeve për gjuhët"
+msgstr "Nivelet: Korniza e Përbashkët Evropiane e Referencës për Gjuhët"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr "Më shumë tema për të vendosur një CV, përveç vetë Postulos: një CV e vendosur si Europass CV është. U fikën, temat nuk ofrohen më dhe një dokument i vendosur në njërën prej tyre është vizatuar në temën e thjeshtë derisa të ndizet përsëri."
+msgstr "Më shumë tema për formatimin e një CV-je, përveç atyre të vetë Postulo-s: një CV e faqosur si CV-ja Europass. Kur është çaktivizuar, temat nuk ofrohen më, dhe një dokument i formatuar në njërën prej tyre vizatohet me temën e thjeshtë derisa të riaktivizohet."
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Mother tongue(s)"
-msgstr "Gjuha nënë"
+msgstr "Gjuha(t) amtare"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Other language(s)"
-msgstr "Gjuha tjetër"
+msgstr "Gjuhë të tjera"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Personal information"
-msgstr "Informacione personale"
+msgstr "Të dhëna personale"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Personal statement"
 msgstr "Deklarata personale"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Postulo Templates"
-msgstr "Modeli:"
+msgstr "Shabllonet e Postulo-s"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "present"
-msgstr "take"
+msgstr "në vazhdim"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "References are available on request."
-msgstr "Referime janë në dispozicion gjatë kërkesës."
+msgstr "Referencat jepen me kërkesë."

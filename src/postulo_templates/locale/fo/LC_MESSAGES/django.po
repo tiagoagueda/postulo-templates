@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-22 22:07+0000\n"
-"Last-Translator: Administrator <weblate@tiagoagueda.com>\n"
+"PO-Revision-Date: 2026-10-25 03:21+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Faroese <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/fo/>\n"
 "Language: fo\n"
 "MIME-Version: 1.0\n"
@@ -16,22 +16,19 @@ msgstr ""
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Curriculum Vitae"
-msgstr "Curriculum Vitae"
+msgstr "Lívsrás"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Document templates"
-msgstr "Skjalasnið"
+msgstr "Skjalafyrimyndir"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy, python-format
+#, python-format
 msgid "EQF level %(level)s"
-msgstr "EQF-stig %(level)s"
+msgstr "EQF-støði %(level)s"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Europass"
 msgstr "Europass"
 
@@ -43,20 +40,17 @@ msgstr "Stig: Felags evropeiska karmurin fyri mál"
 #: src/postulo_templates/plugin.py
 #, fuzzy
 msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr "Fleiri tema at seta eitt CV upp í, umframt Postulo's egnu: eitt CV sett upp, sum Europass-CV'ið er. Er hetta sløkt, verða temuni ikki longur boðin fram, og eitt skjal sett upp í einum av teimum verður teknað í reina temanum, til tað verður tendrað aftur."
+msgstr "Fleiri tema at seta eina lívsrás upp í, umframt tey hjá Postulo sjálvum: ein lívsrás sett upp, sum Europass-lívsrásin er. Er hetta sløkt, verða temuni ikki longur boðin fram, og eitt skjal, sett upp í einum av teimum, verður teknað í einfalda temanum, til tað verður tendrað aftur."
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Mother tongue(s)"
 msgstr "Móðurmál"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Other language(s)"
 msgstr "Onnur mál"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Personal information"
 msgstr "Persónligar upplýsingar"
 
@@ -66,16 +60,13 @@ msgid "Personal statement"
 msgstr "Persónlig frágreiðing"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Postulo Templates"
-msgstr "Postulo-snið"
+msgstr "Postulo-fyrimyndir"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "present"
 msgstr "nú"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "References are available on request."
-msgstr "Ummæli fáast eftir umbøn."
+msgstr "Viðmæli fáast eftir umbøn."

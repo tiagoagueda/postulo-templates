@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-22 22:07+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-10-25 04:04+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Kazakh <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/kk/>\n"
 "Language: kk\n"
 "MIME-Version: 1.0\n"
@@ -17,53 +17,54 @@ msgstr ""
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Curriculum Vitae"
-msgstr ""
+msgstr "Түйіндеме"
 
 #: src/postulo_templates/plugin.py
 msgid "Document templates"
-msgstr ""
+msgstr "Құжат үлгілері"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 #, python-format
 msgid "EQF level %(level)s"
-msgstr ""
+msgstr "EQF деңгейі: %(level)s"
 
 #: src/postulo_templates/plugin.py
 msgid "Europass"
-msgstr ""
+msgstr "Europass"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Levels: Common European Framework of Reference for Languages"
-msgstr ""
+msgstr "Деңгейлер: Тілдерді меңгерудің жалпыеуропалық құзыреттері"
 
 #: src/postulo_templates/plugin.py
+#, fuzzy
 msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr ""
+msgstr "Postulo-ның өз темаларынан бөлек түйіндемені безендіруге арналған қосымша темалар: Europass түйіндемесі сияқты орналастырылған түйіндеме. Сөндірулі болса, темалар бұдан былай ұсынылмайды, ал солардың бірінде безендірілген құжат қайта іске қосылғанша қарапайым темада салынады."
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Mother tongue(s)"
-msgstr ""
+msgstr "Ана тілі (тілдері)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Other language(s)"
-msgstr ""
+msgstr "Басқа тіл(дер)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Personal information"
-msgstr ""
+msgstr "Жеке ақпарат"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Personal statement"
-msgstr ""
+msgstr "Жеке мәлімдеме"
 
 #: src/postulo_templates/plugin.py
 msgid "Postulo Templates"
-msgstr ""
+msgstr "Postulo үлгілері"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "present"
-msgstr ""
+msgstr "қазірге дейін"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "References are available on request."
-msgstr ""
+msgstr "Кепілдемелер сұрау бойынша беріледі."

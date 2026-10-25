@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-22 22:07+0000\n"
+"PO-Revision-Date: 2026-10-24 21:45+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Georgian <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/ka/>\n"
 "Language: ka\n"
@@ -16,47 +16,39 @@ msgstr ""
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Curriculum Vitae"
 msgstr "Curriculum Vitae"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Document templates"
 msgstr "დოკუმენტების შაბლონები"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy, python-format
+#, python-format
 msgid "EQF level %(level)s"
 msgstr "EQF-ის დონე %(level)s"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Europass"
 msgstr "Europass"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Levels: Common European Framework of Reference for Languages"
 msgstr "დონეები: ენების ცოდნის საერთო ევროპული ჩარჩო"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr "დამატებითი თემები CV-ის გასაფორმებლად, Postulo-ს საკუთარის გარდა: CV, განლაგებული ისე, როგორც Europass CV. გამორთულია, თემები აღარ არის შეთავაზებული, ხოლო ერთ-ერთ მათგანში გაფორმებული დოკუმენტი მარტივ თემაში იხატება, სანამ ხელახლა არ ჩაირთვება."
+msgstr "დამატებითი თემები CV-ის გასაფორმებლად, Postulo-ს საკუთარის გარდა: CV, განლაგებული ისე, როგორც Europass CV. გამორთვის შემთხვევაში Postulo თემებს აღარ გთავაზობთ, ხოლო ერთ-ერთ მათგანში გაფორმებული დოკუმენტი მარტივ თემაში გამოჩნდება, სანამ ხელახლა არ ჩაირთვება."
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Mother tongue(s)"
 msgstr "მშობლიური ენა (ენები)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Other language(s)"
 msgstr "სხვა ენა (ენები)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Personal information"
 msgstr "პირადი ინფორმაცია"
 
@@ -66,16 +58,13 @@ msgid "Personal statement"
 msgstr "თვითპრეზენტაცია"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Postulo Templates"
 msgstr "Postulo-ს შაბლონები"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "present"
 msgstr "დღემდე"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "References are available on request."
 msgstr "რეკომენდაციები ხელმისაწვდომია მოთხოვნისამებრ."

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-22 22:07+0000\n"
+"PO-Revision-Date: 2026-10-24 23:02+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Luxembourgish <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/lb/>\n"
 "Language: lb\n"
@@ -16,22 +16,19 @@ msgstr ""
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Curriculum Vitae"
 msgstr "Liewenslaf"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Document templates"
 msgstr "Dokumentvirlagen"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy, python-format
+#, python-format
 msgid "EQF level %(level)s"
-msgstr "EQR-Niveau %(level)s"
+msgstr "EQF-Niveau %(level)s"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Europass"
 msgstr "Europass"
 
@@ -41,41 +38,33 @@ msgid "Levels: Common European Framework of Reference for Languages"
 msgstr "Niveauen: Gemeinsamen europäesche Referenzrahmen fir Sproochen"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr "Méi Designen, fir e CV ze setzen, nieft deene vum Postulo: e CV, deen esou opgebaut ass wéi den Europass-CV. Ausgeschalt, ginn d'Designen net méi ugebueden, an en Dokument, dat an engem dovu gesat ass, gëtt am schlichten Design gezeechent, bis en erëm ugeschalt gëtt."
+msgstr "Méi Designen, fir e CV ze setzen, nieft deene vum Postulo: e CV, deen esou opgebaut ass wéi den Europass-CV. Ausgeschalt ginn d'Designen net méi ugebueden, an en Dokument, dat an engem dovu gesat ass, gëtt am schlichten Design gezeechent, bis et erëm ugeschalt gëtt."
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Mother tongue(s)"
 msgstr "Mammesprooch(en)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Other language(s)"
 msgstr "Aner Sprooch(en)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Personal information"
 msgstr "Perséinlech Informatiounen"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "Personal statement"
 msgstr "Perséinlech Presentatioun"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
 msgid "Postulo Templates"
 msgstr "Postulo-Virlagen"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "present"
 msgstr "haut"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
-#, fuzzy
 msgid "References are available on request."
 msgstr "Referenze ginn op Ufro zur Verfügung gestallt."

@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-22 22:07+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-10-25 03:21+0000\n"
+"Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Azerbaijani <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/az/>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
@@ -16,54 +16,57 @@ msgstr ""
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "Curriculum Vitae"
-msgstr ""
+msgstr "Curriculum Vitae"
 
 #: src/postulo_templates/plugin.py
 msgid "Document templates"
-msgstr ""
+msgstr "Sənəd şablonları"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 #, python-format
 msgid "EQF level %(level)s"
-msgstr ""
+msgstr "EQF səviyyəsi %(level)s"
 
 #: src/postulo_templates/plugin.py
 msgid "Europass"
-msgstr ""
+msgstr "Europass"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Levels: Common European Framework of Reference for Languages"
-msgstr ""
+msgstr "Səviyyələr: Ümumavropa Dil İstinad Çərçivəsi"
 
 #: src/postulo_templates/plugin.py
 msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr ""
+msgstr "Postulo-nun öz temalarından əlavə CV tərtib etmək üçün daha çox tema: Europass CV-si kimi tərtib edilmiş CV. Deaktiv edildikdə temalar artıq təklif edilmir və onlardan birində tərtib edilmiş sənəd yenidən aktiv edilənə qədər sadə temada göstərilir."
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Mother tongue(s)"
-msgstr ""
+msgstr "Ana dili(ləri)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Other language(s)"
-msgstr ""
+msgstr "Digər dil(lər)"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Personal information"
-msgstr ""
+msgstr "Şəxsi məlumatlar"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "Personal statement"
-msgstr ""
+msgstr "Şəxsi bəyanat"
 
 #: src/postulo_templates/plugin.py
 msgid "Postulo Templates"
-msgstr ""
+msgstr "Postulo şablonları"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
+#, fuzzy
 msgid "present"
-msgstr ""
+msgstr "indiyədək"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "References are available on request."
-msgstr ""
+msgstr "Tövsiyələr sorğu əsasında təqdim edilə bilər."
