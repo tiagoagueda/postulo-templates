@@ -1,6 +1,6 @@
 [project]
 name = "postulo-templates"
-version = "0.3.0"
+version = "0.5.0"
 description = "The official document templates for Postulo: CV themes that sit beside Postulo's own, installed as a plugin. The first is a CV laid out as the Europass CV is."
 readme = "README.md"
 requires-python = ">=3.12.4"
@@ -42,10 +42,10 @@ artifacts = ["src/postulo_templates/locale/*/LC_MESSAGES/django.mo"]
 
 [dependency-groups]
 dev = [
-    # The Postulo these templates are proved against, named by commit rather than whatever
+    # The Postulo these templates are proved against, named by its release tag rather than whatever
     # `main` holds the morning CI runs: a template proved against tomorrow's core goes green
     # here and breaks on the instance it ships to.
-    "postulo @ git+https://source.tiagoagueda.com/postulo/postulo.git@a8467ab21fac7e16c4a6faf825413e42381656e5",
+    "postulo @ git+https://source.tiagoagueda.com/postulo/postulo.git@v0.5.0",
     "pytest>=8.3",
     "pytest-django>=4.14",
     "ruff>=0.16",
