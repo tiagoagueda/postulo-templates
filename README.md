@@ -5,23 +5,42 @@ as a plugin: install it and its themes appear in the theme picker of a CV, besid
 own *Plain* and *Classic*, each named with this plugin as its provider ("Europass, from
 Postulo Templates").
 
-A theme shapes the PDF and the preview. The Word and plain-text exports are built from the
-document's outline and never see one.
+A theme shapes the PDF and the preview. The plain-text, OpenDocument and Word exports, and
+any format another plugin adds, are built from the document's outline and never see one.
 
 ## Install
 
-Install it into the environment of a running Postulo:
+A template from here reaches an instance the one way Postulo accepts a theme from outside
+itself: inside an installed plugin. There is no upload form for a theme and there will not
+be one, since a theme is markup Postulo runs.
+
+**From the interface**, as an administrator, under *Server settings → Plugins*. This plugin
+is in Postulo's official catalogue: the *Official* repository is listed there already,
+switched off; *Switch on* it, press *Check for updates* under *Catalogues*, and *Install*
+*postulo-templates*. The signed index and the wheel's checksum are checked before anything
+is installed. Or download the wheel from this repository's releases and upload it under
+*Install a package*. Either way it is installed on the data volume, not into the image, so
+an upgrade of Postulo does not lose it, and its themes are offered at once, without a
+restart. A newer release of this plugin over an older one is in use once Postulo has been
+restarted, since every process keeps the code it has already loaded.
+
+**By hand**, on an instance you run without a container, into Postulo's environment, then
+restart Postulo:
 
 ```sh
 uv pip install git+https://source.tiagoagueda.com/postulo/postulo-templates.git
 ```
 
-Then restart Postulo. In a container, bake it into the image; see *Plugins in the image* on
+To bake it into an image of your own instead, see *Plugins* on
 [Installing Postulo](https://source.tiagoagueda.com/postulo/postulo/wiki/Installing-Postulo).
 
-The plugin is a feature: an administrator can switch it off under the plugins page like any
-other. Switched off, its themes are no longer offered, and a document set in one of them is
-drawn in *Plain* until it is switched on again. Nothing is deleted.
+Install the release with the same minor version as your Postulo (0.5.x beside Postulo 0.5):
+the plugin is released beside the core and tested against that release.
+
+The plugin is a feature: an administrator can switch it off under *Installed on this
+instance* on the same page, like any other. Switched off, its themes are no longer
+offered, and a document set in one of them is drawn in *Plain* until it is switched on
+again. Nothing is deleted, and the same holds if the plugin is removed.
 
 ## The themes
 
