@@ -1,0 +1,33 @@
+# The dependency audit, weekly, so a vulnerability disclosed in a library is noticed even in
+# a week when nothing was pushed (#15). The audit alone: the lock did not change, so the
+# tests would only prove again what the last push proved (postulo/postulo#1170).
+#
+# A workflow of its own rather than the schedule `ci.yml` used to carry: that ran the whole
+# workflow, tests and all, every week, and this Forgejo fails a job whose `if` is false
+# instead of skipping it, so the test job could not be left out of it. The job is the one
+# `ci.yml` runs on every push; both call the shared action, so they cannot drift apart.
+name: Weekly
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+jobs:
+  audit:
+    name: Audit the locked dependencies
+    runs-on: ubuntu-latest
+    container:
+      image: node:22-bookworm
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+        timeout-minutes: 5
+
+      - name: Audit the Python dependencies
+        uses: https://source.tiagoagueda.com/Postulo/plugin-ci@v1
+        with:
+          mode: audit
+        timeout-minutes: 15

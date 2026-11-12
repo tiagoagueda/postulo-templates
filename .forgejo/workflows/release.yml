@@ -6,22 +6,15 @@
 # ends the whole run here with "'runs-on' key not defined in CI/test" — the release job
 # reported failure on every ordinary push, which is the same red as a real failure. A
 # workflow that a branch push does not trigger cannot be red on one (postulo/postulo-dav#3).
+# It is also the only workflow a tag starts: the tagged commit is one `main` already tested.
+#
+# The install and the gate are the shared plugin CI, Postulo/plugin-ci (postulo/postulo#1170);
+# `ci.yml` says why it is named by its full address.
 name: Release gate
 
 on:
   push:
     tags: ["v*"]
-
-permissions:
-  contents: read
-
-env:
-  # The one version of uv every job installs, and the sha256 of that version's install.sh,
-  # checked before it is run: the script is the trust root for the uv binary it then fetches,
-  # and `curl | sh` ran whatever the address answered (postulo/postulo#790). Same values as
-  # Postulo's own `.forgejo/workflows/ci.yml`; bump the two together when it does.
-  UV_VERSION: "0.12.17"
-  UV_INSTALLER_SHA256: "37b82230b28617c6c24fa52364fa28aa37f2aa40c114809a623f6b064a9730e5"
 
 jobs:
   gate:
@@ -35,22 +28,16 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
-
-      - name: Install WeasyPrint's libraries
-        run: |
-          apt-get update
-          apt-get install -y --no-install-recommends libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz0b libharfbuzz-subset0 libfontconfig1
-          rm -rf /var/lib/apt/lists/*
-
-      - name: Install uv
-        run: |
-          curl -LsSf "https://astral.sh/uv/${UV_VERSION}/install.sh" -o /tmp/uv-install.sh
-          echo "${UV_INSTALLER_SHA256}  /tmp/uv-install.sh" | sha256sum -c -
-          sh /tmp/uv-install.sh
-          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
-
-      - name: Install the plugin, Postulo and the test tools
-        run: uv sync --locked --python 3.14
+        timeout-minutes: 5
 
       - name: Every European Union catalogue is complete
-        run: uv run pytest -m release
+        # WeasyPrint's libraries and HarfBuzz's subsetter, uv, `uv sync --locked --python 3.14`,
+        # then `pytest -m release` alone: lint, the catalogue checks and the suite ran on `main`.
+        uses: https://source.tiagoagueda.com/Postulo/plugin-ci@v1
+        with:
+          extra-system-packages: libharfbuzz-subset0
+          lint: "false"
+          catalogues: "false"
+          tests: "false"
+          release-gate: "true"
+        timeout-minutes: 30
