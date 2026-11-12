@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: A security problem is not a public issue
+    url: https://source.tiagoagueda.com/postulo/postulo/src/branch/main/SECURITY.md
+    about: Report a vulnerability privately, as SECURITY.md describes. Do not open an issue.
+  - name: A wrong or missing translation
+    url: https://source.tiagoagueda.com/postulo/postulo-templates/src/branch/main/README.md#translations
+    about: Correct a word a theme prints in Weblate, where this plugin's translations are kept, rather than reporting it here.
+  - name: A question about the themes
+    url: https://source.tiagoagueda.com/postulo/postulo-templates/src/branch/main/README.md#the-themes
+    about: The README says what each theme is for and what it leaves out on purpose.

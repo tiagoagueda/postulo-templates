@@ -1,0 +1,93 @@
+name: Bug report
+about: A theme sets a document wrongly, or does not work for you.
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time. Write in whatever language you can; English is easiest for the maintainer to act on, but a report in another language is better than none.
+
+        **Is it a security problem?** Do not post it here, this page is public. Follow [SECURITY.md](https://source.tiagoagueda.com/postulo/postulo/src/branch/main/SECURITY.md).
+
+        **Remove personal details before you paste anything.** Postulo holds CVs, home addresses and the names of the people somebody is applying to. A log or a screenshot is where those leak: blank out names, addresses, e-mail addresses, company and listing details, tokens and cookies first.
+
+        A picture of the page helps most here, **with every personal detail covered**: a CV is nothing but personal details. Better still, show a document filled in with made-up ones.
+  - type: input
+    id: plugin-version
+    attributes:
+      label: postulo-templates version or commit
+      description: "*Server settings → Plugins* lists the version; give the commit if you installed it from the repository."
+      placeholder: "0.5.0"
+    validations:
+      required: true
+  - type: input
+    id: postulo-version
+    attributes:
+      label: Postulo version
+      description: The foot of every page shows the version. On the `:dev` image, give the pinned tag (`<version>-dev.<short sha>`), because `:dev` moves.
+      placeholder: "0.5.0"
+    validations:
+      required: true
+  - type: input
+    id: theme
+    attributes:
+      label: Which theme
+      placeholder: Europass
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Which kind of document
+      options:
+        - CV
+        - Cover letter
+        - Other (say so below)
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: The document's language
+      placeholder: Português (Portugal)
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where it is wrong
+      options:
+        - In the browser preview
+        - In the PDF
+        - In both
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: What you did, step by step
+      placeholder: |
+        1. Open ...
+        2. Press ...
+    validations:
+      required: true
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Anything from the logs that bears on it, with personal details removed first.
+      render: text

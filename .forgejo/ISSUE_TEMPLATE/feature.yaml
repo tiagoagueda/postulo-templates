@@ -1,0 +1,45 @@
+name: Feature request
+about: Ask for a new theme, or for something the themes do not do yet.
+title: "[Feature] "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. Write in whatever language you can; English is easiest for the maintainer to act on.
+
+        Describe the problem before the solution: a theme is judged by the documents it serves. Do not paste personal details such as a CV, an address or the name of somebody you applied to.
+
+        Would you rather make the theme yourself? A theme is written as a plugin's is: see [A theme, if you set documents](https://source.tiagoagueda.com/postulo/postulo/wiki/Writing-a-plugin#a-theme-if-you-set-documents) in the wiki, then open a pull request here.
+  - type: dropdown
+    id: scope
+    attributes:
+      label: What it is
+      description: If it changes how every theme behaves, the core may need an issue of its own.
+      options:
+        - A new theme
+        - A change to one theme
+        - A change to how every theme behaves (the core may need an issue too)
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What it is for, and who it suits
+      description: The kind of document, the applications or countries it is meant for, and who would use it.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you propose
+      description: For a new theme, what it looks like, or where a published model of it can be seen.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What else you considered
+      description: Other ways to solve it, and what you do today.
