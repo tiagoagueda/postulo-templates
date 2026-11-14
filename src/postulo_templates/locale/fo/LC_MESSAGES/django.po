@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-25 03:21+0000\n"
+"PO-Revision-Date: 2026-11-14 10:48+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Faroese <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/fo/>\n"
 "Language: fo\n"
@@ -29,6 +29,7 @@ msgid "EQF level %(level)s"
 msgstr "EQF-støði %(level)s"
 
 #: src/postulo_templates/plugin.py
+#, fuzzy
 msgid "Europass"
 msgstr "Europass"
 
