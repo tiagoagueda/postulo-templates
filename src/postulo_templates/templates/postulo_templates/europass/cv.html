@@ -35,6 +35,7 @@
     {% if document_author %}<meta name="author" content="{{ document_author }}">{% endif %}
     {% if document_subject %}<meta name="description" content="{{ document_subject }}">{% endif %}
     {% if document_keywords %}<meta name="keywords" content="{{ document_keywords }}">{% endif %}
+    {% if document_scrub %}<meta name="{{ scrub_meta }}" content="{{ document_scrub }}">{% endif %}
     <style{% if csp_nonce %} nonce="{{ csp_nonce }}"{% endif %}>
       /* The Word template's page: A4, its side margins, and the page number where its
          footer had one. The number is a counter, drawn and not written, which is right

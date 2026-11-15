@@ -12,42 +12,18 @@ import re
 from ctypes.util import find_library
 
 import pytest
-from django.contrib.auth import get_user_model
 from django.contrib.contenttypes.models import ContentType
 from postulo.documents import pdf as pdf_options
 from postulo.documents import themes
 from postulo.documents.models import CV, CVItem
 from postulo.documents.pdf import WeasyPrintBackend
 from postulo.documents.rendering import render_cv_html
-from postulo.plugins import registry
 from postulo.resume.models import Certification, Education, Experience, LanguageSkill
 
-pytestmark = pytest.mark.django_db
+pytestmark = [pytest.mark.django_db, pytest.mark.usefixtures("installed")]
 
 ROLE = "Test engineer"
 QUALIFICATION = "MSc Applied Physics"
-
-
-@pytest.fixture(autouse=True)
-def installed(settings):
-    """The plugin loaded the way Postulo loads it at start-up, and forgotten afterwards."""
-    settings.TEMPLATES = [{**settings.TEMPLATES[0], "DIRS": list(settings.TEMPLATES[0]["DIRS"])}]
-    registry._cache.clear()
-    registry.plugins("feature", refresh=True)
-    yield
-    themes.forget()
-    registry._cache.clear()
-
-
-@pytest.fixture
-def person():
-    user = get_user_model().objects.create_user(
-        email="alex@example.org",
-        password="not-a-real-password",  # noqa: S106
-    )
-    user.first_name, user.last_name = "Alex", "Morgan"
-    user.save()
-    return user
 
 
 def on_the_cv(cv, *entries) -> None:
