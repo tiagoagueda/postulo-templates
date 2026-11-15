@@ -15,6 +15,10 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: postulo-messages\n"
 
+#: src/postulo_templates/plugin.py
+msgid "Applicant tracking"
+msgstr ""
+
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Curriculum Vitae"
 msgstr "Curriculum Vitae"
@@ -37,8 +41,8 @@ msgid "Levels: Common European Framework of Reference for Languages"
 msgstr "Nivoi: Zajednički evropski referentni okvir za jezike"
 
 #: src/postulo_templates/plugin.py
-msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr "Još tema u kojima se može složiti CV, pored Postulovih sopstvenih: CV raspoređen onako kako je raspoređen Europass CV. Kad je isključeno, teme se više ne nude, a dokument složen u nekoj od njih prikazuje se u običnoj temi dok se ponovo ne uključi."
+msgid "More themes to set a CV or a portfolio in, beside Postulo's own: one a hiring system reads cleanly and one laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
+msgstr ""
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Mother tongue(s)"
@@ -55,6 +59,10 @@ msgstr "Lični podaci"
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Personal statement"
 msgstr "Lična izjava"
+
+#: src/postulo_templates/templates/postulo_templates/europass/cv.html
+msgid "Portfolio"
+msgstr ""
 
 #: src/postulo_templates/plugin.py
 msgid "Postulo Templates"

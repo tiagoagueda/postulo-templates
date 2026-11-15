@@ -12,29 +12,19 @@ import re
 from ctypes.util import find_library
 
 import pytest
-from django.contrib.contenttypes.models import ContentType
 from postulo.documents import pdf as pdf_options
 from postulo.documents import themes
-from postulo.documents.models import CV, CVItem
+from postulo.documents.models import CV, CVKind
 from postulo.documents.pdf import WeasyPrintBackend
 from postulo.documents.rendering import render_cv_html
 from postulo.resume.models import Certification, Education, Experience, LanguageSkill
+
+from .support import on_the_cv
 
 pytestmark = [pytest.mark.django_db, pytest.mark.usefixtures("installed")]
 
 ROLE = "Test engineer"
 QUALIFICATION = "MSc Applied Physics"
-
-
-def on_the_cv(cv, *entries) -> None:
-    for order, entry in enumerate(entries):
-        CVItem.objects.create(
-            owner=cv.owner,
-            cv=cv,
-            content_type=ContentType.objects.get_for_model(entry),
-            object_id=entry.pk,
-            order=order,
-        )
 
 
 @pytest.fixture
@@ -94,9 +84,21 @@ def test_the_plugin_offers_the_theme_for_a_cv_and_names_itself():
 
 
 def test_it_does_not_offer_a_kind_it_was_never_taught():
-    """No portfolio and no letter yet, so neither picker offers it."""
+    """No letter yet, so the letter picker does not offer it."""
     assert "europass" not in [one.name for one in themes.for_kind(themes.Kind.LETTER)]
-    assert "europass" not in [one.name for one in themes.for_kind(themes.Kind.PORTFOLIO)]
+
+
+def test_it_sets_a_portfolio_with_the_same_page():
+    assert "europass" in [one.name for one in themes.for_kind(themes.Kind.PORTFOLIO)]
+
+
+def test_a_portfolio_says_it_is_one_in_the_masthead(person):
+    portfolio = CV.objects.create(
+        owner=person, name="Work", theme="europass", kind=CVKind.PORTFOLIO, language="en-GB"
+    )
+
+    assert "Portfolio" in text_of(render_cv_html(portfolio))[:40]
+    assert "Curriculum Vitae" not in render_cv_html(portfolio)
 
 
 # ------------------------------------------------------------------- what it draws

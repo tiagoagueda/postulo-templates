@@ -46,7 +46,8 @@ again. Nothing is deleted, and the same holds if the plugin is removed.
 
 | Theme | Sets | Paper | What it is for |
 | --- | --- | --- | --- |
-| `europass` | CV | Fluid | A CV laid out as the Europass CV is, for applications in Europe that ask for one or where the format is familiar. |
+| `ats` | CV, Portfolio | Fluid | A CV a hiring system's parser reads cleanly: one column, real headings, no text in pictures. For applications sent through an online form. |
+| `europass` | CV, Portfolio | Fluid | A CV laid out as the Europass CV is, for applications in Europe that ask for one or where the format is familiar. |
 
 **Paper.** Every theme says which papers it prints on, and the picker offers a document no
 other. *Fluid* means every paper Postulo has (A4 and US Letter, each upright or on its side);
@@ -54,12 +55,25 @@ a theme drawn for one sheet is *restricted* and names the papers it keeps to, wi
 in this table. A fluid theme is drawn on every paper by the tests, and a restricted one on
 each it names, and fails if anything runs past the page.
 
+### Applicant tracking
+
+For the applications that are read by software before a person. One column in the document's
+own order, a real heading for the name, each section and each job, black on white, system
+fonts, no table, no float, nothing that is a word drawn as a picture. The text of the PDF
+comes out in the order it is read, which a test checks by extracting it.
+
+What it leaves out on purpose: the **photograph**, even where the CV has one (a parser
+cannot read it and many employers who use one ask applicants not to send it), and any
+colour, icon or ornament. A portfolio in this theme is the same page with the work first.
+
 ### Europass layout
 
 Drawn from the Europass CV Word template (2013–2019): a narrow column of labels and dates,
 right-aligned in dark blue, the content beside it, each section opened by its name and a
-thin blue rule ending in a square, Arial throughout. Each entry's dates sit in the label
-column, level with its title.
+thin blue rule ending in a square, Arial throughout (the plugin carries Arimo, which has
+Arial's metrics; see `ASSETS.md`). Each entry's dates sit in the label column, level with its
+title. A portfolio in this theme is drawn by the same page, headed *Portfolio*, with its
+projects first as Postulo orders them.
 
 What it prints is what Postulo gives a theme: the contact details the CV chose (each on its
 own line, behind a small icon), the photograph if the CV has one, the personal statement,

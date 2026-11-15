@@ -15,6 +15,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: postulo-messages\n"
 
+#: src/postulo_templates/plugin.py
+msgid "Applicant tracking"
+msgstr ""
+
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Curriculum Vitae"
 msgstr "Curriculum Vitae"
@@ -38,8 +42,8 @@ msgid "Levels: Common European Framework of Reference for Languages"
 msgstr "Մակարդակներ՝ Լեզուների իմացության համաեվրոպական ընդհանուր շրջանակ"
 
 #: src/postulo_templates/plugin.py
-msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr "CV-ի լրացուցիչ թեմաներ՝ Postulo-ի սեփական թեմաներից բացի․ CV, որը դասավորված է այնպես, ինչպես Europass CV-ն։ Անջատված վիճակում թեմաներն այլևս չեն առաջարկվում, իսկ դրանցից մեկով ձևավորված փաստաթուղթը գծվում է պարզ թեմայով, մինչև հավելումը կրկին միացվի։"
+msgid "More themes to set a CV or a portfolio in, beside Postulo's own: one a hiring system reads cleanly and one laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
+msgstr ""
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Mother tongue(s)"
@@ -56,6 +60,10 @@ msgstr "Անձնական տվյալներ"
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Personal statement"
 msgstr "Անձնական ներկայացում"
+
+#: src/postulo_templates/templates/postulo_templates/europass/cv.html
+msgid "Portfolio"
+msgstr ""
 
 #: src/postulo_templates/plugin.py
 msgid "Postulo Templates"

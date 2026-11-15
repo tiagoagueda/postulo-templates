@@ -15,6 +15,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: postulo-messages\n"
 
+#: src/postulo_templates/plugin.py
+msgid "Applicant tracking"
+msgstr ""
+
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 #, fuzzy
 msgid "Curriculum Vitae"
@@ -40,9 +44,8 @@ msgid "Levels: Common European Framework of Reference for Languages"
 msgstr "Mfumo wa Ulaya wa Marejeo ya Lugha"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
-msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr "Mandhari zaidi ya kuweka CV, kando ya Postulo mwenyewe: CV iliyowekwa kama CV ya Europas ni. Ilibadilishwa, mandhari haya hutolewa tena, na hati iliyowekwa katika mojawapo ya hizo hutolewa katika mandhari wazi hadi ibadilishwe tena."
+msgid "More themes to set a CV or a portfolio in, beside Postulo's own: one a hiring system reads cleanly and one laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
+msgstr ""
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 #, fuzzy
@@ -63,6 +66,10 @@ msgstr "Taarifa binafsi"
 #, fuzzy
 msgid "Personal statement"
 msgstr "Taarifa binafsi"
+
+#: src/postulo_templates/templates/postulo_templates/europass/cv.html
+msgid "Portfolio"
+msgstr ""
 
 #: src/postulo_templates/plugin.py
 #, fuzzy

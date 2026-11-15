@@ -15,6 +15,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: postulo-messages\n"
 
+#: src/postulo_templates/plugin.py
+msgid "Applicant tracking"
+msgstr ""
+
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Curriculum Vitae"
 msgstr "Curriculum Vitae"
@@ -37,8 +41,8 @@ msgid "Levels: Common European Framework of Reference for Languages"
 msgstr "Niveaus: Gemeenschappelijk Europees Referentiekader voor Talen"
 
 #: src/postulo_templates/plugin.py
-msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr "Meer thema’s om een cv in op te maken, naast die van Postulo zelf: een cv opgemaakt zoals het Europass-cv. Uitgeschakeld worden de thema’s niet meer aangeboden, en wordt een document dat in een ervan is opgemaakt in het eenvoudige thema getoond totdat het weer wordt ingeschakeld."
+msgid "More themes to set a CV or a portfolio in, beside Postulo's own: one a hiring system reads cleanly and one laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
+msgstr ""
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Mother tongue(s)"
@@ -55,6 +59,10 @@ msgstr "Persoonlijke gegevens"
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Personal statement"
 msgstr "Persoonlijk profiel"
+
+#: src/postulo_templates/templates/postulo_templates/europass/cv.html
+msgid "Portfolio"
+msgstr ""
 
 #: src/postulo_templates/plugin.py
 msgid "Postulo Templates"

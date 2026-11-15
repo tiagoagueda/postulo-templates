@@ -25,6 +25,8 @@ from postulo.resume.models import Experience
 
 from postulo_templates.plugin import Templates
 
+from .support import on_the_cv
+
 pytestmark = [pytest.mark.django_db, pytest.mark.usefixtures("installed")]
 
 REPO = Path(__file__).resolve().parents[1]
@@ -65,12 +67,15 @@ def draw(person, name: str, kind: str, *, language: str = "en-GB", **options) ->
         summary="Ten years of keeping things calm.",
         kind=CVKind.PORTFOLIO if kind == themes.Kind.PORTFOLIO else CVKind.CV,
     )
-    Experience.objects.create(
-        owner=person,
-        organisation="Aperture Science",
-        role="Test engineer",
-        start_date=dt.date(2019, 3, 1),
-        highlights="Kept the turrets calm.",
+    on_the_cv(
+        cv,
+        Experience.objects.create(
+            owner=person,
+            organisation="Aperture Science",
+            role="Test engineer",
+            start_date=dt.date(2019, 3, 1),
+            highlights="Kept the turrets calm.",
+        ),
     )
     return render_cv_html(cv, **options)
 

@@ -15,6 +15,10 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > 19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? 1 : 2);\n"
 "X-Generator: postulo-messages\n"
 
+#: src/postulo_templates/plugin.py
+msgid "Applicant tracking"
+msgstr ""
+
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Curriculum Vitae"
 msgstr "Gyvenimo aprašymas"
@@ -37,8 +41,8 @@ msgid "Levels: Common European Framework of Reference for Languages"
 msgstr "Lygiai: Bendrieji Europos kalbų metmenys"
 
 #: src/postulo_templates/plugin.py
-msgid "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr "Daugiau apipavidalinimų CV maketuoti, be paties Postulo apipavidalinimų: CV, sumaketuotas kaip Europass CV. Išjungus šie apipavidalinimai nebesiūlomi, o dokumentas, sumaketuotas vienu iš jų, generuojamas paprastu apipavidalinimu, kol papildinys vėl bus įjungtas."
+msgid "More themes to set a CV or a portfolio in, beside Postulo's own: one a hiring system reads cleanly and one laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
+msgstr ""
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Mother tongue(s)"
@@ -55,6 +59,10 @@ msgstr "Asmeninė informacija"
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Personal statement"
 msgstr "Prisistatymas"
+
+#: src/postulo_templates/templates/postulo_templates/europass/cv.html
+msgid "Portfolio"
+msgstr ""
 
 #: src/postulo_templates/plugin.py
 msgid "Postulo Templates"

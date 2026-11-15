@@ -130,7 +130,7 @@
     </style>
   </head>
   <body>
-    <p class="row masthead"><span></span><span>{% translate "Curriculum Vitae" %}</span></p>
+    <p class="row masthead"><span></span><span>{% if cv.theme_kind == "portfolio" %}{% translate "Portfolio" %}{% else %}{% translate "Curriculum Vitae" %}{% endif %}</span></p>
 
     {% if contact %}
       <section class="block personal-information">

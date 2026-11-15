@@ -28,7 +28,12 @@ EUROPASS = Theme(
     # labelled "Europass import", and the same word for both left people unable to tell them
     # apart. The name stays "europass", because stored documents record it (postulo/postulo#911).
     label=_("Europass layout"),
-    templates={ThemeKind.CV: "postulo_templates/europass/cv.html"},
+    # The portfolio is drawn by the same page: Postulo puts its projects first, and the
+    # masthead says which of the two it is.
+    templates={
+        ThemeKind.CV: "postulo_templates/europass/cv.html",
+        ThemeKind.PORTFOLIO: "postulo_templates/europass/cv.html",
+    },
     provider=PROVIDER,
     # Fluid: a 45 mm column of labels and the rest for the content, margins in millimetres
     # and nothing measured against A4's 210. Every paper in the tests keeps it so.
@@ -36,6 +41,20 @@ EUROPASS = Theme(
     # The scripts the shipped font draws, by ISO 15924. A document in another script is set
     # in the server's fonts instead, and Postulo leaves this one out (postulo/postulo#343).
     font_scripts={"assets/fonts/Arimo-Regular.woff2": ("Latn", "Grek", "Cyrl")},
+)
+
+
+#: A CV an applicant tracking system reads cleanly: one column, real headings, no text in
+#: pictures, system fonts. Fluid, with a margin and nothing else measured in millimetres.
+ATS = Theme(
+    name="ats",
+    label=_("Applicant tracking"),
+    templates={
+        ThemeKind.CV: "postulo_templates/ats/cv.html",
+        ThemeKind.PORTFOLIO: "postulo_templates/ats/portfolio.html",
+    },
+    provider=PROVIDER,
+    papers=("any",),
 )
 
 
@@ -47,8 +66,9 @@ class Templates:
     kind = "feature"
     label = _("Document templates")
     description = _(
-        "More themes to set a CV in, beside Postulo's own: a CV laid out as the Europass CV "
-        "is. Switched off, the themes are no longer offered, and a document set in one of "
-        "them is drawn in the plain theme until it is switched on again."
+        "More themes to set a CV or a portfolio in, beside Postulo's own: one a hiring "
+        "system reads cleanly and one laid out as the Europass CV is. Switched off, the "
+        "themes are no longer offered, and a document set in one of them is drawn in the "
+        "plain theme until it is switched on again."
     )
-    themes = (EUROPASS,)
+    themes = (EUROPASS, ATS)

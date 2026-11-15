@@ -1,0 +1,13 @@
+{% extends "documents/themes/base_cv.html" %}
+{% comment %}
+  A CV an applicant tracking system reads cleanly: one column, real headings (the name an
+  `<h1>`, each section an `<h2>`, each job a `<h3>`), black on white, system fonts, no table
+  and no float, nothing as a picture that is a word. The markup and the order are Postulo's
+  own, so what a parser reads out of the file is what the document says, in the order it
+  says it. Its stylesheet is `ats/styles.css`, shared with the portfolio.
+
+  The photograph is never drawn, whatever the CV chose: it carries nothing a machine can
+  read, and many employers who use such a system ask applicants not to send one.
+{% endcomment %}
+{% block page_styles %}{% include "postulo_templates/ats/styles.css" %}{% endblock %}
+{% block photo_styles %}{% endblock %}

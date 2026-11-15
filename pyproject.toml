@@ -46,6 +46,7 @@ dev = [
     # `main` holds the morning CI runs: a template proved against tomorrow's core goes green
     # here and breaks on the instance it ships to.
     "postulo @ git+https://source.tiagoagueda.com/postulo/postulo.git@v0.5.0",
+    "pypdf>=7.1.0",
     "pytest>=8.3",
     "pytest-django>=4.14",
     "ruff>=0.16",

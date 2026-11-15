@@ -1,0 +1,36 @@
+      /* One column, one font, real headings, no table, no float and no text in a picture:
+         what an applicant tracking system reads cleanly. The page is made of the document's
+         own order, so the text comes out of the PDF in the order it is read. */
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", "Noto Sans", "Noto Sans Ethiopic", "Noto Naskh Arabic", sans-serif;
+        font-size: 10.5pt;
+        line-height: 1.4;
+      }
+      /* Urdu is set in Nastaliq and Arabic stays in Naskh (#1054). */
+      body:lang(ur) {
+        font-family: "Noto Nastaliq Urdu", "Helvetica Neue", Helvetica, Arial, "Noto Sans", "Noto Sans Ethiopic", "Noto Naskh Arabic", sans-serif;
+        line-height: 2;
+      }
+      @page { margin: 18mm; }
+      * { box-sizing: border-box; }
+      body { margin: 0; color: #000; overflow-wrap: anywhere; }
+      h1 { margin: 0 0 2px; font-size: 18pt; }
+      h2 { margin: 0 0 6px; padding-bottom: 2px; font-size: 11.5pt; border-bottom: 1px solid #000; break-after: avoid; }
+      h3 { margin: 0; font-size: inherit; font-weight: bold; break-after: avoid; }
+      p { margin: 0; }
+      ul { margin: 4px 0 0; padding-inline-start: 18px; }
+      li { margin-bottom: 2px; }
+      .headline { font-size: 11pt; }
+      .details { margin-top: 4px; }
+      .summary { margin: 10px 0; }
+      .block { margin-top: 14px; }
+      /* A person's dates are a line of their own under the title, not a column beside it. */
+      .entry, .piece { margin-bottom: 10px; break-inside: avoid; }
+      .entry-head, .piece-head { display: block; }
+      .dates { font-style: italic; }
+      .summary-line { margin-top: 3px; }
+      .places, .background { list-style: none; padding-inline-start: 0; }
+      .places .org, .places .where { display: block; }
+      .where { color: #000; }
+      /* A photograph is a picture an ATS cannot read and many employers ask not to see. */
+      .photo { display: none; }
