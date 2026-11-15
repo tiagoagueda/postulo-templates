@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-31 00:04+0000\n"
+"PO-Revision-Date: 2026-11-15 20:09+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Bengali <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/bn/>\n"
 "Language: bn\n"
@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/postulo_templates/plugin.py
 msgid "Applicant tracking"
-msgstr ""
+msgstr "আবেদনকারী ট্র্যাকিং"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Curriculum Vitae"
@@ -34,15 +34,16 @@ msgstr "EQF স্তর %(level)s"
 
 #: src/postulo_templates/plugin.py
 msgid "Europass layout"
-msgstr ""
+msgstr "Europass বিন্যাস"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Levels: Common European Framework of Reference for Languages"
 msgstr "স্তর: ভাষার জন্য অভিন্ন ইউরোপীয় রেফারেন্স কাঠামো"
 
 #: src/postulo_templates/plugin.py
+#, fuzzy
 msgid "More themes to set a CV or a portfolio in, beside Postulo's own: one a hiring system reads cleanly and one laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr ""
+msgstr "CV বা পোর্টফোলিও সাজানোর জন্য Postulo-র নিজস্ব থিমের পাশাপাশি আরও থিম: একটি যা নিয়োগ ব্যবস্থা পরিষ্কারভাবে পড়তে পারে এবং একটি Europass CV-র মতো সাজানো। বন্ধ থাকলে থিমগুলো আর দেওয়া হয় না, এবং এদের কোনোটিতে সাজানো নথি আবার চালু না হওয়া পর্যন্ত সাদামাটা থিমে আঁকা হয়।"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Mother tongue(s)"
@@ -62,7 +63,7 @@ msgstr "ব্যক্তিগত বিবৃতি"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Portfolio"
-msgstr ""
+msgstr "পোর্টফোলিও"
 
 #: src/postulo_templates/plugin.py
 msgid "Postulo Templates"

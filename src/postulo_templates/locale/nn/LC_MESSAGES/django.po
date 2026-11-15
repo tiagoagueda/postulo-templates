@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-25 04:04+0000\n"
+"PO-Revision-Date: 2026-11-15 20:11+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Norwegian Nynorsk <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/nn/>\n"
 "Language: nn\n"
@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/postulo_templates/plugin.py
 msgid "Applicant tracking"
-msgstr ""
+msgstr "Søkjarsporing"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Curriculum Vitae"
@@ -34,7 +34,7 @@ msgstr "EQF-nivå %(level)s"
 
 #: src/postulo_templates/plugin.py
 msgid "Europass layout"
-msgstr ""
+msgstr "Europass-oppsett"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Levels: Common European Framework of Reference for Languages"
@@ -42,7 +42,7 @@ msgstr "Nivå: Det felles europeiske rammeverket for språk"
 
 #: src/postulo_templates/plugin.py
 msgid "More themes to set a CV or a portfolio in, beside Postulo's own: one a hiring system reads cleanly and one laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr ""
+msgstr "Fleire tema å setje opp eit CV eller ei portefølje i, ved sida av Postulos eigne: eitt som eit rekrutteringssystem les utan problem, og eitt lagt opp som Europass-CV-en. Når dei er slått av, blir ikkje temaa tilbodne lenger, og eit dokument sett opp i eitt av dei blir teikna i det vanlege temaet til dei blir slåtte på att."
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Mother tongue(s)"
@@ -62,7 +62,7 @@ msgstr "Personleg presentasjon"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Portfolio"
-msgstr ""
+msgstr "Portefølje"
 
 #: src/postulo_templates/plugin.py
 msgid "Postulo Templates"

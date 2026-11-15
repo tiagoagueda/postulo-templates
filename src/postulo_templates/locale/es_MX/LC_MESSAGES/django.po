@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-22 22:07+0000\n"
+"PO-Revision-Date: 2026-11-15 20:10+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Spanish (Mexico) <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/es_MX/>\n"
 "Language: es_MX\n"
@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/postulo_templates/plugin.py
 msgid "Applicant tracking"
-msgstr ""
+msgstr "Seguimiento de candidatos"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Curriculum Vitae"
@@ -34,7 +34,7 @@ msgstr "Nivel %(level)s del MEC"
 
 #: src/postulo_templates/plugin.py
 msgid "Europass layout"
-msgstr ""
+msgstr "Diseño Europass"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Levels: Common European Framework of Reference for Languages"
@@ -42,7 +42,7 @@ msgstr "Niveles: Marco común europeo de referencia para las lenguas"
 
 #: src/postulo_templates/plugin.py
 msgid "More themes to set a CV or a portfolio in, beside Postulo's own: one a hiring system reads cleanly and one laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr ""
+msgstr "Más temas para componer un CV o un portafolio, además de los propios de Postulo: uno que un sistema de reclutamiento lee sin problemas y otro con el diseño del CV Europass. Si se desactivan, los temas ya no se ofrecen, y un documento compuesto con uno de ellos se dibuja con el tema simple hasta que se vuelvan a activar."
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Mother tongue(s)"
@@ -62,7 +62,7 @@ msgstr "Presentación personal"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Portfolio"
-msgstr ""
+msgstr "Portafolio"
 
 #: src/postulo_templates/plugin.py
 msgid "Postulo Templates"

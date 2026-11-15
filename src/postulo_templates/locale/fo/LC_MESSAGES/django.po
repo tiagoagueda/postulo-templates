@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-11-14 10:48+0000\n"
+"PO-Revision-Date: 2026-11-15 20:11+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Faroese <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/fo/>\n"
 "Language: fo\n"
@@ -16,8 +16,9 @@ msgstr ""
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_templates/plugin.py
+#, fuzzy
 msgid "Applicant tracking"
-msgstr ""
+msgstr "Umsóknarfylgjan"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Curriculum Vitae"
@@ -34,7 +35,7 @@ msgstr "EQF-støði %(level)s"
 
 #: src/postulo_templates/plugin.py
 msgid "Europass layout"
-msgstr ""
+msgstr "Europass-uppstilling"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 #, fuzzy
@@ -42,8 +43,9 @@ msgid "Levels: Common European Framework of Reference for Languages"
 msgstr "Stig: Felags evropeiska karmurin fyri mál"
 
 #: src/postulo_templates/plugin.py
+#, fuzzy
 msgid "More themes to set a CV or a portfolio in, beside Postulo's own: one a hiring system reads cleanly and one laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr ""
+msgstr "Fleiri tema at seta ein CV ella eina verkmappu í, afturat sjálvum Postulo: eitt, sum eitt mannagongdarskipan les reint, og eitt uppsett sum Europass CV. Sløkt verða temuni ikki longur boðin, og eitt skjal sett í einum teirra verður tekna í einfalda temanum, til tey verða tendrað aftur."
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Mother tongue(s)"
@@ -64,7 +66,7 @@ msgstr "Persónlig frágreiðing"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Portfolio"
-msgstr ""
+msgstr "Verkmappa"
 
 #: src/postulo_templates/plugin.py
 msgid "Postulo Templates"

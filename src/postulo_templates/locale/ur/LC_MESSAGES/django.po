@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-10-31 00:04+0000\n"
+"PO-Revision-Date: 2026-11-15 20:11+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Urdu <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/ur/>\n"
 "Language: ur\n"
@@ -16,8 +16,9 @@ msgstr ""
 "X-Generator: postulo-messages\n"
 
 #: src/postulo_templates/plugin.py
+#, fuzzy
 msgid "Applicant tracking"
-msgstr ""
+msgstr "درخواستوں کا سراغ"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Curriculum Vitae"
@@ -34,15 +35,16 @@ msgstr "EQF سطح %(level)s"
 
 #: src/postulo_templates/plugin.py
 msgid "Europass layout"
-msgstr ""
+msgstr "Europass لے آؤٹ"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Levels: Common European Framework of Reference for Languages"
 msgstr "سطحیں: زبانوں کے لیے مشترکہ یورپی حوالہ جاتی فریم ورک"
 
 #: src/postulo_templates/plugin.py
+#, fuzzy
 msgid "More themes to set a CV or a portfolio in, beside Postulo's own: one a hiring system reads cleanly and one laid out as the Europass CV is. Switched off, the themes are no longer offered, and a document set in one of them is drawn in the plain theme until it is switched on again."
-msgstr ""
+msgstr "سی وی یا پورٹ فولیو ترتیب دینے کے لیے Postulo کے اپنے تھیمز کے علاوہ مزید تھیمز: ایک جسے بھرتی کا نظام صاف پڑھتا ہے اور ایک جو Europass سی وی کی طرح ترتیب دیا گیا ہے۔ بند ہونے پر تھیمز پیش نہیں کیے جاتے، اور ان میں سے کسی میں ترتیب دیا گیا دستاویز دوبارہ آن ہونے تک سادہ تھیم میں بنایا جاتا ہے۔"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Mother tongue(s)"
@@ -62,7 +64,7 @@ msgstr "ذاتی بیان"
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Portfolio"
-msgstr ""
+msgstr "پورٹ فولیو"
 
 #: src/postulo_templates/plugin.py
 msgid "Postulo Templates"
