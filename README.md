@@ -126,4 +126,7 @@ with the change, their slots empty.
 
 ## Licence
 
-AGPL-3.0-or-later; see `LICENSE` and `NOTICE`.
+AGPL-3.0-or-later; see `LICENSE` and `NOTICE`. The `europass` theme is drawn after the
+Europass CV template, © European Union, 2002-2015, reused under CC BY 4.0 with the layout
+redrawn and changed as `NOTICE` says; Europass's logo and marks are not licensed and
+not used, and the theme is not endorsed by Europass.

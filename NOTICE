@@ -2,11 +2,28 @@ postulo-templates
 Copyright (C) 2026 Tiago Agueda
 Licensed under the GNU Affero General Public License, version 3 or later (see LICENSE).
 
-The europass theme reproduces the layout of the Europass CV template (Word, 2013-2019),
-© European Union, 2002-2015, published by Cedefop at https://europass.cedefop.europa.eu and
-reused under the European Commission's reuse policy (Decision 2011/833/EU). The layout is
-redrawn in HTML and CSS; no file, text or image of the template is included.
+Europass layout theme
+---------------------
+The europass theme is drawn after the layout of the Europass CV template (Word, 2013-2019),
+© European Union, 2002-2015, published by Cedefop at https://europass.cedefop.europa.eu.
+Content owned by the European Union is licensed under the Creative Commons Attribution 4.0
+International licence (CC BY 4.0, https://creativecommons.org/licenses/by/4.0/), as the
+European Union's legal notice states (https://european-union.europa.eu/legal-notice_en):
+reuse is allowed, provided appropriate credit is given and changes are indicated.
+
+Source: the Europass CV template, © European Union, 2002-2015 | europass.cedefop.europa.eu.
+Licence: CC BY 4.0.
+Changes: the layout was redrawn from scratch as HTML and CSS templates for Postulo, set in
+Arimo instead of Arial, with contact icons drawn for this plugin, a portfolio and a letter
+the original does not have, right-to-left support, and without the language grid, the "Job
+applied for" row, the logo and the footer. No file, text or image of the template is
+included; the words the theme prints are in this plugin's own catalogues.
+
+Not covered, and not used: the legal notice excludes logos and names from the licence
+("logos and names ... are excluded from the Commission's reuse policy and are not licensed
+to you"). The plugin ships no Europass or European Union logo, emblem or flag. The word
+"Europass" appears only to say which layout the theme follows ("Europass layout").
 
 This plugin is not affiliated with, endorsed by or sponsored by Europass, Cedefop or the
-European Commission. "Europass" names the format the theme follows, and nothing more. The
-plugin ships no Europass logo.
+European Commission. The europass theme is inspired by the Europass CV and is not the
+Europass CV.
