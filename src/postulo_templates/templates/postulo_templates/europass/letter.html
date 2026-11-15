@@ -1,0 +1,40 @@
+{% extends "documents/themes/base_letter.html" %}
+{% load theme_assets %}
+{% comment %}
+  The letter that goes with the Europass CV: the same typeface (Arimo, shipped with the
+  plugin, which has Arial's metrics), the same blues, the sender set as the CV sets its name
+  and opened by the same thin rule ending in a square. It stands alone too: the sender's
+  details open it, whether or not a CV travels beside it. It adds no word of its own, so
+  there is nothing here for a translator; the date and the recipient arrive already written
+  in the letter's language.
+
+  Fluid: a margin in millimetres and nothing else measured against the paper.
+{% endcomment %}
+{% block page_styles %}
+      {% theme_asset "assets/fonts/Arimo-Regular.woff2" family="Arimo" weight="400" %}
+      body {
+        font-family: Arimo, Arial, "Liberation Sans", Helvetica, "Noto Sans", "Noto Sans Ethiopic", "Noto Naskh Arabic", sans-serif;
+        font-size: 10pt;
+        line-height: 1.5;
+      }
+      /* Urdu is set in Nastaliq and Arabic stays in Naskh (#1054). */
+      body:lang(ur) {
+        font-family: "Noto Nastaliq Urdu", Arimo, Arial, "Liberation Sans", "Noto Sans", "Noto Sans Ethiopic", "Noto Naskh Arabic", sans-serif;
+        line-height: 2;
+      }
+      @page { margin: 22mm 18mm; }
+      * { box-sizing: border-box; }
+      body { margin: 0; color: #3f3a38; overflow-wrap: anywhere; }
+      p { margin: 0; }
+      /* The rule that opens a section of the CV, ending in a square at the far side: a
+         border and an empty box, nothing here is text. */
+      .sender { position: relative; margin-bottom: 9mm; padding-bottom: 4mm; border-bottom: 1px solid #1593cb; }
+      .sender::after { content: ""; position: absolute; right: 0; bottom: -3px; width: 6px; height: 6px; background: #1593cb; }
+      [dir="rtl"] .sender::after { right: auto; left: 0; }
+      .name { font-size: 13pt; font-weight: normal; color: #0e4194; }
+      .details { margin-top: 1mm; font-size: 9pt; color: #1593cb; }
+      .recipient { margin-bottom: 6mm; }
+      .date { margin-bottom: 6mm; color: #0e4194; }
+      .subject { font-size: inherit; font-weight: normal; text-transform: uppercase; color: #0e4194; margin: 0 0 6mm; }
+      .body p { margin-bottom: 3.5mm; }
+{% endblock %}

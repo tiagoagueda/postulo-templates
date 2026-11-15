@@ -46,8 +46,8 @@ again. Nothing is deleted, and the same holds if the plugin is removed.
 
 | Theme | Sets | Paper | What it is for |
 | --- | --- | --- | --- |
-| `ats` | CV, Portfolio | Fluid | A CV a hiring system's parser reads cleanly: one column, real headings, no text in pictures. For applications sent through an online form. |
-| `europass` | CV, Portfolio | Fluid | A CV laid out as the Europass CV is, for applications in Europe that ask for one or where the format is familiar. |
+| `ats` | CV, Portfolio, Letter | Fluid | A CV a hiring system's parser reads cleanly: one column, real headings, no text in pictures. For applications sent through an online form. |
+| `europass` | CV, Portfolio, Letter | Fluid | A CV laid out as the Europass CV is, for applications in Europe that ask for one or where the format is familiar. |
 
 **Paper.** Every theme says which papers it prints on, and the picker offers a document no
 other. *Fluid* means every paper Postulo has (A4 and US Letter, each upright or on its side);
@@ -64,7 +64,8 @@ comes out in the order it is read, which a test checks by extracting it.
 
 What it leaves out on purpose: the **photograph**, even where the CV has one (a parser
 cannot read it and many employers who use one ask applicants not to send it), and any
-colour, icon or ornament. A portfolio in this theme is the same page with the work first.
+colour, icon or ornament. A portfolio in this theme is the same page with the work first, and its letter is the same
+type with the sender at the top.
 
 ### Europass layout
 
@@ -73,7 +74,8 @@ right-aligned in dark blue, the content beside it, each section opened by its na
 thin blue rule ending in a square, Arial throughout (the plugin carries Arimo, which has
 Arial's metrics; see `ASSETS.md`). Each entry's dates sit in the label column, level with its
 title. A portfolio in this theme is drawn by the same page, headed *Portfolio*, with its
-projects first as Postulo orders them.
+projects first as Postulo orders them. Its letter is set in the same typeface and blues, the
+sender opened by the same rule ending in a square.
 
 What it prints is what Postulo gives a theme: the contact details the CV chose (each on its
 own line, behind a small icon), the photograph if the CV has one, the personal statement,

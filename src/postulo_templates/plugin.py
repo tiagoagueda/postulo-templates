@@ -33,6 +33,7 @@ EUROPASS = Theme(
     templates={
         ThemeKind.CV: "postulo_templates/europass/cv.html",
         ThemeKind.PORTFOLIO: "postulo_templates/europass/cv.html",
+        ThemeKind.LETTER: "postulo_templates/europass/letter.html",
     },
     provider=PROVIDER,
     # Fluid: a 45 mm column of labels and the rest for the content, margins in millimetres
@@ -52,6 +53,7 @@ ATS = Theme(
     templates={
         ThemeKind.CV: "postulo_templates/ats/cv.html",
         ThemeKind.PORTFOLIO: "postulo_templates/ats/portfolio.html",
+        ThemeKind.LETTER: "postulo_templates/ats/letter.html",
     },
     provider=PROVIDER,
     papers=("any",),

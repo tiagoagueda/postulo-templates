@@ -1,0 +1,32 @@
+{% extends "documents/themes/base_letter.html" %}
+{% comment %}
+  The letter that goes with the `ats` CV: the same family, so what is sent together looks
+  like one set. Plain text in the document's own order, black on white, system fonts, real
+  headings, and nothing drawn: a letter is uploaded through the same forms as a CV and is
+  read by the same parsers. It stands alone too: the sender's details open it, whether or
+  not a CV travels beside it. It adds no word of its own, so there is nothing here for a
+  translator.
+{% endcomment %}
+{% block page_styles %}
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", "Noto Sans", "Noto Sans Ethiopic", "Noto Naskh Arabic", sans-serif;
+        font-size: 10.5pt;
+        line-height: 1.5;
+      }
+      /* Urdu is set in Nastaliq and Arabic stays in Naskh (#1054). */
+      body:lang(ur) {
+        font-family: "Noto Nastaliq Urdu", "Helvetica Neue", Helvetica, Arial, "Noto Sans", "Noto Sans Ethiopic", "Noto Naskh Arabic", sans-serif;
+        line-height: 2;
+      }
+      @page { margin: 22mm; }
+      * { box-sizing: border-box; }
+      body { margin: 0; color: #000; overflow-wrap: anywhere; }
+      p { margin: 0; }
+      .sender { margin-bottom: 20px; }
+      .name { font-weight: bold; font-size: 13pt; }
+      .details { margin-top: 3px; }
+      .recipient { margin-bottom: 14px; }
+      .date { margin-bottom: 14px; }
+      .subject { font-size: inherit; font-weight: bold; margin: 0 0 14px; }
+      .body p { margin-bottom: 10px; }
+{% endblock %}
