@@ -5,7 +5,7 @@ description = "The official document templates for Postulo: CV themes that sit b
 readme = "README.md"
 requires-python = ">=3.12.4"
 license = "AGPL-3.0-or-later"
-authors = [{ name = "Tiago Agueda" }]
+authors = [{ name = "Postulo contributors" }]
 keywords = ["postulo", "plugin", "cv", "europass", "templates"]
 classifiers = [
     "Development Status :: 3 - Alpha",
