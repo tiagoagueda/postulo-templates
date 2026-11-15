@@ -33,6 +33,9 @@ EUROPASS = Theme(
     # Fluid: a 45 mm column of labels and the rest for the content, margins in millimetres
     # and nothing measured against A4's 210. Every paper in the tests keeps it so.
     papers=("any",),
+    # The scripts the shipped font draws, by ISO 15924. A document in another script is set
+    # in the server's fonts instead, and Postulo leaves this one out (postulo/postulo#343).
+    font_scripts={"assets/fonts/Arimo-Regular.woff2": ("Latn", "Grek", "Cyrl")},
 )
 
 

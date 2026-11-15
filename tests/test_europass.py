@@ -154,9 +154,11 @@ def test_no_cefr_note_where_no_language_has_a_level(person):
 def test_the_icons_are_hidden_and_nothing_is_written_by_css(cv):
     html = render_cv_html(cv)
 
+    # Postulo's sanitiser drops attributes it does not know from an SVG, so the picture is
+    # hidden by the element around it.
     icons = re.findall(r"<svg[^>]*>", html)
     assert icons, "the contact lines drew no icon"
-    assert all('aria-hidden="true"' in tag for tag in icons)
+    assert html.count('<span class="icon" aria-hidden="true"><svg') == len(icons)
     contents = re.findall(r'content:\s*("[^"]*")', html)
     assert set(contents) <= {'""', '" / "'}, contents
 
