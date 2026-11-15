@@ -113,7 +113,8 @@ def test_the_plugin_offers_the_theme_for_a_cv_and_names_itself():
     theme = themes.find("europass")
     assert theme is not None, "the entry point did not register the theme"
     assert theme.sets(themes.Kind.CV)
-    assert ("europass", "Europass, from Postulo Templates") in themes.choices_for(themes.Kind.CV)
+    wanted = ("europass", "Europass layout, from Postulo Templates")
+    assert wanted in themes.choices_for(themes.Kind.CV)
 
 
 def test_it_does_not_offer_a_kind_it_was_never_taught():

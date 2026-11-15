@@ -31,9 +31,8 @@ msgid "EQF level %(level)s"
 msgstr "Kiwango cha EQF %(level)s"
 
 #: src/postulo_templates/plugin.py
-#, fuzzy
-msgid "Europass"
-msgstr "Umoja wa Ulaya"
+msgid "Europass layout"
+msgstr ""
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 #, fuzzy

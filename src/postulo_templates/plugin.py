@@ -18,13 +18,16 @@ from postulo.plugins.api import Theme, ThemeKind
 
 from . import __version__
 
-#: Who provides these themes, as the picker says it: "Europass, from Postulo Templates".
+#: Who provides these themes, as the picker says it: "Europass layout, from Postulo Templates".
 PROVIDER = _("Postulo Templates")
 
 #: A CV laid out as the Europass CV is: a column of labels and dates, the content beside it.
 EUROPASS = Theme(
     name="europass",
-    label=_("Europass"),
+    # "Europass layout", not plain "Europass": core ships an importer that reads Europass files,
+    # labelled "Europass import", and the same word for both left people unable to tell them
+    # apart. The name stays "europass", because stored documents record it (postulo/postulo#911).
+    label=_("Europass layout"),
     templates={ThemeKind.CV: "postulo_templates/europass/cv.html"},
     provider=PROVIDER,
 )

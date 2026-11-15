@@ -29,8 +29,8 @@ msgid "EQF level %(level)s"
 msgstr "EKS %(level)s lygis"
 
 #: src/postulo_templates/plugin.py
-msgid "Europass"
-msgstr "Europass"
+msgid "Europass layout"
+msgstr ""
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Levels: Common European Framework of Reference for Languages"

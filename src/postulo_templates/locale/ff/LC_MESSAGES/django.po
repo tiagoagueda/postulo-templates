@@ -29,7 +29,7 @@ msgid "EQF level %(level)s"
 msgstr ""
 
 #: src/postulo_templates/plugin.py
-msgid "Europass"
+msgid "Europass layout"
 msgstr ""
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html

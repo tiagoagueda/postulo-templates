@@ -2,7 +2,7 @@
 
 The official document templates for [Postulo](https://source.tiagoagueda.com/postulo/postulo),
 as a plugin: install it and its themes appear in the theme picker of a CV, beside Postulo's
-own *Plain* and *Classic*, each named with this plugin as its provider ("Europass, from
+own *Plain* and *Classic*, each named with this plugin as its provider ("Europass layout, from
 Postulo Templates").
 
 A theme shapes the PDF and the preview. The plain-text, OpenDocument and Word exports, and
@@ -48,7 +48,7 @@ again. Nothing is deleted, and the same holds if the plugin is removed.
 | --- | --- | --- |
 | `europass` | CV | A CV laid out as the Europass CV is, for applications in Europe that ask for one or where the format is familiar. |
 
-### Europass
+### Europass layout
 
 Drawn from the Europass CV Word template (2013–2019): a narrow column of labels and dates,
 right-aligned in dark blue, the content beside it, each section opened by its name and a
