@@ -44,9 +44,15 @@ again. Nothing is deleted, and the same holds if the plugin is removed.
 
 ## The themes
 
-| Theme | Sets | What it is for |
-| --- | --- | --- |
-| `europass` | CV | A CV laid out as the Europass CV is, for applications in Europe that ask for one or where the format is familiar. |
+| Theme | Sets | Paper | What it is for |
+| --- | --- | --- | --- |
+| `europass` | CV | Fluid | A CV laid out as the Europass CV is, for applications in Europe that ask for one or where the format is familiar. |
+
+**Paper.** Every theme says which papers it prints on, and the picker offers a document no
+other. *Fluid* means every paper Postulo has (A4 and US Letter, each upright or on its side);
+a theme drawn for one sheet is *restricted* and names the papers it keeps to, with the reason,
+in this table. A fluid theme is drawn on every paper by the tests, and a restricted one on
+each it names, and fails if anything runs past the page.
 
 ### Europass layout
 
@@ -70,7 +76,9 @@ What it leaves out of the Word template, on purpose:
   nothing where no level was stated.
 - **The "Job applied for" row.** A CV's headline goes under the name.
 
-It is laid out right to left for a right-to-left language, and it is A4.
+It is laid out right to left for a right-to-left language, and it is fluid: the label column
+is 45 mm and the content takes the rest, so it holds on US Letter and on a page turned on
+its side.
 
 ## Translations
 

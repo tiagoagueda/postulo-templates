@@ -37,11 +37,11 @@
     {% if document_keywords %}<meta name="keywords" content="{{ document_keywords }}">{% endif %}
     {% if document_scrub %}<meta name="{{ scrub_meta }}" content="{{ document_scrub }}">{% endif %}
     <style{% if csp_nonce %} nonce="{{ csp_nonce }}"{% endif %}>
-      /* The Word template's page: A4, its side margins, and the page number where its
-         footer had one. The number is a counter, drawn and not written, which is right
+      /* The Word template's margins and the page number where its footer had one. The size
+         is not written here: Postulo writes the page rule for the paper that was chosen,
+         and this theme prints on all of them. The number is a counter, drawn and not written, which is right
          for it: nobody needs "1 / 2" in the text a machine reads back. */
       @page {
-        size: A4;
         margin: 15mm 12mm 18mm 15mm;
         @bottom-right {
           content: counter(page) " / " counter(pages);

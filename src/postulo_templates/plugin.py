@@ -30,6 +30,9 @@ EUROPASS = Theme(
     label=_("Europass layout"),
     templates={ThemeKind.CV: "postulo_templates/europass/cv.html"},
     provider=PROVIDER,
+    # Fluid: a 45 mm column of labels and the rest for the content, margins in millimetres
+    # and nothing measured against A4's 210. Every paper in the tests keeps it so.
+    papers=("any",),
 )
 
 

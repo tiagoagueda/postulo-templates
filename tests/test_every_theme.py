@@ -12,6 +12,7 @@ import datetime as dt
 import itertools
 import re
 from ctypes.util import find_library
+from pathlib import Path
 
 import pytest
 from postulo.documents import paper as papers
@@ -25,6 +26,8 @@ from postulo.resume.models import Experience
 from postulo_templates.plugin import Templates
 
 pytestmark = [pytest.mark.django_db, pytest.mark.usefixtures("installed")]
+
+REPO = Path(__file__).resolve().parents[1]
 
 #: Each theme the plugin declares, with each kind it sets: what a picker would offer.
 EVERY = [(theme.name, kind) for theme in Templates.themes for kind in theme.templates]
@@ -115,6 +118,33 @@ def test_every_theme_carries_what_the_export_says_about_itself(person, name, kin
     person.profile.export_strip_metadata = True
     person.profile.save()
     assert f'<meta name="{SCRUB_META}" content="producer">' in draw(person, name, kind)
+
+
+@pytest.mark.parametrize(("name", "kind"), EVERY)
+def test_a_theme_declares_its_paper(name, kind):
+    """Nothing declared would be read as A4 portrait only, which is a decision to make out
+    loud here and not one to inherit (postulo/postulo#344)."""
+    theme = themes.find(name)
+    assert theme.papers, f"{name} does not say which paper it prints on"
+    assert papers.declared(theme, kind)
+
+
+def test_the_readme_says_what_each_theme_declares():
+    """The table's *Paper* column is what the theme declares: *Fluid*, or the papers named."""
+    readme = (REPO / "README.md").read_text(encoding="utf-8")
+    for theme in Templates.themes:
+        row = next(line for line in readme.splitlines() if line.startswith(f"| `{theme.name}` |"))
+        cells = [cell.strip() for cell in row.strip("|").split("|")]
+        sets, paper = cells[1], cells[2]
+        assert sets.split(", ") == [
+            str(kind.label) for kind in themes.Kind if kind in theme.templates
+        ]
+        for kind in theme.templates:
+            declared = papers.declared(theme, kind)
+            if declared == papers.EVERY:
+                assert paper == "Fluid", f"{theme.name}: the README does not say it is fluid"
+            else:
+                assert paper == papers.listed(declared), f"{theme.name}: the README's paper"
 
 
 # ------------------------------------------------------------------------- the PDF
