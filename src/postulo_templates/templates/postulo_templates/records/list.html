@@ -42,13 +42,16 @@
   <h1><bdi>{{ title }}</bdi></h1>
   <div class="meta">
     <div><strong><bdi>{{ person }}</bdi></strong></div>
+    {# Translators: Printed in the header of an exported list: the date and time it was produced. #}
     <div>{% blocktranslate with produced=produced_at|date:"DATETIME_FORMAT" %}Produced on {{ produced }}{% endblocktranslate %}</div>
     <div>
       {% if truncated %}
+        {# Translators: Printed in the header of an exported list that was cut short: how many rows are shown out of how many there are. #}
         {% blocktranslate trimmed with count=count total=total %}
           The first {{ count }} of {{ total }} rows; the rest are in the table.
         {% endblocktranslate %}
       {% else %}
+        {# Translators: Printed in the header of an exported list: how many rows it holds. #}
         {% blocktranslate trimmed count total=total %}
           {{ total }} row
         {% plural %}
@@ -57,6 +60,7 @@
       {% endif %}
     </div>
     {% if filters %}
+      {# Translators: Printed in the header of an exported list, before the filters that narrowed it (for example status: interview). #}
       <div>{% translate "Narrowed by" %}:
         {% for filter in filters %}<bdi>{{ filter.label }}{% if filter.value %}: {{ filter.value }}{% endif %}</bdi>{% if not forloop.last %}; {% endif %}{% endfor %}
       </div>
@@ -79,6 +83,7 @@
       </dl>
     </section>
   {% empty %}
+    {# Translators: Said in place of an exported list when no row matches the filters. #}
     <p>{% translate "Nothing matches." %}</p>
   {% endfor %}
 </body>

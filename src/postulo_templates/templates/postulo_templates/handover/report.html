@@ -54,28 +54,42 @@
   </style>
 </head>
 <body>
+  {# Translators: The title at the top of the report handed to an employment service or adviser. #}
   <h1>{% translate "Job search report" %}</h1>
 
   <dl class="who">
+    {# Translators: Label before the name of the person the report is about, in the details block at the top. #}
     <dt>{% translate "Name" %}</dt><dd><bdi>{{ person }}</bdi></dd>
+    {# Translators: Label before the name of the employment office the report is for, in the details block at the top. #}
     {% if office %}<dt>{% translate "Office" %}</dt><dd><bdi>{{ office }}</bdi></dd>{% endif %}
+    {# Translators: Label before the name of the person's adviser at the employment office, in the details block at the top. #}
     {% if adviser %}<dt>{% translate "Adviser" %}</dt><dd><bdi>{{ adviser }}</bdi></dd>{% endif %}
+    {# Translators: Label before the dates the report covers (for example March 2026), in the details block at the top. #}
     <dt>{% translate "Period" %}</dt>
     <dd>{{ period.label }} ({{ period.start|date:"DATE_FORMAT" }} – {{ period.end|date:"DATE_FORMAT" }})</dd>
+    {# Translators: Label before the date and time the report was produced, in the details block at the top. #}
     <dt>{% translate "Produced" %}</dt><dd>{{ produced_at|date:"DATETIME_FORMAT" }}</dd>
   </dl>
 
+  {# Translators: Heading above the table that lists every application sent in the period, oldest first. #}
   <h2>{% translate "Every application, in order" %}</h2>
   {% if evidence %}
     <table>
       <thead>
         <tr>
+          {# Translators: Table heading of the first column: the row number, abbreviated. Keep it very short; it sits above a one- or two-digit number. #}
           <th class="number">{% translate "No." %}</th>
+          {# Translators: Table heading: the date the application was sent. #}
           <th>{% translate "Applied on" %}</th>
+          {# Translators: Table heading: the employer the application was sent to. #}
           <th>{% translate "Company" %}</th>
+          {# Translators: Table heading: the job title applied for. #}
           <th>{% translate "Role" %}</th>
+          {# Translators: Table heading: where the job was found, for example a job board or a contact. #}
           <th>{% translate "Found via" %}</th>
+          {# Translators: Table heading: where the application stands, for example sent, interview or rejected. #}
           <th>{% translate "Status" %}</th>
+          {# Translators: Table heading: the date of the latest event on that application. #}
           <th>{% translate "Last activity" %}</th>
         </tr>
       </thead>
@@ -94,27 +108,41 @@
       </tbody>
     </table>
   {% else %}
+    {# Translators: Said in place of the table when no application was sent in the period. #}
     <p>{% translate "Nothing was sent in this period." %}</p>
   {% endif %}
+  {# Translators: A note under the table of applications. #}
   <p class="note">{% translate "Applications drafted but never sent are not counted." %}</p>
 
+  {# Translators: Heading above a short list of totals for the period (applications sent, replies, interviews, offers). #}
   <h2>{% translate "In figures" %}</h2>
   <ul class="figures">
+    {# Translators: Label of a total: how many applications were sent in the period. The number comes before it. #}
     <li><strong>{{ total }}</strong> {% translate "Applications sent" %}</li>
+    {# Translators: Label of a total: the average number of applications sent per week. The number comes before it. #}
     <li><strong>{{ cadence.per_week|floatformat:1 }}</strong> {% translate "A week, on average" %}</li>
+    {# Translators: Label of a total: how many weeks of the period had no application sent. The number comes before it. #}
     <li><strong>{{ cadence.empty_weeks }}</strong> {% translate "Weeks with none" %}</li>
+    {# Translators: Label of a total: how many employers replied for the first time in the period. The number comes before it. #}
     <li><strong>{{ happened.replies }}</strong> {% translate "First replies" %}</li>
+    {# Translators: Label of a total: how many interviews the person attended in the period. The number comes before it. #}
     <li><strong>{{ happened.interviews }}</strong> {% translate "Interviews attended" %}</li>
+    {# Translators: Label of a total: how many job offers were received in the period. The number comes before it. #}
     <li><strong>{{ happened.offers }}</strong> {% translate "Offers" %}</li>
+    {# Translators: Label of a total: how many applications were turned down in the period. The number comes before it. #}
     <li><strong>{{ happened.rejections }}</strong> {% translate "Rejections" %}</li>
     {% if office %}
+      {# Translators: Label of a total: how many applications were sent through the public employment service. The number comes before it. #}
       <li><strong>{{ through_service }}</strong> {% translate "Through the public employment service" %}</li>
+      {# Translators: Label of a total: how many appointments at the employment office the person attended. The number comes before it. #}
       <li><strong>{{ appointments_attended }}</strong> {% translate "Appointments attended" %}</li>
     {% endif %}
   </ul>
 
   <div class="signed">
+    {# Translators: Caption under an empty line on which the person writes the date by hand, at the end of the report. #}
     <div><div class="line"></div><div class="label">{% translate "Date" %}</div></div>
+    {# Translators: Caption under an empty line on which the person signs by hand, at the end of the report. #}
     <div><div class="line"></div><div class="label">{% translate "Signature" %}</div></div>
   </div>
 </body>

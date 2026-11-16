@@ -135,3 +135,22 @@ def test_dates_follow_the_documents_language(person):
 
     assert "mars 2019" in french
     assert "March 2019" not in french
+
+
+#: Templates whose words stand on a document the translator cannot see: each string says
+#: where it is printed (postulo/postulo-templates#10).
+EXPLAINED = ("handover/report.html", "records/list.html", "europass/cv.html")
+
+
+def test_every_string_says_where_on_the_document_it_is_printed(tool):
+    """A translator reads a string in Weblate, not on a CV or a report: without a comment
+    "Role" is a job title or a part in a play, and "Date" is a day or a fruit."""
+    from postulo.core.messages_tool import extract_template
+
+    missing = []
+    for name in EXPLAINED:
+        path = REPO / "src" / "postulo_templates" / "templates" / "postulo_templates" / name
+        for message in extract_template(path.read_text(encoding="utf-8"), name):
+            if not message.comments:
+                missing.append(f"{name}: {message.msgid}")
+    assert missing == []

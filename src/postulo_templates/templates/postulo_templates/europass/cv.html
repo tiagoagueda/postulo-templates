@@ -130,11 +130,20 @@
     </style>
   </head>
   <body>
-    <p class="row masthead"><span></span><span>{% if cv.theme_kind == "portfolio" %}{% translate "Portfolio" %}{% else %}{% translate "Curriculum Vitae" %}{% endif %}</span></p>
+    <p class="row masthead"><span></span><span>
+      {% if cv.theme_kind == "portfolio" %}
+        {# Translators: Label of the portfolio, the document type, printed on a CV-like page that lists the person's projects first. #}
+        {% translate "Portfolio" %}
+      {% else %}
+        {# Translators: The title at the top of the CV. #}
+        {% translate "Curriculum Vitae" %}
+      {% endif %}
+    </span></p>
 
     {% if contact %}
       <section class="block personal-information">
         <div class="row heading">
+          {# Translators: Heading of the section with the person's contact details, in a CV laid out as the Europass CV is. #}
           <p class="aside label">{% translate "Personal information" %}</p>
           <h1 class="main">{% if contact.form_of_address or contact.pronouns %}{% if contact.form_of_address %}<bdi class="form-of-address">{{ contact.form_of_address }}</bdi> {% endif %}<bdi>{{ contact.name }}</bdi>{% if contact.pronouns %} <span class="pronouns">(<bdi>{{ contact.pronouns }}</bdi>)</span>{% endif %}{% else %}{{ contact.name }}{% endif %}</h1>
         </div>
@@ -163,6 +172,7 @@
     {% if cv.summary %}
       <section class="block">
         <div class="row">
+          {# Translators: Heading of the section holding the person's summary of themselves. #}
           <p class="aside label">{% translate "Personal statement" %}</p>
           <p class="main statement">{{ cv.summary|linebreaksbr }}</p>
         </div>
@@ -191,17 +201,20 @@
              "only on the first of these" without a variable to hold it. {% endcomment %}
           {% for entry in section.items %}{% if entry.item.proficiency == 'native' %}
             <div class="row">
+              {# Translators: Label before the person's first language(s) in the languages section; the (s) is for one or several. #}
               {% ifchanged %}<p class="aside">{% translate "Mother tongue(s)" %}</p>{% else %}<p class="aside"></p>{% endifchanged %}
               <p class="main"><bdi>{{ entry.item.shown_name|default:entry.item.name }}</bdi></p>
             </div>
           {% endif %}{% endfor %}
           {% for entry in section.items %}{% if entry.item.proficiency != 'native' %}
             <div class="row">
+              {# Translators: Label before the other languages the person speaks; the (s) is for one or several. #}
               {% ifchanged %}<p class="aside">{% translate "Other language(s)" %}</p>{% else %}<p class="aside"></p>{% endifchanged %}
               <p class="main language"><bdi>{{ entry.item.shown_name|default:entry.item.name }}</bdi><span>{% if entry.item.proficiency %}{{ entry.item.get_proficiency_display }}{% endif %}</span></p>
             </div>
           {% endif %}{% endfor %}
           {% for entry in section.items %}{% if entry.item.proficiency and entry.item.proficiency != 'native' %}{% ifchanged %}
+            {# Translators: A line under the languages table explaining that its levels (A1 to C2) follow the CEFR. #}
             <div class="row"><span></span><p class="main cefr">{% translate "Levels: Common European Framework of Reference for Languages" %}</p></div>
           {% endifchanged %}{% endif %}{% endfor %}
 
@@ -288,6 +301,7 @@
              dates in the label column, level with the title, as Europass sets them. {% endcomment %}
           {% for entry in section.items %}
             <article class="row entry">
+              {# Translators: Printed after a dash where a job or study has no end date: for example March 2019 - present. #}
               <p class="aside dates">{% if entry.item.start_date %}{{ entry.item.start_date|date:"YEAR_MONTH_FORMAT" }}{% endif %}{% if entry.item.start_date and entry.item.end_date %} – {% endif %}{% if entry.item.end_date %}{{ entry.item.end_date|date:"YEAR_MONTH_FORMAT" }}{% elif entry.item.start_date %} – {% translate "present" %}{% endif %}</p>
               <div class="main">
                 {% if section.kind == 'experience' %}
@@ -296,6 +310,7 @@
                 {% elif section.kind == 'education' %}
                   <div class="entry-title">
                     <h3 class="role">{{ entry.item.qualification }}</h3>
+                    {# Translators: A level of the European Qualifications Framework (1 to 8) printed beside a qualification, for example EQF level 6. #}
                     {% if cv.show_eqf_level and entry.item.eqf_level %}<p class="eqf">{% blocktranslate with level=entry.item.eqf_level %}EQF level {{ level }}{% endblocktranslate %}</p>{% endif %}
                   </div>
                   <p class="org"><bdi>{{ entry.item.institution }}</bdi>{% if entry.item.location %}, <bdi>{{ entry.item.location }}</bdi>{% endif %}</p>
@@ -316,6 +331,7 @@
     {% endfor %}
 
     {% if cv.references_on_request %}
+      {# Translators: A closing line of the CV. #}
       <div class="row closing"><span></span><p class="main">{% translate "References are available on request." %}</p></div>
     {% endif %}
   </body>
