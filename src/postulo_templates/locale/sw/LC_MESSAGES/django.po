@@ -184,6 +184,10 @@ msgstr "Templates za Postulo"
 msgid "present"
 msgstr "kwa sasa"
 
+#: src/postulo_templates/plugin.py
+msgid "Printed calendar"
+msgstr ""
+
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Produced"
 msgstr ""

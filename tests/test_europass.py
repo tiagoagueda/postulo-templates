@@ -68,7 +68,7 @@ def cv(person):
 
 def text_of(html: str) -> str:
     """The words in the markup, in order, without the tags or the stylesheet."""
-    body = html.split("<body>", 1)[1]
+    body = re.split(r"<body[^>]*>", html, maxsplit=1)[1]
     return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", body)).strip()
 
 

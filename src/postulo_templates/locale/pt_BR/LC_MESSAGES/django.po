@@ -176,6 +176,10 @@ msgstr "Postulo Templates"
 msgid "present"
 msgstr "atual"
 
+#: src/postulo_templates/plugin.py
+msgid "Printed calendar"
+msgstr ""
+
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Produced"
 msgstr ""

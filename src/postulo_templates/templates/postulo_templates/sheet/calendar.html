@@ -1,0 +1,63 @@
+{% extends "documents/themes/base_calendar.html" %}
+{% comment %}
+  The Calendar printed for a black-and-white printer (postulo/postulo#6): the month with every
+  entry of each day, the week and the day as days one under another, and the agenda as the
+  coming days with what is overdue. One template for the four views, which Postulo's base
+  already tells apart.
+
+  **Nothing is told apart by colour.** The kind of an entry is said in words, which Postulo
+  writes before the title, and also drawn as the rule at the entry's start: solid, dashed,
+  dotted, double, thick and thin. An entry that is over (a reminder done, an interview
+  cancelled, a deadline met) is struck through, set in grey and marked with a cross, and the
+  base says it in words too, so a page that comes out grey loses nothing.
+
+  The week starts on the day the document's language's region starts it, and the weekday and
+  month names are written by Postulo in the document's language: this adds no word of its own.
+  A month wants landscape, which Postulo chooses for it; every measure here is a fraction of
+  the page or a length that is the same on any paper.
+{% endcomment %}
+{% block page_styles %}
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", "Noto Sans", "Noto Sans Ethiopic", "Noto Naskh Arabic", sans-serif;
+        font-size: 9pt;
+        line-height: 1.35;
+      }
+      /* Urdu is set in Nastaliq and Arabic stays in Naskh (#1054). */
+      body:lang(ur) {
+        font-family: "Noto Nastaliq Urdu", "Helvetica Neue", Helvetica, Arial, "Noto Sans", "Noto Sans Ethiopic", "Noto Naskh Arabic", sans-serif;
+        line-height: 2;
+      }
+      @page { margin: 12mm; @bottom-center { content: counter(page) " / " counter(pages); font-size: 7.5pt; } }
+      * { box-sizing: border-box; }
+      body { margin: 0; color: #000; overflow-wrap: anywhere; }
+      h1 { margin: 0 0 2mm; font-size: 15pt; }
+      h2 { margin: 0 0 1.5mm; padding-bottom: 1mm; font-size: 10pt; border-bottom: 0.6pt solid #000; break-after: avoid; }
+      .meta { margin: 0 0 4mm; font-size: 8pt; }
+      table.month { inline-size: 100%; border-collapse: collapse; table-layout: fixed; font-size: 7.5pt; }
+      table.month th { padding: 1mm 1.2mm; text-align: start; font-size: 7.5pt; text-transform: uppercase; border: 0.6pt solid #000; background: #e6e6e6; }
+      table.month td { padding: 1mm 1.2mm; vertical-align: top; border: 0.5pt solid #000; block-size: 24mm; }
+      table.month tr { break-inside: avoid; }
+      table.month td.outside { background: #f0f0f0; color: #555; }
+      table.month td.today .number { font-weight: bold; text-decoration: underline; }
+      .number { margin-bottom: 0.8mm; font-size: 8.5pt; font-weight: bold; }
+      .entry { margin-bottom: 0.8mm; padding-inline-start: 1.2mm; border-inline-start: 2pt solid #000; }
+      .kind-interview { border-inline-start: 3pt solid #000; }
+      .kind-reminder { border-inline-start: 2pt dashed #000; }
+      .kind-deadline { border-inline-start: 3pt double #000; }
+      .kind-closing { border-inline-start: 2pt dotted #000; }
+      .kind-answer { border-inline-start: 1pt solid #000; }
+      .kind-appointment { border-inline-start: 4pt groove #000; }
+      .day { margin-bottom: 4mm; break-inside: avoid; }
+      .day ul { margin: 0; padding: 0; list-style: none; }
+      .day li { display: flex; gap: 3mm; padding-block: 0.8mm; padding-inline-start: 1.5mm; }
+      .day .time { flex: none; inline-size: 24mm; font-variant-numeric: tabular-nums; }
+      .day .what { min-inline-size: 0; }
+      .said { font-weight: bold; }
+      .detail { color: #333; }
+      .over { color: #555; }
+      .over .title { text-decoration: line-through; }
+      .over::before { content: "\2715\00a0"; font-weight: bold; }
+      .today h2 { text-decoration: underline; }
+      .nothing { margin: 0; color: #333; }
+      .note { margin-top: 3mm; font-size: 7.5pt; }
+{% endblock %}

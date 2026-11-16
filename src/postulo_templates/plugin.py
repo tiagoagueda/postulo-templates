@@ -84,6 +84,18 @@ RECORDS = Theme(
     papers=("any",),
 )
 
+#: The Calendar printed for a black-and-white printer (#6): the month, the week, the day and
+#: the agenda, each kind of entry told apart in words and by the shape of its rule, and a
+#: finished one struck through and crossed. Apart from the CV families, since a calendar is
+#: not handed over with a CV.
+SHEET = Theme(
+    name="sheet",
+    label=_("Printed calendar"),
+    templates={ThemeKind.CALENDAR: "postulo_templates/sheet/calendar.html"},
+    provider=PROVIDER,
+    papers=("any",),
+)
+
 
 class Templates:
     """Postulo's official document templates."""
@@ -98,4 +110,4 @@ class Templates:
         "themes are no longer offered, and a document set in one of them is drawn in the "
         "plain theme until it is switched on again."
     )
-    themes = (EUROPASS, ATS, HANDOVER, RECORDS)
+    themes = (EUROPASS, ATS, HANDOVER, RECORDS, SHEET)
