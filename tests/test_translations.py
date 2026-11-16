@@ -93,9 +93,17 @@ def tool():
     return messages_tool
 
 
-def translated(tool, code: str) -> dict[str, str]:
+def translated(tool, code: str, theme: str | None = None) -> dict[str, str]:
+    """What the catalogue has translated; with `theme`, only the strings written in that
+    theme's own templates. A theme that extends Postulo's page also prints the page's words
+    (*Period*, *Produced on*), and those are the core's to translate, not this plugin's."""
     catalogue = tool.parse(tool.po_path(code).read_text(encoding="utf-8"))
-    return {m.msgid: m.msgstr[0] for m in catalogue.messages.values() if m.translated}
+    return {
+        m.msgid: m.msgstr[0]
+        for m in catalogue.messages.values()
+        if m.translated
+        and (theme is None or any(f"/postulo_templates/{theme}/" in ref for ref in m.references))
+    }
 
 
 @pytest.mark.django_db
@@ -116,7 +124,7 @@ def test_a_word_with_a_translation_is_drawn_translated(person, tool, code, name,
     shown = text_of(html)
     own = {
         msgid: msgstr
-        for msgid, msgstr in translated(tool, code).items()
+        for msgid, msgstr in translated(tool, code, name).items()
         if msgstr != msgid and not msgid.startswith("More themes") and len(msgid) < 80
     }
     drawn_in_english = [
