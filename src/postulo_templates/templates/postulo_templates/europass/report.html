@@ -1,0 +1,44 @@
+{% extends "documents/themes/base_report.html" %}
+{% load theme_assets %}
+{% comment %}
+  The job-search report in the Europass-layout family: the typeface (Arimo, shipped with the
+  plugin, which has Arial's metrics) and the blues of the CV, each section opened by the thin
+  rule that ends in a square. It adds no word of its own, so there is nothing here for a
+  translator.
+
+  Fluid: a margin in millimetres and nothing else measured against the paper.
+{% endcomment %}
+{% block page_styles %}
+      {% theme_asset "assets/fonts/Arimo-Regular.woff2" family="Arimo" weight="400" %}
+      body {
+        font-family: Arimo, Arial, "Liberation Sans", Helvetica, "Noto Sans", "Noto Sans Ethiopic", "Noto Naskh Arabic", sans-serif;
+        font-size: 9.5pt;
+        line-height: 1.45;
+      }
+      /* Urdu is set in Nastaliq and Arabic stays in Naskh (#1054). */
+      body:lang(ur) {
+        font-family: "Noto Nastaliq Urdu", Arimo, Arial, "Liberation Sans", "Noto Sans", "Noto Sans Ethiopic", "Noto Naskh Arabic", sans-serif;
+        line-height: 2;
+      }
+      @page { margin: 18mm; @bottom-center { content: counter(page) " / " counter(pages); font-size: 8pt; color: #1593cb; } }
+      * { box-sizing: border-box; }
+      body { margin: 0; color: #3f3a38; overflow-wrap: anywhere; }
+      h1 { margin: 0 0 2mm; font-size: 18pt; font-weight: normal; color: #0e4194; }
+      h2 { position: relative; margin: 8mm 0 3mm; padding-bottom: 1.5mm; font-size: 11pt; font-weight: normal; text-transform: uppercase; color: #0e4194; border-bottom: 1px solid #1593cb; break-after: avoid; }
+      h2::after { content: ""; position: absolute; inset-inline-end: 0; bottom: -3px; inline-size: 6px; block-size: 6px; background: #1593cb; }
+      .meta { margin: 0 0 4mm; font-size: 9pt; color: #1593cb; }
+      .figures { display: flex; flex-wrap: wrap; gap: 6mm; margin-bottom: 3mm; }
+      .figure { min-inline-size: 28mm; }
+      .figure .value { font-size: 14pt; color: #0e4194; }
+      .figure .name { font-size: 8pt; }
+      table { inline-size: 100%; border-collapse: collapse; font-size: 8.5pt; }
+      th, td { text-align: start; padding: 1.3mm 1.8mm; vertical-align: top; }
+      thead { display: table-header-group; }
+      thead th { font-size: 8pt; font-weight: normal; text-transform: uppercase; color: #0e4194; border-bottom: 1px solid #1593cb; }
+      tbody tr { border-bottom: 0.3pt solid #c9d6e8; break-inside: avoid; }
+      .weeks .when { inline-size: 34mm; white-space: nowrap; }
+      .count { inline-size: 18mm; text-align: end; white-space: nowrap; }
+      .bar-track { block-size: 2.4mm; background: #e4edf7; }
+      .bar { block-size: 100%; background: #1593cb; }
+      .note, .part { font-size: 8pt; margin-top: 1.5mm; color: #6b6663; }
+{% endblock %}

@@ -34,6 +34,7 @@ EUROPASS = Theme(
         ThemeKind.CV: "postulo_templates/europass/cv.html",
         ThemeKind.PORTFOLIO: "postulo_templates/europass/cv.html",
         ThemeKind.LETTER: "postulo_templates/europass/letter.html",
+        ThemeKind.REPORT: "postulo_templates/europass/report.html",
     },
     provider=PROVIDER,
     # Fluid: a 45 mm column of labels and the rest for the content, margins in millimetres
@@ -54,7 +55,19 @@ ATS = Theme(
         ThemeKind.CV: "postulo_templates/ats/cv.html",
         ThemeKind.PORTFOLIO: "postulo_templates/ats/portfolio.html",
         ThemeKind.LETTER: "postulo_templates/ats/letter.html",
+        ThemeKind.REPORT: "postulo_templates/ats/report.html",
     },
+    provider=PROVIDER,
+    papers=("any",),
+)
+
+#: The job-search report made for handing to an employment service (#4): the person, the
+#: office and the adviser first, every application of the period in a table, then a line for
+#: the date and one for a signature. It sets the report and nothing else.
+HANDOVER = Theme(
+    name="handover",
+    label=_("Hand-over report"),
+    templates={ThemeKind.REPORT: "postulo_templates/handover/report.html"},
     provider=PROVIDER,
     papers=("any",),
 )
@@ -73,4 +86,4 @@ class Templates:
         "themes are no longer offered, and a document set in one of them is drawn in the "
         "plain theme until it is switched on again."
     )
-    themes = (EUROPASS, ATS)
+    themes = (EUROPASS, ATS, HANDOVER)

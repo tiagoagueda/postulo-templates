@@ -45,7 +45,7 @@ dev = [
     # The Postulo these templates are proved against, named by its release tag rather than whatever
     # `main` holds the morning CI runs: a template proved against tomorrow's core goes green
     # here and breaks on the instance it ships to.
-    "postulo @ git+https://source.tiagoagueda.com/postulo/postulo.git@v0.5.0",
+    "postulo @ git+https://source.tiagoagueda.com/postulo/postulo.git@47b22e4f4649e0d607946574bd28e1014a4a1df0",
     "pypdf>=7.1.0",
     "pytest>=8.3",
     "pytest-django>=4.14",

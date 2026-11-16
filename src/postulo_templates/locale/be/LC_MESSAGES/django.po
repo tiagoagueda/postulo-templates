@@ -15,13 +15,45 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: postulo-messages\n"
 
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "A week, on average"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Adviser"
+msgstr ""
+
 #: src/postulo_templates/plugin.py
 msgid "Applicant tracking"
 msgstr "Адсочванне кандыдатаў"
 
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Applications drafted but never sent are not counted."
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Applications sent"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Applied on"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Appointments attended"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Company"
+msgstr ""
+
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Curriculum Vitae"
 msgstr "Curriculum Vitae"
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Date"
+msgstr ""
 
 #: src/postulo_templates/plugin.py
 msgid "Document templates"
@@ -35,6 +67,38 @@ msgstr "Узровень ЕРК %(level)s"
 #: src/postulo_templates/plugin.py
 msgid "Europass layout"
 msgstr "Макет Europass"
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Every application, in order"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "First replies"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Found via"
+msgstr ""
+
+#: src/postulo_templates/plugin.py
+msgid "Hand-over report"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "In figures"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Interviews attended"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Job search report"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Last activity"
+msgstr ""
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 #, fuzzy
@@ -50,9 +114,33 @@ msgstr "Іншыя тэмы для афармлення рэзюмэ або па
 msgid "Mother tongue(s)"
 msgstr "Родная мова (мовы)"
 
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Name"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "No."
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Nothing was sent in this period."
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Offers"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Office"
+msgstr ""
+
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Other language(s)"
 msgstr "Іншая мова (мовы)"
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Period"
+msgstr ""
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "Personal information"
@@ -75,6 +163,34 @@ msgstr "Шаблоны Postulo"
 msgid "present"
 msgstr "цяпер"
 
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Produced"
+msgstr ""
+
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "References are available on request."
 msgstr "Рэкамендацыі даступныя па запыце."
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Rejections"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Role"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Signature"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Status"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Through the public employment service"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Weeks with none"
+msgstr ""

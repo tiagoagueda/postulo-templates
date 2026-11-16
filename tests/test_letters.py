@@ -17,7 +17,8 @@ from .test_every_theme import draw
 pytestmark = [pytest.mark.django_db, pytest.mark.usefixtures("installed")]
 
 PACKAGE = Path(__file__).resolve().parents[1] / "src" / "postulo_templates"
-FAMILIES = [theme.name for theme in Templates.themes]
+#: The themes that set a CV: a report-only theme is not a family and has no letter.
+FAMILIES = [theme.name for theme in Templates.themes if theme.sets(themes.Kind.CV)]
 
 MONTHS_IN_FRENCH = (
     "janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre"
@@ -27,7 +28,8 @@ MONTHS_IN_FRENCH = (
 def test_every_cv_theme_has_a_letter_under_the_same_name():
     """What is sent together looks like one set (postulo/postulo#132)."""
     for theme in Templates.themes:
-        assert theme.sets(themes.Kind.CV)
+        if not theme.sets(themes.Kind.CV):
+            continue
         assert theme.sets(themes.Kind.LETTER), f"{theme.name} has a CV and no letter"
 
 

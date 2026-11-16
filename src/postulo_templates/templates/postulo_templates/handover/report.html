@@ -1,0 +1,121 @@
+{% load i18n %}<!DOCTYPE html>
+{% comment %}
+  The job-search report made for handing to an employment service, not for keeping: the
+  person, the office and the adviser first, then every application of the period as a table
+  the reader can check, then a line for the date and a signature. The figures are a short
+  list after the evidence, since an office asks for the evidence and the figures only
+  summarise it.
+
+  Not a theme over `base_report.html`, which opens with the figures: this one needs the table
+  first, so it draws the whole page. Everything it is handed is plain values (the contract in
+  Postulo's *Writing a plugin*), and it lays out all of it and hides nothing: choosing what a
+  report holds belongs on the report's page.
+
+  Fluid: every measure is a fraction of the page or a length that is the same on any paper,
+  so it prints in portrait and in landscape alike, and the table's columns share the width
+  rather than being measured against A4. Every side is logical, for a right-to-left document.
+{% endcomment %}
+<html lang="{{ document_language }}" dir="{{ document_direction|default:'ltr' }}">
+<head>
+  <meta charset="utf-8">
+  <title>{{ document_title }}</title>
+  <style{% if csp_nonce %} nonce="{{ csp_nonce }}"{% endif %}>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", "Noto Sans", "Noto Sans Ethiopic", "Noto Naskh Arabic", sans-serif;
+      font-size: 10pt;
+      line-height: 1.4;
+    }
+    /* Urdu is set in Nastaliq and Arabic stays in Naskh (#1054). */
+    body:lang(ur) {
+      font-family: "Noto Nastaliq Urdu", "Helvetica Neue", Helvetica, Arial, "Noto Sans", "Noto Sans Ethiopic", "Noto Naskh Arabic", sans-serif;
+      line-height: 2;
+    }
+    @page { margin: 16mm; @bottom-center { content: counter(page) " / " counter(pages); font-size: 8pt; } }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #000; overflow-wrap: anywhere; }
+    h1 { margin: 0 0 3mm; font-size: 17pt; }
+    h2 { margin: 7mm 0 2mm; font-size: 11pt; break-after: avoid; }
+    dl.who { display: grid; grid-template-columns: max-content 1fr; gap: 1mm 5mm; margin: 0; }
+    dl.who dt { font-weight: bold; }
+    dl.who dd { margin: 0; }
+    table { inline-size: 100%; border-collapse: collapse; font-size: 8.5pt; }
+    th, td { text-align: start; padding: 1.3mm 1.6mm; vertical-align: top; border: 0.5pt solid #000; }
+    thead { display: table-header-group; }
+    thead th { background: #e6e6e6; font-size: 8pt; }
+    tr { break-inside: avoid; }
+    td.number, th.number { inline-size: 9mm; text-align: end; }
+    .figures { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 1mm 8mm; }
+    .figures strong { font-size: 11pt; }
+    .note { margin: 2mm 0 0; font-size: 8pt; }
+    .signed { display: flex; gap: 12mm; margin-top: 12mm; break-inside: avoid; }
+    .signed div { flex: 1; min-inline-size: 0; }
+    .signed .line { block-size: 14mm; border-bottom: 0.6pt solid #000; }
+    .signed .label { margin-top: 1mm; font-size: 8pt; }
+  </style>
+</head>
+<body>
+  <h1>{% translate "Job search report" %}</h1>
+
+  <dl class="who">
+    <dt>{% translate "Name" %}</dt><dd><bdi>{{ person }}</bdi></dd>
+    {% if office %}<dt>{% translate "Office" %}</dt><dd><bdi>{{ office }}</bdi></dd>{% endif %}
+    {% if adviser %}<dt>{% translate "Adviser" %}</dt><dd><bdi>{{ adviser }}</bdi></dd>{% endif %}
+    <dt>{% translate "Period" %}</dt>
+    <dd>{{ period.label }} ({{ period.start|date:"DATE_FORMAT" }} – {{ period.end|date:"DATE_FORMAT" }})</dd>
+    <dt>{% translate "Produced" %}</dt><dd>{{ produced_at|date:"DATETIME_FORMAT" }}</dd>
+  </dl>
+
+  <h2>{% translate "Every application, in order" %}</h2>
+  {% if evidence %}
+    <table>
+      <thead>
+        <tr>
+          <th class="number">{% translate "No." %}</th>
+          <th>{% translate "Applied on" %}</th>
+          <th>{% translate "Company" %}</th>
+          <th>{% translate "Role" %}</th>
+          <th>{% translate "Found via" %}</th>
+          <th>{% translate "Status" %}</th>
+          <th>{% translate "Last activity" %}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in evidence %}
+          <tr>
+            <td class="number">{{ forloop.counter }}</td>
+            <td>{{ row.applied_on|date:"DATE_FORMAT" }}</td>
+            <td><bdi>{{ row.company }}</bdi></td>
+            <td><bdi>{{ row.role }}</bdi>{% if row.url %}<div class="note"><bdi>{{ row.url }}</bdi></div>{% endif %}</td>
+            <td>{% if row.source %}<bdi>{{ row.source }}</bdi>{% else %}—{% endif %}</td>
+            <td>{{ row.status }}</td>
+            <td>{% if row.last_activity_on %}{{ row.last_activity_on|date:"DATE_FORMAT" }}{% else %}—{% endif %}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>{% translate "Nothing was sent in this period." %}</p>
+  {% endif %}
+  <p class="note">{% translate "Applications drafted but never sent are not counted." %}</p>
+
+  <h2>{% translate "In figures" %}</h2>
+  <ul class="figures">
+    <li><strong>{{ total }}</strong> {% translate "Applications sent" %}</li>
+    <li><strong>{{ cadence.per_week|floatformat:1 }}</strong> {% translate "A week, on average" %}</li>
+    <li><strong>{{ cadence.empty_weeks }}</strong> {% translate "Weeks with none" %}</li>
+    <li><strong>{{ happened.replies }}</strong> {% translate "First replies" %}</li>
+    <li><strong>{{ happened.interviews }}</strong> {% translate "Interviews attended" %}</li>
+    <li><strong>{{ happened.offers }}</strong> {% translate "Offers" %}</li>
+    <li><strong>{{ happened.rejections }}</strong> {% translate "Rejections" %}</li>
+    {% if office %}
+      <li><strong>{{ through_service }}</strong> {% translate "Through the public employment service" %}</li>
+      <li><strong>{{ appointments_attended }}</strong> {% translate "Appointments attended" %}</li>
+    {% endif %}
+  </ul>
+
+  <div class="signed">
+    <div><div class="line"></div><div class="label">{% translate "Date" %}</div></div>
+    <div><div class="line"></div><div class="label">{% translate "Signature" %}</div></div>
+  </div>
+</body>
+</html>

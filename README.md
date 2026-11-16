@@ -46,8 +46,9 @@ again. Nothing is deleted, and the same holds if the plugin is removed.
 
 | Theme | Sets | Paper | What it is for |
 | --- | --- | --- | --- |
-| `ats` | CV, Portfolio, Letter | Fluid | A CV a hiring system's parser reads cleanly: one column, real headings, no text in pictures. For applications sent through an online form. |
-| `europass` | CV, Portfolio, Letter | Fluid | A CV laid out as the Europass CV is, for applications in Europe that ask for one or where the format is familiar. |
+| `ats` | CV, Portfolio, Letter, Report | Fluid | A CV a hiring system's parser reads cleanly: one column, real headings, no text in pictures. For applications sent through an online form. |
+| `europass` | CV, Portfolio, Letter, Report | Fluid | A CV laid out as the Europass CV is, for applications in Europe that ask for one or where the format is familiar. |
+| `handover` | Report | Fluid | The job-search report made for handing to an employment service: the person, the office and the adviser first, every application of the period in a numbered table, then the figures and a line each for the date and a signature. Portrait or landscape. |
 
 **Paper.** Every theme says which papers it prints on, and the picker offers a document no
 other. *Fluid* means every paper Postulo has (A4 and US Letter, each upright or on its side);

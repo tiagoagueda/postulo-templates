@@ -25,7 +25,7 @@ from postulo.resume.models import Experience
 
 from postulo_templates.plugin import Templates
 
-from .support import on_the_cv
+from .support import a_calendar, a_list, a_report, on_the_cv
 
 pytestmark = [pytest.mark.django_db, pytest.mark.usefixtures("installed")]
 
@@ -46,8 +46,19 @@ needs_pango = pytest.mark.skipif(
 )
 
 
+#: The kinds that are not a document of the person's own: a report, a list, the calendar.
+#: Postulo hands their templates plain values, and there is no row to set a theme on.
+OTHER = {
+    themes.Kind.REPORT: a_report,
+    themes.Kind.LIST: a_list,
+    themes.Kind.CALENDAR: a_calendar,
+}
+
+
 def draw(person, name: str, kind: str, *, language: str = "en-GB", **options) -> str:
     """The HTML of one document of ``kind`` set in the theme ``name``."""
+    if kind in OTHER:
+        return OTHER[kind](person, name, language=language, paper=options.get("paper", ""))
     if kind == themes.Kind.LETTER:
         letter = CoverLetter.objects.create(
             owner=person,
@@ -111,7 +122,7 @@ def test_no_theme_asks_for_anything_outside_the_document(person, name, kind):
     assert "<link" not in html
 
 
-@pytest.mark.parametrize(("name", "kind"), EVERY)
+@pytest.mark.parametrize(("name", "kind"), [pair for pair in EVERY if pair[1] not in OTHER])
 def test_every_theme_carries_what_the_export_says_about_itself(person, name, kind):
     """The author where the properties are carried; the instruction to strip where they
     are not (postulo/postulo#878, #480)."""

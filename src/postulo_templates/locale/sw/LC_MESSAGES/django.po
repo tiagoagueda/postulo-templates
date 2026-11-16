@@ -15,14 +15,46 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: postulo-messages\n"
 
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "A week, on average"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Adviser"
+msgstr ""
+
 #: src/postulo_templates/plugin.py
 msgid "Applicant tracking"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Applications drafted but never sent are not counted."
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Applications sent"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Applied on"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Appointments attended"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Company"
 msgstr ""
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 #, fuzzy
 msgid "Curriculum Vitae"
 msgstr "Mafunzo ya Vita"
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Date"
+msgstr ""
 
 #: src/postulo_templates/plugin.py
 #, fuzzy
@@ -36,6 +68,38 @@ msgstr "Kiwango cha EQF %(level)s"
 
 #: src/postulo_templates/plugin.py
 msgid "Europass layout"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Every application, in order"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "First replies"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Found via"
+msgstr ""
+
+#: src/postulo_templates/plugin.py
+msgid "Hand-over report"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "In figures"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Interviews attended"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Job search report"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Last activity"
 msgstr ""
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
@@ -52,10 +116,34 @@ msgstr ""
 msgid "Mother tongue(s)"
 msgstr "Lugha ya mama (s)"
 
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Name"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "No."
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Nothing was sent in this period."
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Offers"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Office"
+msgstr ""
+
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 #, fuzzy
 msgid "Other language(s)"
 msgstr "Lugha nyingine (s)"
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Period"
+msgstr ""
 
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 #, fuzzy
@@ -81,7 +169,35 @@ msgstr "Templates za Postulo"
 msgid "present"
 msgstr "kwa sasa"
 
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Produced"
+msgstr ""
+
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 #, fuzzy
 msgid "References are available on request."
 msgstr "Maombi yanapatikana kwa maombi."
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Rejections"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Role"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Signature"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Status"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Through the public employment service"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Weeks with none"
+msgstr ""
