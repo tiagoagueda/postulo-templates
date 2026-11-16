@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-11-15 20:10+0000\n"
+"PO-Revision-Date: 2026-11-16 10:00+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Georgian <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/ka/>\n"
 "Language: ka\n"
@@ -20,18 +20,20 @@ msgstr ""
 #, python-format
 msgid "%(total)s row"
 msgid_plural "%(total)s rows"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(total)s მწკრივი"
+msgstr[1] "%(total)s მწკრივი"
 
 #. Label of a total: the average number of applications sent per week. The number comes before it.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
+#, fuzzy
 msgid "A week, on average"
-msgstr ""
+msgstr "საშუალოდ კვირაში"
 
 #. Label before the name of the person's adviser at the employment office, in the details block at the top.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
+#, fuzzy
 msgid "Adviser"
-msgstr ""
+msgstr "კონსულტანტი"
 
 #: src/postulo_templates/plugin.py
 msgid "Applicant tracking"
@@ -40,27 +42,27 @@ msgstr "კანდიდატების თვალყურის დე�
 #. A note under the table of applications.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Applications drafted but never sent are not counted."
-msgstr ""
+msgstr "შედგენილი, მაგრამ არასდროს გაგზავნილი განაცხადები არ ითვლება."
 
 #. Label of a total: how many applications were sent in the period. The number comes before it.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Applications sent"
-msgstr ""
+msgstr "გაგზავნილი განაცხადები"
 
 #. Table heading: the date the application was sent.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Applied on"
-msgstr ""
+msgstr "გაგზავნის თარიღი"
 
 #. Label of a total: how many appointments at the employment office the person attended. The number comes before it.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Appointments attended"
-msgstr ""
+msgstr "დასწრებული შეხვედრები"
 
 #. Table heading: the employer the application was sent to.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Company"
-msgstr ""
+msgstr "კომპანია"
 
 #. The title at the top of the CV.
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
@@ -70,7 +72,7 @@ msgstr "Curriculum Vitae"
 #. Caption under an empty line on which the person writes the date by hand, at the end of the report.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Date"
-msgstr ""
+msgstr "თარიღი"
 
 #: src/postulo_templates/plugin.py
 msgid "Document templates"
@@ -89,41 +91,43 @@ msgstr "Europass-ის განლაგება"
 #. Heading above the table that lists every application sent in the period, oldest first.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Every application, in order"
-msgstr ""
+msgstr "ყველა განაცხადი, თანმიმდევრობით"
 
 #. Label of a total: how many employers replied for the first time in the period. The number comes before it.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "First replies"
-msgstr ""
+msgstr "პირველი პასუხები"
 
 #. Table heading: where the job was found, for example a job board or a contact.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
+#, fuzzy
 msgid "Found via"
-msgstr ""
+msgstr "მოძიების წყარო"
 
 #: src/postulo_templates/plugin.py
+#, fuzzy
 msgid "Hand-over report"
-msgstr ""
+msgstr "ჩაბარების ანგარიში"
 
 #. Heading above a short list of totals for the period (applications sent, replies, interviews, offers).
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "In figures"
-msgstr ""
+msgstr "ციფრებში"
 
 #. Label of a total: how many interviews the person attended in the period. The number comes before it.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Interviews attended"
-msgstr ""
+msgstr "დასწრებული გასაუბრებები"
 
 #. The title at the top of the report handed to an employment service or adviser.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Job search report"
-msgstr ""
+msgstr "სამუშაოს ძიების ანგარიში"
 
 #. Table heading: the date of the latest event on that application.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Last activity"
-msgstr ""
+msgstr "ბოლო აქტივობა"
 
 #. A line under the languages table explaining that its levels (A1 to C2) follow the CEFR.
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
@@ -142,38 +146,40 @@ msgstr "მშობლიური ენა (ენები)"
 
 #. Label before the name of the person the report is about, in the details block at the top.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
+#, fuzzy
 msgid "Name"
-msgstr ""
+msgstr "სახელი"
 
 #. Printed in the header of an exported list, before the filters that narrowed it (for example status: interview).
 #: src/postulo_templates/templates/postulo_templates/records/list.html
 msgid "Narrowed by"
-msgstr ""
+msgstr "გაფილტრულია"
 
 #. Table heading of the first column: the row number, abbreviated. Keep it very short; it sits above a one- or two-digit number.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "No."
-msgstr ""
+msgstr "№"
 
 #. Said in place of an exported list when no row matches the filters.
 #: src/postulo_templates/templates/postulo_templates/records/list.html
 msgid "Nothing matches."
-msgstr ""
+msgstr "არაფერი ემთხვევა."
 
 #. Said in place of the table when no application was sent in the period.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Nothing was sent in this period."
-msgstr ""
+msgstr "ამ პერიოდში არაფერი გაგზავნილა."
 
 #. Label of a total: how many job offers were received in the period. The number comes before it.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
+#, fuzzy
 msgid "Offers"
-msgstr ""
+msgstr "შეთავაზებები"
 
 #. Label before the name of the employment office the report is for, in the details block at the top.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Office"
-msgstr ""
+msgstr "ოფისი"
 
 #. Label before the other languages the person speaks; the (s) is for one or several.
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
@@ -183,7 +189,7 @@ msgstr "სხვა ენა (ენები)"
 #. Label before the dates the report covers (for example March 2026), in the details block at the top.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Period"
-msgstr ""
+msgstr "პერიოდი"
 
 #. Heading of the section with the person's contact details, in a CV laid out as the Europass CV is.
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
@@ -211,23 +217,25 @@ msgid "present"
 msgstr "დღემდე"
 
 #: src/postulo_templates/plugin.py
+#, fuzzy
 msgid "Printed calendar"
-msgstr ""
+msgstr "დაბეჭდილი კალენდარი"
 
 #. Label before the date and time the report was produced, in the details block at the top.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
+#, fuzzy
 msgid "Produced"
-msgstr ""
+msgstr "შედგენილია"
 
 #. Printed in the header of an exported list: the date and time it was produced.
 #: src/postulo_templates/templates/postulo_templates/records/list.html
-#, python-format
+#, fuzzy, python-format
 msgid "Produced on %(produced)s"
-msgstr ""
+msgstr "შედგენის თარიღი: %(produced)s"
 
 #: src/postulo_templates/plugin.py
 msgid "Records list"
-msgstr ""
+msgstr "ჩანაწერების სია"
 
 #. A closing line of the CV.
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
@@ -237,35 +245,37 @@ msgstr "რეკომენდაციები ხელმისაწვ�
 #. Label of a total: how many applications were turned down in the period. The number comes before it.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Rejections"
-msgstr ""
+msgstr "უარები"
 
 #. Table heading: the job title applied for.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Role"
-msgstr ""
+msgstr "პოზიცია"
 
 #. Caption under an empty line on which the person signs by hand, at the end of the report.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Signature"
-msgstr ""
+msgstr "ხელმოწერა"
 
 #. Table heading: where the application stands, for example sent, interview or rejected.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Status"
-msgstr ""
+msgstr "სტატუსი"
 
 #. Printed in the header of an exported list that was cut short: how many rows are shown out of how many there are.
 #: src/postulo_templates/templates/postulo_templates/records/list.html
-#, python-format
+#, fuzzy, python-format
 msgid "The first %(count)s of %(total)s rows; the rest are in the table."
-msgstr ""
+msgstr "პირველი %(count)s %(total)s მწკრივიდან; დანარჩენი ცხრილშია."
 
 #. Label of a total: how many applications were sent through the public employment service. The number comes before it.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
+#, fuzzy
 msgid "Through the public employment service"
-msgstr ""
+msgstr "სახელმწიფო დასაქმების სამსახურის მეშვეობით"
 
 #. Label of a total: how many weeks of the period had no application sent. The number comes before it.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
+#, fuzzy
 msgid "Weeks with none"
-msgstr ""
+msgstr "კვირები განაცხადების გარეშე"
