@@ -890,7 +890,7 @@ wheels = [
 [[package]]
 name = "postulo"
 version = "0.5.0"
-source = { git = "https://source.tiagoagueda.com/postulo/postulo.git?rev=c21fbefb2#c21fbefb2a39526ddd7677ea513dba8e69b5dfc5" }
+source = { git = "https://source.tiagoagueda.com/postulo/postulo.git?rev=173c2700d#173c2700d1d055ef6692c634b209138d3907c290" }
 dependencies = [
     { name = "babel" },
     { name = "bibtexparser" },
@@ -937,7 +937,7 @@ dev = [
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "postulo", git = "https://source.tiagoagueda.com/postulo/postulo.git?rev=c21fbefb2" },
+    { name = "postulo", git = "https://source.tiagoagueda.com/postulo/postulo.git?rev=173c2700d" },
     { name = "pypdf", specifier = ">=7.1.0" },
     { name = "pytest", specifier = ">=8.3" },
     { name = "pytest-django", specifier = ">=4.14" },
