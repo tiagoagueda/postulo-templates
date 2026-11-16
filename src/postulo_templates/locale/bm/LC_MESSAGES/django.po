@@ -15,6 +15,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: postulo-messages\n"
 
+#: src/postulo_templates/templates/postulo_templates/records/list.html
+#, python-format
+msgid "%(total)s row"
+msgid_plural "%(total)s rows"
+msgstr[0] ""
+
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "A week, on average"
 msgstr ""
@@ -116,8 +122,16 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
+#: src/postulo_templates/templates/postulo_templates/records/list.html
+msgid "Narrowed by"
+msgstr ""
+
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "No."
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/records/list.html
+msgid "Nothing matches."
 msgstr ""
 
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
@@ -164,6 +178,15 @@ msgstr ""
 msgid "Produced"
 msgstr ""
 
+#: src/postulo_templates/templates/postulo_templates/records/list.html
+#, python-format
+msgid "Produced on %(produced)s"
+msgstr ""
+
+#: src/postulo_templates/plugin.py
+msgid "Records list"
+msgstr ""
+
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "References are available on request."
 msgstr ""
@@ -182,6 +205,11 @@ msgstr ""
 
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Status"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/records/list.html
+#, python-format
+msgid "The first %(count)s of %(total)s rows; the rest are in the table."
 msgstr ""
 
 #: src/postulo_templates/templates/postulo_templates/handover/report.html

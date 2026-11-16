@@ -1,0 +1,85 @@
+{% load i18n %}<!DOCTYPE html>
+{% comment %}
+  A list for few columns and long text, such as companies with their notes, where a table
+  reads badly: each row is a block, its first column the heading and every other column a
+  label with its text beside it, so a long note takes the width of the page instead of a
+  narrow column. Blocks do not break across pages.
+
+  Not a theme over `base_list.html`, which draws a table: this one draws the whole page. It
+  is handed plain values (the contract in Postulo's *Writing a plugin*), draws every row and
+  column it is given, and prints an empty cell as a dash, as the table does.
+
+  Fluid, and every side logical, for a right-to-left document.
+{% endcomment %}
+<html lang="{{ document_language }}" dir="{{ document_direction|default:'ltr' }}">
+<head>
+  <meta charset="utf-8">
+  <title>{{ document_title }}</title>
+  <style{% if csp_nonce %} nonce="{{ csp_nonce }}"{% endif %}>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", "Noto Sans", "Noto Sans Ethiopic", "Noto Naskh Arabic", sans-serif;
+      font-size: 10pt;
+      line-height: 1.4;
+    }
+    /* Urdu is set in Nastaliq and Arabic stays in Naskh (#1054). */
+    body:lang(ur) {
+      font-family: "Noto Nastaliq Urdu", "Helvetica Neue", Helvetica, Arial, "Noto Sans", "Noto Sans Ethiopic", "Noto Naskh Arabic", sans-serif;
+      line-height: 2;
+    }
+    @page { margin: 16mm; @bottom-center { content: counter(page) " / " counter(pages); font-size: 8pt; } }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #000; overflow-wrap: anywhere; }
+    h1 { margin: 0 0 2mm; font-size: 17pt; }
+    .meta { margin: 0 0 5mm; font-size: 9pt; }
+    .record { margin: 0 0 4mm; padding-block-end: 3mm; border-bottom: 0.4pt solid #888; break-inside: avoid; }
+    .record h2 { margin: 0 0 1.5mm; font-size: 11pt; }
+    .record dl { display: grid; grid-template-columns: 32mm minmax(0, 1fr); gap: 0.8mm 4mm; margin: 0; }
+    .record dt { font-size: 8.5pt; color: #333; }
+    .record dd { margin: 0; white-space: pre-line; }
+  </style>
+</head>
+<body>
+  <h1><bdi>{{ title }}</bdi></h1>
+  <div class="meta">
+    <div><strong><bdi>{{ person }}</bdi></strong></div>
+    <div>{% blocktranslate with produced=produced_at|date:"DATETIME_FORMAT" %}Produced on {{ produced }}{% endblocktranslate %}</div>
+    <div>
+      {% if truncated %}
+        {% blocktranslate trimmed with count=count total=total %}
+          The first {{ count }} of {{ total }} rows; the rest are in the table.
+        {% endblocktranslate %}
+      {% else %}
+        {% blocktranslate trimmed count total=total %}
+          {{ total }} row
+        {% plural %}
+          {{ total }} rows
+        {% endblocktranslate %}
+      {% endif %}
+    </div>
+    {% if filters %}
+      <div>{% translate "Narrowed by" %}:
+        {% for filter in filters %}<bdi>{{ filter.label }}{% if filter.value %}: {{ filter.value }}{% endif %}</bdi>{% if not forloop.last %}; {% endif %}{% endfor %}
+      </div>
+    {% endif %}
+    {% if sort %}<div>{{ sort.words }}</div>{% endif %}
+  </div>
+
+  {% for row in rows %}
+    <section class="record">
+      <h2><bdi>{{ row.0|default:"—" }}</bdi></h2>
+      <dl>
+        {% for cell in row %}
+          {% if not forloop.first %}
+            {% with column=columns|slice:forloop.counter|last %}
+              <dt><bdi>{{ column.label }}</bdi></dt>
+              <dd><bdi>{{ cell|default:"—" }}</bdi></dd>
+            {% endwith %}
+          {% endif %}
+        {% endfor %}
+      </dl>
+    </section>
+  {% empty %}
+    <p>{% translate "Nothing matches." %}</p>
+  {% endfor %}
+</body>
+</html>

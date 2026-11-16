@@ -35,6 +35,7 @@ EUROPASS = Theme(
         ThemeKind.PORTFOLIO: "postulo_templates/europass/cv.html",
         ThemeKind.LETTER: "postulo_templates/europass/letter.html",
         ThemeKind.REPORT: "postulo_templates/europass/report.html",
+        ThemeKind.LIST: "postulo_templates/europass/list.html",
     },
     provider=PROVIDER,
     # Fluid: a 45 mm column of labels and the rest for the content, margins in millimetres
@@ -56,6 +57,7 @@ ATS = Theme(
         ThemeKind.PORTFOLIO: "postulo_templates/ats/portfolio.html",
         ThemeKind.LETTER: "postulo_templates/ats/letter.html",
         ThemeKind.REPORT: "postulo_templates/ats/report.html",
+        ThemeKind.LIST: "postulo_templates/ats/list.html",
     },
     provider=PROVIDER,
     papers=("any",),
@@ -68,6 +70,16 @@ HANDOVER = Theme(
     name="handover",
     label=_("Hand-over report"),
     templates={ThemeKind.REPORT: "postulo_templates/handover/report.html"},
+    provider=PROVIDER,
+    papers=("any",),
+)
+
+#: A list for few columns and long text (#5): each row a block, so a note takes the width of
+#: the page instead of a narrow column. The table for every other list is in the families.
+RECORDS = Theme(
+    name="records",
+    label=_("Records list"),
+    templates={ThemeKind.LIST: "postulo_templates/records/list.html"},
     provider=PROVIDER,
     papers=("any",),
 )
@@ -86,4 +98,4 @@ class Templates:
         "themes are no longer offered, and a document set in one of them is drawn in the "
         "plain theme until it is switched on again."
     )
-    themes = (EUROPASS, ATS, HANDOVER)
+    themes = (EUROPASS, ATS, HANDOVER, RECORDS)

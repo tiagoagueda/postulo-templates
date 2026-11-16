@@ -15,6 +15,14 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
 "X-Generator: postulo-messages\n"
 
+#: src/postulo_templates/templates/postulo_templates/records/list.html
+#, python-format
+msgid "%(total)s row"
+msgid_plural "%(total)s rows"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "A week, on average"
 msgstr ""
@@ -117,8 +125,16 @@ msgstr "Limba(i) maternă(e)"
 msgid "Name"
 msgstr ""
 
+#: src/postulo_templates/templates/postulo_templates/records/list.html
+msgid "Narrowed by"
+msgstr ""
+
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "No."
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/records/list.html
+msgid "Nothing matches."
 msgstr ""
 
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
@@ -165,6 +181,15 @@ msgstr "prezent"
 msgid "Produced"
 msgstr ""
 
+#: src/postulo_templates/templates/postulo_templates/records/list.html
+#, python-format
+msgid "Produced on %(produced)s"
+msgstr ""
+
+#: src/postulo_templates/plugin.py
+msgid "Records list"
+msgstr ""
+
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "References are available on request."
 msgstr "Referințele sunt disponibile la cerere."
@@ -183,6 +208,11 @@ msgstr ""
 
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Status"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/records/list.html
+#, python-format
+msgid "The first %(count)s of %(total)s rows; the rest are in the table."
 msgstr ""
 
 #: src/postulo_templates/templates/postulo_templates/handover/report.html

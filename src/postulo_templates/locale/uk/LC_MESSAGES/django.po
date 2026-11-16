@@ -15,6 +15,14 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: postulo-messages\n"
 
+#: src/postulo_templates/templates/postulo_templates/records/list.html
+#, python-format
+msgid "%(total)s row"
+msgid_plural "%(total)s rows"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "A week, on average"
 msgstr ""
@@ -117,8 +125,16 @@ msgstr "Рідна мова (мови)"
 msgid "Name"
 msgstr ""
 
+#: src/postulo_templates/templates/postulo_templates/records/list.html
+msgid "Narrowed by"
+msgstr ""
+
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "No."
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/records/list.html
+msgid "Nothing matches."
 msgstr ""
 
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
@@ -166,6 +182,15 @@ msgstr "дотепер"
 msgid "Produced"
 msgstr ""
 
+#: src/postulo_templates/templates/postulo_templates/records/list.html
+#, python-format
+msgid "Produced on %(produced)s"
+msgstr ""
+
+#: src/postulo_templates/plugin.py
+msgid "Records list"
+msgstr ""
+
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
 msgid "References are available on request."
 msgstr "Рекомендації надаються на запит."
@@ -184,6 +209,11 @@ msgstr ""
 
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Status"
+msgstr ""
+
+#: src/postulo_templates/templates/postulo_templates/records/list.html
+#, python-format
+msgid "The first %(count)s of %(total)s rows; the rest are in the table."
 msgstr ""
 
 #: src/postulo_templates/templates/postulo_templates/handover/report.html

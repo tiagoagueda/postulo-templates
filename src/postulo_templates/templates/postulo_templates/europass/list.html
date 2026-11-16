@@ -1,0 +1,36 @@
+{% extends "documents/themes/base_list.html" %}
+{% load theme_assets %}
+{% comment %}
+  A list exported from one of Postulo's tables, in the Europass-layout family: a table with its headings repeated on
+  every page and rows that do not break across pages, the list's name, its filters in words, the
+  date and a page count. The typeface (Arimo, shipped with the plugin) and the blues of the CV. It adds no word of its own: the labels are the
+  core's, in the document's language. Fluid: a margin in millimetres, so it prints in landscape
+  as well as portrait, which a wide list wants.
+{% endcomment %}
+{% block page_styles %}
+      {% theme_asset "assets/fonts/Arimo-Regular.woff2" family="Arimo" weight="400" %}
+      body {
+        font-family: Arimo, Arial, "Liberation Sans", Helvetica, "Noto Sans", "Noto Sans Ethiopic", "Noto Naskh Arabic", sans-serif;
+        font-size: 9.5pt;
+        line-height: 1.45;
+      }
+      /* Urdu is set in Nastaliq and Arabic stays in Naskh (#1054). */
+      body:lang(ur) {
+        font-family: "Noto Nastaliq Urdu", Arimo, Arial, "Liberation Sans", "Noto Sans", "Noto Sans Ethiopic", "Noto Naskh Arabic", sans-serif;
+        line-height: 2;
+      }
+      @page { margin: 18mm; @bottom-center { content: counter(page) " / " counter(pages); font-size: 8pt; color: #1593cb; } }
+      * { box-sizing: border-box; }
+      body { margin: 0; color: #3f3a38; overflow-wrap: anywhere; }
+      h1 { margin: 0 0 2mm; font-size: 18pt; font-weight: normal; color: #0e4194; }
+      h2 { position: relative; margin: 8mm 0 3mm; padding-bottom: 1.5mm; font-size: 11pt; font-weight: normal; text-transform: uppercase; color: #0e4194; border-bottom: 1px solid #1593cb; break-after: avoid; }
+      h2::after { content: ""; position: absolute; inset-inline-end: 0; bottom: -3px; inline-size: 6px; block-size: 6px; background: #1593cb; }
+      .meta { margin: 0 0 4mm; font-size: 9pt; color: #1593cb; }
+      table { inline-size: 100%; border-collapse: collapse; font-size: 8.5pt; }
+      th, td { text-align: start; padding: 1.3mm 1.8mm; vertical-align: top; }
+      thead { display: table-header-group; }
+      thead th { font-size: 8pt; font-weight: normal; text-transform: uppercase; color: #0e4194; border-bottom: 1px solid #1593cb; }
+      tbody tr { border-bottom: 0.3pt solid #c9d6e8; break-inside: avoid; }
+      .filters { margin-top: 0.5mm; }
+      .note, .part { font-size: 8pt; margin-top: 1.5mm; color: #6b6663; }
+{% endblock %}
