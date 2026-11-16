@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postulo-templates\n"
 "Report-Msgid-Bugs-To: https://source.tiagoagueda.com/postulo/postulo-templates/issues\n"
-"PO-Revision-Date: 2026-11-15 20:10+0000\n"
+"PO-Revision-Date: 2026-11-16 10:00+0000\n"
 "Last-Translator: Tiago Águeda <tiago.agueda@tiagoagueda.com>\n"
 "Language-Team: Slovenian <https://translate.tiagoagueda.com/projects/postulo/plugin-templates/sl/>\n"
 "Language: sl\n"
@@ -20,20 +20,20 @@ msgstr ""
 #, python-format
 msgid "%(total)s row"
 msgid_plural "%(total)s rows"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%(total)s vrstica"
+msgstr[1] "%(total)s vrstici"
+msgstr[2] "%(total)s vrstice"
+msgstr[3] "%(total)s vrstic"
 
 #. Label of a total: the average number of applications sent per week. The number comes before it.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "A week, on average"
-msgstr ""
+msgstr "Na teden v povprečju"
 
 #. Label before the name of the person's adviser at the employment office, in the details block at the top.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Adviser"
-msgstr ""
+msgstr "Svetovalec"
 
 #: src/postulo_templates/plugin.py
 msgid "Applicant tracking"
@@ -42,27 +42,28 @@ msgstr "Sledenje prijavam"
 #. A note under the table of applications.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Applications drafted but never sent are not counted."
-msgstr ""
+msgstr "Prijave, ki so bile pripravljene, a nikoli oddane, se ne štejejo."
 
 #. Label of a total: how many applications were sent in the period. The number comes before it.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Applications sent"
-msgstr ""
+msgstr "Oddane prijave"
 
 #. Table heading: the date the application was sent.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Applied on"
-msgstr ""
+msgstr "Oddano dne"
 
 #. Label of a total: how many appointments at the employment office the person attended. The number comes before it.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
+#, fuzzy
 msgid "Appointments attended"
-msgstr ""
+msgstr "Opravljeni termini"
 
 #. Table heading: the employer the application was sent to.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Company"
-msgstr ""
+msgstr "Podjetje"
 
 #. The title at the top of the CV.
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
@@ -72,7 +73,7 @@ msgstr "Življenjepis"
 #. Caption under an empty line on which the person writes the date by hand, at the end of the report.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 #: src/postulo_templates/plugin.py
 msgid "Document templates"
@@ -91,41 +92,42 @@ msgstr "Postavitev Europass"
 #. Heading above the table that lists every application sent in the period, oldest first.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Every application, in order"
-msgstr ""
+msgstr "Vse prijave po vrstnem redu"
 
 #. Label of a total: how many employers replied for the first time in the period. The number comes before it.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "First replies"
-msgstr ""
+msgstr "Prvi odgovori"
 
 #. Table heading: where the job was found, for example a job board or a contact.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Found via"
-msgstr ""
+msgstr "Najdeno prek"
 
 #: src/postulo_templates/plugin.py
+#, fuzzy
 msgid "Hand-over report"
-msgstr ""
+msgstr "Poročilo za predajo"
 
 #. Heading above a short list of totals for the period (applications sent, replies, interviews, offers).
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "In figures"
-msgstr ""
+msgstr "V številkah"
 
 #. Label of a total: how many interviews the person attended in the period. The number comes before it.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Interviews attended"
-msgstr ""
+msgstr "Opravljeni razgovori"
 
 #. The title at the top of the report handed to an employment service or adviser.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Job search report"
-msgstr ""
+msgstr "Poročilo o iskanju zaposlitve"
 
 #. Table heading: the date of the latest event on that application.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Last activity"
-msgstr ""
+msgstr "Zadnja dejavnost"
 
 #. A line under the languages table explaining that its levels (A1 to C2) follow the CEFR.
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
@@ -145,37 +147,38 @@ msgstr "Materni jezik(i)"
 #. Label before the name of the person the report is about, in the details block at the top.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Name"
-msgstr ""
+msgstr "Ime"
 
 #. Printed in the header of an exported list, before the filters that narrowed it (for example status: interview).
 #: src/postulo_templates/templates/postulo_templates/records/list.html
 msgid "Narrowed by"
-msgstr ""
+msgstr "Filtrirano po"
 
 #. Table heading of the first column: the row number, abbreviated. Keep it very short; it sits above a one- or two-digit number.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "No."
-msgstr ""
+msgstr "Št."
 
 #. Said in place of an exported list when no row matches the filters.
 #: src/postulo_templates/templates/postulo_templates/records/list.html
 msgid "Nothing matches."
-msgstr ""
+msgstr "Ni zadetkov."
 
 #. Said in place of the table when no application was sent in the period.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Nothing was sent in this period."
-msgstr ""
+msgstr "V tem obdobju ni bilo oddano nič."
 
 #. Label of a total: how many job offers were received in the period. The number comes before it.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Offers"
-msgstr ""
+msgstr "Ponudbe"
 
 #. Label before the name of the employment office the report is for, in the details block at the top.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
+#, fuzzy
 msgid "Office"
-msgstr ""
+msgstr "Urad"
 
 #. Label before the other languages the person speaks; the (s) is for one or several.
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
@@ -185,7 +188,7 @@ msgstr "Drugi jezik(i)"
 #. Label before the dates the report covers (for example March 2026), in the details block at the top.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Period"
-msgstr ""
+msgstr "Obdobje"
 
 #. Heading of the section with the person's contact details, in a CV laid out as the Europass CV is.
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
@@ -213,22 +216,22 @@ msgstr "danes"
 
 #: src/postulo_templates/plugin.py
 msgid "Printed calendar"
-msgstr ""
+msgstr "Natisnjen koledar"
 
 #. Label before the date and time the report was produced, in the details block at the top.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Produced"
-msgstr ""
+msgstr "Izdelano"
 
 #. Printed in the header of an exported list: the date and time it was produced.
 #: src/postulo_templates/templates/postulo_templates/records/list.html
 #, python-format
 msgid "Produced on %(produced)s"
-msgstr ""
+msgstr "Izdelano dne %(produced)s"
 
 #: src/postulo_templates/plugin.py
 msgid "Records list"
-msgstr ""
+msgstr "Seznam zapisov"
 
 #. A closing line of the CV.
 #: src/postulo_templates/templates/postulo_templates/europass/cv.html
@@ -238,35 +241,35 @@ msgstr "Reference so na voljo na zahtevo."
 #. Label of a total: how many applications were turned down in the period. The number comes before it.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Rejections"
-msgstr ""
+msgstr "Zavrnitve"
 
 #. Table heading: the job title applied for.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Role"
-msgstr ""
+msgstr "Delovno mesto"
 
 #. Caption under an empty line on which the person signs by hand, at the end of the report.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Signature"
-msgstr ""
+msgstr "Podpis"
 
 #. Table heading: where the application stands, for example sent, interview or rejected.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Status"
-msgstr ""
+msgstr "Stanje"
 
 #. Printed in the header of an exported list that was cut short: how many rows are shown out of how many there are.
 #: src/postulo_templates/templates/postulo_templates/records/list.html
 #, python-format
 msgid "The first %(count)s of %(total)s rows; the rest are in the table."
-msgstr ""
+msgstr "Prvih %(count)s od %(total)s vrstic; ostale so v tabeli."
 
 #. Label of a total: how many applications were sent through the public employment service. The number comes before it.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Through the public employment service"
-msgstr ""
+msgstr "Prek javne službe za zaposlovanje"
 
 #. Label of a total: how many weeks of the period had no application sent. The number comes before it.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Weeks with none"
-msgstr ""
+msgstr "Tedni brez prijav"
