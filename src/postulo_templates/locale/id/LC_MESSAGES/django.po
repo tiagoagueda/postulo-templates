@@ -266,6 +266,11 @@ msgstr "%(count)s baris pertama dari %(total)s baris; sisanya ada di tabel."
 msgid "Through the public employment service"
 msgstr "Melalui layanan ketenagakerjaan publik"
 
+#. A throwaway probe for the Weblate round trip (#10); never drawn, removed again at once.
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Weblate round-trip probe"
+msgstr ""
+
 #. Label of a total: how many weeks of the period had no application sent. The number comes before it.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Weeks with none"

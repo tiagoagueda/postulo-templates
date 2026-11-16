@@ -266,6 +266,11 @@ msgstr "Primele %(count)s din %(total)s rânduri; restul se află în tabel."
 msgid "Through the public employment service"
 msgstr "Prin serviciul public de ocupare a forței de muncă"
 
+#. A throwaway probe for the Weblate round trip (#10); never drawn, removed again at once.
+#: src/postulo_templates/templates/postulo_templates/handover/report.html
+msgid "Weblate round-trip probe"
+msgstr ""
+
 #. Label of a total: how many weeks of the period had no application sent. The number comes before it.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Weeks with none"
