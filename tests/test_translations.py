@@ -147,7 +147,12 @@ def test_dates_follow_the_documents_language(person):
 
 #: Templates whose words stand on a document the translator cannot see: each string says
 #: where it is printed (postulo/postulo-templates#10).
-EXPLAINED = ("handover/report.html", "records/list.html", "europass/cv.html")
+EXPLAINED = (
+    "handover/report.html",
+    "demarches/report.html",
+    "records/list.html",
+    "europass/cv.html",
+)
 
 
 def test_every_string_says_where_on_the_document_it_is_printed(tool):

@@ -74,6 +74,24 @@ HANDOVER = Theme(
     papers=("any",),
 )
 
+#: The job-search report laid out the way France Travail's adviser reads a jobseeker's steps
+#: (postulo/postulo#1262): the applications, then the interviews, a blank line for the France
+#: Travail identifier Postulo does not hold, place, date and signature, and a closing line
+#: saying it is the person's own list and not a France Travail form. "(France)" in the label
+#: says whose office it is laid out for, and nothing on it imitates an official form or
+#: carries a mark. No body takes a file from a jobseeker's software, so nothing is sent: it is
+#: filed, stored and mailed like any other report.
+DEMARCHES = Theme(
+    name="demarches",
+    # Translators: The name of a layout of the job-search report, in the list of layouts. It
+    # is laid out for France Travail, the French public employment service; keep "(France)".
+    # In French: « Relevé des démarches (France) ».
+    label=_("Job-search steps (France)"),
+    templates={ThemeKind.REPORT: "postulo_templates/demarches/report.html"},
+    provider=PROVIDER,
+    papers=("any",),
+)
+
 #: A list for few columns and long text (#5): each row a block, so a note takes the width of
 #: the page instead of a narrow column. The table for every other list is in the families.
 RECORDS = Theme(
@@ -110,4 +128,4 @@ class Templates:
         "themes are no longer offered, and a document set in one of them is drawn in the "
         "plain theme until it is switched on again."
     )
-    themes = (EUROPASS, ATS, HANDOVER, RECORDS, SHEET)
+    themes = (EUROPASS, ATS, HANDOVER, DEMARCHES, RECORDS, SHEET)

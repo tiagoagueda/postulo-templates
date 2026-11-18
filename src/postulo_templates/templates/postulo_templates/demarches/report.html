@@ -1,0 +1,198 @@
+{% load i18n %}<!DOCTYPE html>
+{% comment %}
+  The job-search report laid out the way France Travail's adviser reads a jobseeker's steps
+  (postulo/postulo#1262): the applications of the period, then the interviews, in the two
+  groups France Travail's own tool for recording steps ("l'organisation des démarches") uses.
+  In France the proof of a search is the copies of the applications and the employers'
+  replies (service-public.gouv.fr, fiche F14926), so this page is a summary of them to type
+  from, to bring to an appointment or to send with the copies; it says so, and it says it is
+  the person's own record and not a France Travail form. No mark, no logo, nothing drawn to
+  look like an official form.
+
+  Drawn whole like `handover`, not over `base_report.html`, which opens with the figures.
+  Plain values only. What Postulo does not hold (the France Travail identifier) is a blank
+  line for the pen; no contact's or interviewer's name is ever printed, and no target number
+  of applications: that is the person's and the adviser's, not the document's.
+
+  The core that names how each application was made and lists the period's interviews one
+  by one (postulo/postulo#1262) hands `interviews` as a list, empty or not; an older core does
+  not hand it at all. `interviews is not None` tells the two apart, so this page draws on
+  either: without them, the column and the second table are left out rather than empty.
+
+  Fluid, logical sides only, a long address wraps, the table's head repeats on each page.
+{% endcomment %}
+<html lang="{{ document_language }}" dir="{{ document_direction|default:'ltr' }}">
+<head>
+  <meta charset="utf-8">
+  <title>{{ document_title }}</title>
+  <style{% if csp_nonce %} nonce="{{ csp_nonce }}"{% endif %}>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", "Noto Sans", "Noto Sans Ethiopic", "Noto Naskh Arabic", sans-serif;
+      font-size: 10pt;
+      line-height: 1.4;
+    }
+    body:lang(ur) {
+      font-family: "Noto Nastaliq Urdu", "Helvetica Neue", Helvetica, Arial, "Noto Sans", "Noto Sans Ethiopic", "Noto Naskh Arabic", sans-serif;
+      line-height: 2;
+    }
+    @page { margin: 16mm; @bottom-center { content: counter(page) " / " counter(pages); font-size: 8pt; } }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #000; overflow-wrap: anywhere; }
+    h1 { margin: 0 0 3mm; font-size: 16pt; }
+    h2 { margin: 7mm 0 2mm; font-size: 11pt; break-after: avoid; }
+    dl.who { display: grid; grid-template-columns: max-content 1fr; gap: 1mm 5mm; margin: 0; }
+    dl.who dt { font-weight: bold; }
+    dl.who dd { margin: 0; }
+    /* No max-inline-size here: in a right-to-left grid WeasyPrint shifts a capped item, then
+       widens it back to the column, and it runs off the page. */
+    dl.who dd.blank { border-bottom: 0.6pt solid #000; min-block-size: 5mm; }
+    table { inline-size: 100%; border-collapse: collapse; font-size: 8.5pt; }
+    th, td { text-align: start; padding: 1.3mm 1.6mm; vertical-align: top; border: 0.5pt solid #000; }
+    thead { display: table-header-group; }
+    thead th { background: #e6e6e6; font-size: 8pt; }
+    tr { break-inside: avoid; }
+    td.number, th.number { inline-size: 9mm; text-align: end; }
+    .small { margin: 0.8mm 0 0; font-size: 7.5pt; }
+    .note { margin: 2mm 0 0; font-size: 8pt; }
+    .figures { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 1mm 8mm; }
+    .figures strong { font-size: 11pt; }
+    .signed { display: flex; gap: 10mm; margin-top: 12mm; break-inside: avoid; }
+    .signed div { flex: 1; min-inline-size: 0; }
+    .signed .line { block-size: 14mm; border-bottom: 0.6pt solid #000; }
+    .signed .label { margin-top: 1mm; font-size: 8pt; }
+    footer { margin-top: 8mm; padding-top: 2mm; border-top: 0.5pt solid #000; font-size: 7.5pt; break-inside: avoid; }
+  </style>
+</head>
+<body>
+  {# Translators: The title of a job-search report laid out for France Travail, the French public employment service. The official French term is « démarches de recherche d'emploi »; in French the title reads « Relevé des démarches de recherche d'emploi ». #}
+  <h1>{% translate "Record of job-search steps" %}</h1>
+
+  <dl class="who">
+    {# Translators: Label before the name of the person the report is about, in the details block at the top. #}
+    <dt>{% translate "Name" %}</dt><dd><bdi>{{ person }}</bdi></dd>
+    {# Translators: Label before an empty line on which the person writes their France Travail identifier by hand. In French: « Identifiant France Travail ». Keep "France Travail" as it is: it is the name of the French public employment service. #}
+    <dt>{% translate "France Travail identifier" %}</dt><dd class="blank"></dd>
+    {# Translators: Label before the name of the employment office the report is for, in the details block at the top. In French: « Agence ». #}
+    {% if office %}<dt>{% translate "Office" %}</dt><dd><bdi>{{ office }}</bdi></dd>{% endif %}
+    {# Translators: Label before the name of the person's adviser at the employment office, in the details block at the top. In French: « Conseiller ou conseillère ». #}
+    {% if adviser %}<dt>{% translate "Adviser" %}</dt><dd><bdi>{{ adviser }}</bdi></dd>{% endif %}
+    {# Translators: Label before the dates the report covers (for example March 2026), in the details block at the top. #}
+    <dt>{% translate "Period" %}</dt>
+    <dd>{{ period.label }} ({{ period.start|date:"DATE_FORMAT" }} – {{ period.end|date:"DATE_FORMAT" }})</dd>
+    {# Translators: Label before the date and time the report was produced, in the details block at the top. #}
+    <dt>{% translate "Produced" %}</dt><dd>{{ produced_at|date:"DATETIME_FORMAT" }}</dd>
+  </dl>
+
+  {# Translators: Heading above the table of the job applications sent in the period, in a report laid out for France Travail. In French: « Candidatures ». #}
+  <h2>{% translate "Applications sent" %}</h2>
+  {% if evidence %}
+    <table>
+      <thead>
+        <tr>
+          {# Translators: Table heading of the first column: the row number, abbreviated. Keep it very short; it sits above a one- or two-digit number. #}
+          <th class="number">{% translate "No." %}</th>
+          {# Translators: Table heading: the date the application was sent. In French: « Date ». #}
+          <th>{% translate "Date" %}</th>
+          {# Translators: Table heading: the employer applied to, with the town of the job beneath. In French: « Entreprise et lieu ». #}
+          <th>{% translate "Employer and place" %}</th>
+          {# Translators: Table heading: the job title applied for. In French: « Poste ». #}
+          <th>{% translate "Position" %}</th>
+          {% if interviews is not None %}
+            {# Translators: Table heading: how the application was made, for example by email, on the company's website or through the employment service. In French: « Mode de candidature ». #}
+            <th>{% translate "How" %}</th>
+          {% endif %}
+          {# Translators: Table heading: where the application stands now, with the date of the latest event. In French: « Suite donnée » or « Résultat ». #}
+          <th>{% translate "Result" %}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in evidence %}
+          <tr>
+            <td class="number">{{ forloop.counter }}</td>
+            <td>{{ row.applied_on|date:"DATE_FORMAT" }}</td>
+            <td><bdi>{{ row.company }}</bdi>{% if row.location %}<div class="small"><bdi>{{ row.location }}</bdi></div>{% endif %}</td>
+            <td><bdi>{{ row.role }}</bdi>{% if row.url %}<div class="small"><bdi>{{ row.url }}</bdi></div>{% endif %}</td>
+            {% if interviews is not None %}
+              <td>{% if row.channel %}{{ row.channel }}{% else %}—{% endif %}</td>
+            {% endif %}
+            <td>{{ row.status }}{% if row.last_activity_on %}<div class="small">{{ row.last_activity_on|date:"DATE_FORMAT" }}</div>{% endif %}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    {# Translators: Said in place of the table when no application was sent in the period. #}
+    <p>{% translate "Nothing was sent in this period." %}</p>
+  {% endif %}
+  {# Translators: A note under the table of applications, in a report laid out for France Travail. France Travail asks for the copies of the applications and the employers' replies as proof; this list only summarises them. #}
+  <p class="note">{% translate "This list summarises the applications. The copies of the applications and the employers' replies are the supporting documents." %}</p>
+
+  {% if interviews is not None %}
+    {# Translators: Heading above the table of the job interviews attended in the period, in a report laid out for France Travail. In French: « Entretiens d'embauche ». #}
+    <h2>{% translate "Job interviews" %}</h2>
+    {% if interviews %}
+      <table>
+        <thead>
+          <tr>
+            {# Translators: Table heading of the first column: the row number, abbreviated. Keep it very short; it sits above a one- or two-digit number. #}
+            <th class="number">{% translate "No." %}</th>
+            {# Translators: Table heading: the day the interview took place. In French: « Date ». #}
+            <th>{% translate "Date" %}</th>
+            {# Translators: Table heading: the employer the interview was with. In French: « Entreprise ». #}
+            <th>{% translate "Employer" %}</th>
+            {# Translators: Table heading: the job title the interview was for. In French: « Poste ». #}
+            <th>{% translate "Position" %}</th>
+            {# Translators: Table heading: the kind of interview, for example by phone, by video or on site. In French: « Type d'entretien ». #}
+            <th>{% translate "Kind" %}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in interviews %}
+            <tr>
+              <td class="number">{{ forloop.counter }}</td>
+              <td>{{ row.on|date:"DATE_FORMAT" }}</td>
+              <td><bdi>{{ row.company }}</bdi></td>
+              <td><bdi>{{ row.role }}</bdi></td>
+              <td>{% if row.kind %}{{ row.kind }}{% else %}—{% endif %}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      {# Translators: Said in place of the table of interviews when none took place in the period. #}
+      <p>{% translate "No interview in this period." %}</p>
+    {% endif %}
+  {% endif %}
+
+  {# Translators: Heading above a short list of totals for the period (applications sent, interviews). #}
+  <h2>{% translate "In figures" %}</h2>
+  <ul class="figures">
+    {# Translators: Label of a total: how many applications were sent in the period. The number comes before it. #}
+    <li><strong>{{ total }}</strong> {% translate "Applications sent" %}</li>
+    {# Translators: Label of a total: how many interviews the person attended in the period. The number comes before it. #}
+    <li><strong>{{ happened.interviews }}</strong> {% translate "Interviews attended" %}</li>
+    {# Translators: Label of a total: how many employers replied for the first time in the period. The number comes before it. #}
+    <li><strong>{{ happened.replies }}</strong> {% translate "First replies" %}</li>
+    {% if office %}
+      {# Translators: Label of a total: how many applications were sent through the public employment service. The number comes before it. #}
+      <li><strong>{{ through_service }}</strong> {% translate "Through the public employment service" %}</li>
+      {# Translators: Label of a total: how many appointments at the employment office the person attended. The number comes before it. #}
+      <li><strong>{{ appointments_attended }}</strong> {% translate "Appointments attended" %}</li>
+    {% endif %}
+  </ul>
+
+  <div class="signed">
+    {# Translators: Caption under an empty line on which the person writes by hand the town where they sign, at the end of a report laid out for France Travail. In French: « Fait à ». #}
+    <div><div class="line"></div><div class="label">{% translate "Signed at" %}</div></div>
+    {# Translators: Caption under an empty line on which the person writes the date by hand, at the end of the report. #}
+    <div><div class="line"></div><div class="label">{% translate "Date" %}</div></div>
+    {# Translators: Caption under an empty line on which the person signs by hand, at the end of the report. #}
+    <div><div class="line"></div><div class="label">{% translate "Signature" %}</div></div>
+  </div>
+
+  <footer>
+    {# Translators: The last line of a report laid out for France Travail. It must say plainly that the person made the list from their own records and that it is not an official France Travail form. Keep "France Travail" and "Postulo" as they are. #}
+    <p>{% translate "Drawn up by the person named above from their own records, with Postulo. This is their own list, not a France Travail form." %}</p>
+  </footer>
+</body>
+</html>

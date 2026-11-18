@@ -49,6 +49,7 @@ again. Nothing is deleted, and the same holds if the plugin is removed.
 | `ats` | CV, Portfolio, Letter, Report, List | Fluid | A CV a hiring system's parser reads cleanly: one column, real headings, no text in pictures. For applications sent through an online form. |
 | `europass` | CV, Portfolio, Letter, Report, List | Fluid | A CV laid out as the Europass CV is, for applications in Europe that ask for one or where the format is familiar. |
 | `handover` | Report | Fluid | The job-search report made for handing to an employment service: the person, the office and the adviser first, every application of the period in a numbered table, then the figures and a line each for the date and a signature. Portrait or landscape. |
+| `demarches` | Report | Fluid | The job-search report laid out for France Travail, labelled *Job-search steps (France)*: the applications of the period, then the interviews, a blank line for the France Travail identifier, place, date and signature. The person's own list, not a France Travail form. |
 | `records` | List | Fluid | An exported list for few columns and long text, such as companies with their notes: each row is a block, so a long note takes the width of the page. Other lists are a table in the `ats` and `europass` themes. |
 | `sheet` | Calendar | Fluid | The Calendar printed: the month with every entry of each day, the week, the day and the agenda. Made for a black-and-white printer: each kind of entry is said in words and drawn with its own kind of rule, and a finished one is struck through and crossed. |
 
@@ -57,6 +58,30 @@ other. *Fluid* means every paper Postulo has (A4 and US Letter, each upright or 
 a theme drawn for one sheet is *restricted* and names the papers it keeps to, with the reason,
 in this table. A fluid theme is drawn on every paper by the tests, and a restricted one on
 each it names, and fails if anything runs past the page.
+
+### Job-search steps (France)
+
+A layout of the monthly job-search report in the two groups France Travail's own tool for
+recording steps uses: the applications sent in the period (date, employer and place, position,
+how it was made, where it stands) and the interviews attended (date, employer, position,
+kind). It is something to type from into that tool, to bring to an appointment with an
+adviser, or to send with the copies of the applications at a control of the search: in France
+the proof is the copies of the applications and the employers' replies, and the page says the
+list only summarises them.
+
+What it is not: an official form. It carries no France Travail mark or logo, does not imitate
+a form's look, and its last line says it is the person's own list. Nothing is sent to France
+Travail, which takes no file from a jobseeker's software; the report is filed, kept in a store
+or mailed from the person's own outbox like any other. Postulo does not hold the France
+Travail identifier, so that line is left blank for the pen, as is the town where it is signed.
+It prints no target number of applications and never a contact's or an interviewer's name.
+
+The column *How*, the place under each employer and the table of interviews come from Postulo
+once it hands them to a report theme (postulo/postulo#1262); on an older Postulo the page draws
+without them. The layout's words are drawn in the language the report is drawn in: the one
+chosen on the report's page, or the profile's for a report made each month; the French words
+come from Weblate like every other translation. Which
+country's offices ask for what is on the wiki's *Proof of job search, by country*.
 
 ### Applicant tracking
 

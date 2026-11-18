@@ -27,7 +27,9 @@ msgstr[0] ""
 msgid "A week, on average"
 msgstr ""
 
+#. Label before the name of the person's adviser at the employment office, in the details block at the top. In French: « Conseiller ou conseillère ».
 #. Label before the name of the person's adviser at the employment office, in the details block at the top.
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Adviser"
 msgstr ""
@@ -41,7 +43,9 @@ msgstr ""
 msgid "Applications drafted but never sent are not counted."
 msgstr ""
 
+#. Heading above the table of the job applications sent in the period, in a report laid out for France Travail. In French: « Candidatures ».
 #. Label of a total: how many applications were sent in the period. The number comes before it.
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Applications sent"
 msgstr ""
@@ -52,6 +56,7 @@ msgid "Applied on"
 msgstr ""
 
 #. Label of a total: how many appointments at the employment office the person attended. The number comes before it.
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Appointments attended"
 msgstr ""
@@ -66,13 +71,31 @@ msgstr ""
 msgid "Curriculum Vitae"
 msgstr ""
 
+#. Table heading: the date the application was sent. In French: « Date ».
+#. Table heading: the day the interview took place. In French: « Date ».
 #. Caption under an empty line on which the person writes the date by hand, at the end of the report.
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Date"
 msgstr ""
 
 #: src/postulo_templates/plugin.py
 msgid "Document templates"
+msgstr ""
+
+#. The last line of a report laid out for France Travail. It must say plainly that the person made the list from their own records and that it is not an official France Travail form. Keep "France Travail" and "Postulo" as they are.
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
+msgid "Drawn up by the person named above from their own records, with Postulo. This is their own list, not a France Travail form."
+msgstr ""
+
+#. Table heading: the employer the interview was with. In French: « Entreprise ».
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
+msgid "Employer"
+msgstr ""
+
+#. Table heading: the employer applied to, with the town of the job beneath. In French: « Entreprise et lieu ».
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
+msgid "Employer and place"
 msgstr ""
 
 #. A level of the European Qualifications Framework (1 to 8) printed beside a qualification, for example EQF level 6.
@@ -91,6 +114,7 @@ msgid "Every application, in order"
 msgstr ""
 
 #. Label of a total: how many employers replied for the first time in the period. The number comes before it.
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "First replies"
 msgstr ""
@@ -100,23 +124,51 @@ msgstr ""
 msgid "Found via"
 msgstr ""
 
+#. Label before an empty line on which the person writes their France Travail identifier by hand. In French: « Identifiant France Travail ». Keep "France Travail" as it is: it is the name of the French public employment service.
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
+msgid "France Travail identifier"
+msgstr ""
+
 #: src/postulo_templates/plugin.py
 msgid "Hand-over report"
 msgstr ""
 
+#. Table heading: how the application was made, for example by email, on the company's website or through the employment service. In French: « Mode de candidature ».
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
+msgid "How"
+msgstr ""
+
+#. Heading above a short list of totals for the period (applications sent, interviews).
 #. Heading above a short list of totals for the period (applications sent, replies, interviews, offers).
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "In figures"
 msgstr ""
 
 #. Label of a total: how many interviews the person attended in the period. The number comes before it.
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Interviews attended"
+msgstr ""
+
+#. Heading above the table of the job interviews attended in the period, in a report laid out for France Travail. In French: « Entretiens d'embauche ».
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
+msgid "Job interviews"
 msgstr ""
 
 #. The title at the top of the report handed to an employment service or adviser.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Job search report"
+msgstr ""
+
+#. The name of a layout of the job-search report, in the list of layouts. It is laid out for France Travail, the French public employment service; keep "(France)". In French: « Relevé des démarches (France) ».
+#: src/postulo_templates/plugin.py
+msgid "Job-search steps (France)"
+msgstr ""
+
+#. Table heading: the kind of interview, for example by phone, by video or on site. In French: « Type d'entretien ».
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
+msgid "Kind"
 msgstr ""
 
 #. Table heading: the date of the latest event on that application.
@@ -139,6 +191,7 @@ msgid "Mother tongue(s)"
 msgstr ""
 
 #. Label before the name of the person the report is about, in the details block at the top.
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Name"
 msgstr ""
@@ -148,7 +201,13 @@ msgstr ""
 msgid "Narrowed by"
 msgstr ""
 
+#. Said in place of the table of interviews when none took place in the period.
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
+msgid "No interview in this period."
+msgstr ""
+
 #. Table heading of the first column: the row number, abbreviated. Keep it very short; it sits above a one- or two-digit number.
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "No."
 msgstr ""
@@ -159,6 +218,7 @@ msgid "Nothing matches."
 msgstr ""
 
 #. Said in place of the table when no application was sent in the period.
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Nothing was sent in this period."
 msgstr ""
@@ -168,7 +228,9 @@ msgstr ""
 msgid "Offers"
 msgstr ""
 
+#. Label before the name of the employment office the report is for, in the details block at the top. In French: « Agence ».
 #. Label before the name of the employment office the report is for, in the details block at the top.
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Office"
 msgstr ""
@@ -179,6 +241,7 @@ msgid "Other language(s)"
 msgstr ""
 
 #. Label before the dates the report covers (for example March 2026), in the details block at the top.
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Period"
 msgstr ""
@@ -198,6 +261,12 @@ msgstr ""
 msgid "Portfolio"
 msgstr ""
 
+#. Table heading: the job title applied for. In French: « Poste ».
+#. Table heading: the job title the interview was for. In French: « Poste ».
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
+msgid "Position"
+msgstr ""
+
 #: src/postulo_templates/plugin.py
 msgid "Postulo Templates"
 msgstr ""
@@ -212,6 +281,7 @@ msgid "Printed calendar"
 msgstr ""
 
 #. Label before the date and time the report was produced, in the details block at the top.
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Produced"
 msgstr ""
@@ -220,6 +290,11 @@ msgstr ""
 #: src/postulo_templates/templates/postulo_templates/records/list.html
 #, python-format
 msgid "Produced on %(produced)s"
+msgstr ""
+
+#. The title of a job-search report laid out for France Travail, the French public employment service. The official French term is « démarches de recherche d'emploi »; in French the title reads « Relevé des démarches de recherche d'emploi ».
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
+msgid "Record of job-search steps"
 msgstr ""
 
 #: src/postulo_templates/plugin.py
@@ -236,14 +311,25 @@ msgstr ""
 msgid "Rejections"
 msgstr ""
 
+#. Table heading: where the application stands now, with the date of the latest event. In French: « Suite donnée » or « Résultat ».
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
+msgid "Result"
+msgstr ""
+
 #. Table heading: the job title applied for.
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Role"
 msgstr ""
 
 #. Caption under an empty line on which the person signs by hand, at the end of the report.
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Signature"
+msgstr ""
+
+#. Caption under an empty line on which the person writes by hand the town where they sign, at the end of a report laid out for France Travail. In French: « Fait à ».
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
+msgid "Signed at"
 msgstr ""
 
 #. Table heading: where the application stands, for example sent, interview or rejected.
@@ -257,7 +343,13 @@ msgstr ""
 msgid "The first %(count)s of %(total)s rows; the rest are in the table."
 msgstr ""
 
+#. A note under the table of applications, in a report laid out for France Travail. France Travail asks for the copies of the applications and the employers' replies as proof; this list only summarises them.
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
+msgid "This list summarises the applications. The copies of the applications and the employers' replies are the supporting documents."
+msgstr ""
+
 #. Label of a total: how many applications were sent through the public employment service. The number comes before it.
+#: src/postulo_templates/templates/postulo_templates/demarches/report.html
 #: src/postulo_templates/templates/postulo_templates/handover/report.html
 msgid "Through the public employment service"
 msgstr ""
